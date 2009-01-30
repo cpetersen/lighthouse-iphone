@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* lighthouseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* lighthouseAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		B12D63B20F303B5A00BDF814 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D63B10F303B5A00BDF814 /* Ticket.m */; };
+		B12D648F0F3101C900BDF814 /* ProjectAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */; };
+		B12D650E0F316CE100BDF814 /* ProjectAdminView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */; };
+		B1A0BC850F3177EB00B29116 /* ShowProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */; };
+		B1A0BC8D0F31780900B29116 /* ShowProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */; };
+		B1A0BD400F319A1E00B29116 /* README in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BD3F0F319A1E00B29116 /* README */; };
+		B1A0BDE50F3282F500B29116 /* ApiKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */; };
+		B1A0BDE90F32845B00B29116 /* ApiKeyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */; };
+		B1A0BDEE0F32850D00B29116 /* api_screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BDED0F32850D00B29116 /* api_screenshot.png */; };
+		B1CE81540F2AF5D600AD82E1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1CE81530F2AF5D600AD82E1 /* icon.png */; };
+		B1CE81620F2AF6D500AD82E1 /* ticket_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = B1CE81610F2AF6D500AD82E1 /* ticket_blue.png */; };
+		B1CE81660F2AFD1100AD82E1 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = B1CE81650F2AFD1100AD82E1 /* mail.png */; };
+		B1CE816C0F2B0BEF00AD82E1 /* signpost.png in Resources */ = {isa = PBXBuildFile; fileRef = B1CE816B0F2B0BEF00AD82E1 /* signpost.png */; };
+		B1CE817D0F2B18FF00AD82E1 /* star_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = B1CE817C0F2B18FF00AD82E1 /* star_blue.png */; };
+		B1CE81EE0F2BDECB00AD82E1 /* AddProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CE81ED0F2BDECB00AD82E1 /* AddProjectViewController.m */; };
+		B1CE81F10F2BDF0A00AD82E1 /* AddProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */; };
+		B1D04EAF0F2AE9470054E41A /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D04EAE0F2AE9470054E41A /* TicketsViewController.m */; };
+		B1D04EB10F2AE98F0054E41A /* TicketsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D04EB00F2AE98F0054E41A /* TicketsView.xib */; };
+		B1E170640F2C537C00EE28C1 /* lighthouse.1.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */; };
+		B1E1706A0F2C555E00EE28C1 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E170690F2C555E00EE28C1 /* Project.m */; };
+		B1E171390F2D1FF300EE28C1 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E171380F2D1FF300EE28C1 /* libsqlite3.0.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* lighthouseAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lighthouseAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* lighthouseAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lighthouseAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		28A0AAE50D9B0CCF005BE974 /* lighthouse_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lighthouse_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Classes/RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Classes/RootViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B12D63B00F303B5A00BDF814 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		B12D63B10F303B5A00BDF814 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectAdminViewController.m; path = Classes/ProjectAdminViewController.m; sourceTree = "<group>"; };
+		B12D64F80F316B0200BDF814 /* AddProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddProjectViewController.h; path = Classes/AddProjectViewController.h; sourceTree = "<group>"; };
+		B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectAdminView.xib; path = Classes/ProjectAdminView.xib; sourceTree = "<group>"; };
+		B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ShowProjectView.xib; path = Classes/ShowProjectView.xib; sourceTree = "<group>"; };
+		B1A0BC8B0F31780900B29116 /* ShowProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowProjectViewController.h; path = Classes/ShowProjectViewController.h; sourceTree = "<group>"; };
+		B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowProjectViewController.m; path = Classes/ShowProjectViewController.m; sourceTree = "<group>"; };
+		B1A0BD3F0F319A1E00B29116 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		B1A0BDE30F3282F500B29116 /* ApiKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiKeyViewController.h; path = Classes/ApiKeyViewController.h; sourceTree = "<group>"; };
+		B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApiKeyViewController.m; path = Classes/ApiKeyViewController.m; sourceTree = "<group>"; };
+		B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiKeyView.xib; sourceTree = SOURCE_ROOT; };
+		B1A0BDED0F32850D00B29116 /* api_screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = api_screenshot.png; sourceTree = "<group>"; };
+		B1CE81530F2AF5D600AD82E1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B1CE81610F2AF6D500AD82E1 /* ticket_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ticket_blue.png; sourceTree = "<group>"; };
+		B1CE81650F2AFD1100AD82E1 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		B1CE816B0F2B0BEF00AD82E1 /* signpost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signpost.png; sourceTree = "<group>"; };
+		B1CE817C0F2B18FF00AD82E1 /* star_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_blue.png; sourceTree = "<group>"; };
+		B1CE81EC0F2BDECB00AD82E1 /* ProjectAdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectAdminViewController.h; path = Classes/ProjectAdminViewController.h; sourceTree = "<group>"; };
+		B1CE81ED0F2BDECB00AD82E1 /* AddProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddProjectViewController.m; path = Classes/AddProjectViewController.m; sourceTree = "<group>"; };
+		B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProjectView.xib; sourceTree = "<group>"; };
+		B1D04EAD0F2AE9470054E41A /* TicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketsViewController.h; path = Classes/TicketsViewController.h; sourceTree = "<group>"; };
+		B1D04EAE0F2AE9470054E41A /* TicketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicketsViewController.m; path = Classes/TicketsViewController.m; sourceTree = "<group>"; };
+		B1D04EB00F2AE98F0054E41A /* TicketsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsView.xib; sourceTree = "<group>"; };
+		B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = lighthouse.1.sqlite; sourceTree = "<group>"; };
+		B1E170680F2C555E00EE28C1 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		B1E170690F2C555E00EE28C1 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		B1E171380F2D1FF300EE28C1 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				B1E171390F2D1FF300EE28C1 /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */,
+				B12D63B00F303B5A00BDF814 /* Ticket.h */,
+				B12D63B10F303B5A00BDF814 /* Ticket.m */,
+				B1E170680F2C555E00EE28C1 /* Project.h */,
+				B1E170690F2C555E00EE28C1 /* Project.m */,
+				1D3623240D0F684500981E51 /* lighthouseAppDelegate.h */,
+				1D3623250D0F684500981E51 /* lighthouseAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* lighthouse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				B1A0BEB40F32C12C00B29116 /* Controllers */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				B1A0BD3F0F319A1E00B29116 /* README */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* lighthouse_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1A0BDED0F32850D00B29116 /* api_screenshot.png */,
+				B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */,
+				B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */,
+				B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */,
+				B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */,
+				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
+				B1CE817C0F2B18FF00AD82E1 /* star_blue.png */,
+				B1CE816B0F2B0BEF00AD82E1 /* signpost.png */,
+				B1CE81650F2AFD1100AD82E1 /* mail.png */,
+				B1CE81610F2AF6D500AD82E1 /* ticket_blue.png */,
+				B1CE81530F2AF5D600AD82E1 /* icon.png */,
+				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1E171380F2D1FF300EE28C1 /* libsqlite3.0.dylib */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1A0BEB40F32C12C00B29116 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE81EC0F2BDECB00AD82E1 /* ProjectAdminViewController.h */,
+				B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */,
+				B1A0BC8B0F31780900B29116 /* ShowProjectViewController.h */,
+				B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */,
+				B1D04EAE0F2AE9470054E41A /* TicketsViewController.m */,
+				B1D04EAD0F2AE9470054E41A /* TicketsViewController.h */,
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				B1A0BDE30F3282F500B29116 /* ApiKeyViewController.h */,
+				B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */,
+				B12D64F80F316B0200BDF814 /* AddProjectViewController.h */,
+				B1CE81ED0F2BDECB00AD82E1 /* AddProjectViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* lighthouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "lighthouse" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lighthouse;
+			productName = lighthouse;
+			productReference = 1D6058910D05DD3D006BFB54 /* lighthouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "lighthouse" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* lighthouse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
+				B1D04EB10F2AE98F0054E41A /* TicketsView.xib in Resources */,
+				B1CE81540F2AF5D600AD82E1 /* icon.png in Resources */,
+				B1CE81620F2AF6D500AD82E1 /* ticket_blue.png in Resources */,
+				B1CE81660F2AFD1100AD82E1 /* mail.png in Resources */,
+				B1CE816C0F2B0BEF00AD82E1 /* signpost.png in Resources */,
+				B1CE817D0F2B18FF00AD82E1 /* star_blue.png in Resources */,
+				B1CE81F10F2BDF0A00AD82E1 /* AddProjectView.xib in Resources */,
+				B1E170640F2C537C00EE28C1 /* lighthouse.1.sqlite in Resources */,
+				B12D650E0F316CE100BDF814 /* ProjectAdminView.xib in Resources */,
+				B1A0BC850F3177EB00B29116 /* ShowProjectView.xib in Resources */,
+				B1A0BD400F319A1E00B29116 /* README in Resources */,
+				B1A0BDE90F32845B00B29116 /* ApiKeyView.xib in Resources */,
+				B1A0BDEE0F32850D00B29116 /* api_screenshot.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* lighthouseAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				B1D04EAF0F2AE9470054E41A /* TicketsViewController.m in Sources */,
+				B1CE81EE0F2BDECB00AD82E1 /* AddProjectViewController.m in Sources */,
+				B1E1706A0F2C555E00EE28C1 /* Project.m in Sources */,
+				B12D63B20F303B5A00BDF814 /* Ticket.m in Sources */,
+				B12D648F0F3101C900BDF814 /* ProjectAdminViewController.m in Sources */,
+				B1A0BC8D0F31780900B29116 /* ShowProjectViewController.m in Sources */,
+				B1A0BDE50F3282F500B29116 /* ApiKeyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = lighthouse_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = lighthouse;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = lighthouse_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = lighthouse;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "lighthouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "lighthouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

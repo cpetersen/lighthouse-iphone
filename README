@@ -1,0 +1,11 @@
+TODO
+
+UPDATE TABLE VIEWS WHEN ADDING A PROJECT
+GETPROPERTY + SETPROPERTY (apiToken)
+figure out webservices...
+
+DONE
+	- HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD
+	- CHECK THAT THE FIRST PROJECT IS DISPLAYED (check array indexes)
+	- change + button to admin
+	- add api key screen
