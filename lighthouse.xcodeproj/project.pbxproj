@@ -52,6 +52,7 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Classes/RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B120FA090F343F740009A4FD /* ProjectAdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectAdminViewController.h; path = ../Lighthouse/Classes/ProjectAdminViewController.h; sourceTree = SOURCE_ROOT; };
 		B12D63B00F303B5A00BDF814 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		B12D63B10F303B5A00BDF814 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectAdminViewController.m; path = Classes/ProjectAdminViewController.m; sourceTree = "<group>"; };
@@ -63,14 +64,13 @@
 		B1A0BD3F0F319A1E00B29116 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		B1A0BDE30F3282F500B29116 /* ApiKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiKeyViewController.h; path = Classes/ApiKeyViewController.h; sourceTree = "<group>"; };
 		B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApiKeyViewController.m; path = Classes/ApiKeyViewController.m; sourceTree = "<group>"; };
-		B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiKeyView.xib; sourceTree = SOURCE_ROOT; };
+		B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiKeyView.xib; sourceTree = "<group>"; };
 		B1A0BDED0F32850D00B29116 /* api_screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = api_screenshot.png; sourceTree = "<group>"; };
 		B1CE81530F2AF5D600AD82E1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B1CE81610F2AF6D500AD82E1 /* ticket_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ticket_blue.png; sourceTree = "<group>"; };
 		B1CE81650F2AFD1100AD82E1 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		B1CE816B0F2B0BEF00AD82E1 /* signpost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signpost.png; sourceTree = "<group>"; };
 		B1CE817C0F2B18FF00AD82E1 /* star_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_blue.png; sourceTree = "<group>"; };
-		B1CE81EC0F2BDECB00AD82E1 /* ProjectAdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectAdminViewController.h; path = Classes/ProjectAdminViewController.h; sourceTree = "<group>"; };
 		B1CE81ED0F2BDECB00AD82E1 /* AddProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddProjectViewController.m; path = Classes/AddProjectViewController.m; sourceTree = "<group>"; };
 		B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProjectView.xib; sourceTree = "<group>"; };
 		B1D04EAD0F2AE9470054E41A /* TicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketsViewController.h; path = Classes/TicketsViewController.h; sourceTree = "<group>"; };
@@ -100,13 +100,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */,
-				B12D63B00F303B5A00BDF814 /* Ticket.h */,
-				B12D63B10F303B5A00BDF814 /* Ticket.m */,
-				B1E170680F2C555E00EE28C1 /* Project.h */,
-				B1E170690F2C555E00EE28C1 /* Project.m */,
 				1D3623240D0F684500981E51 /* lighthouseAppDelegate.h */,
 				1D3623250D0F684500981E51 /* lighthouseAppDelegate.m */,
+				B1E170680F2C555E00EE28C1 /* Project.h */,
+				B1E170690F2C555E00EE28C1 /* Project.m */,
+				B12D63B00F303B5A00BDF814 /* Ticket.h */,
+				B12D63B10F303B5A00BDF814 /* Ticket.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -122,6 +121,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				B11F742B0F34083C001D4AE9 /* Views */,
 				B1A0BEB40F32C12C00B29116 /* Controllers */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -136,8 +136,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				28A0AAE50D9B0CCF005BE974 /* lighthouse_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				28A0AAE50D9B0CCF005BE974 /* lighthouse_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -146,18 +146,12 @@
 			isa = PBXGroup;
 			children = (
 				B1A0BDED0F32850D00B29116 /* api_screenshot.png */,
-				B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */,
-				B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */,
 				B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */,
-				B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */,
-				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
 				B1CE817C0F2B18FF00AD82E1 /* star_blue.png */,
 				B1CE816B0F2B0BEF00AD82E1 /* signpost.png */,
 				B1CE81650F2AFD1100AD82E1 /* mail.png */,
 				B1CE81610F2AF6D500AD82E1 /* ticket_blue.png */,
 				B1CE81530F2AF5D600AD82E1 /* icon.png */,
-				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
-				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
 			name = Resources;
@@ -174,21 +168,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B11F742B0F34083C001D4AE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */,
+				B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */,
+				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
+				B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */,
+				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		B1A0BEB40F32C12C00B29116 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1CE81EC0F2BDECB00AD82E1 /* ProjectAdminViewController.h */,
+				B120FA090F343F740009A4FD /* ProjectAdminViewController.h */,
+				B12D64F80F316B0200BDF814 /* AddProjectViewController.h */,
+				B1CE81ED0F2BDECB00AD82E1 /* AddProjectViewController.m */,
+				B1A0BDE30F3282F500B29116 /* ApiKeyViewController.h */,
+				B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */,
 				B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */,
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				B1A0BC8B0F31780900B29116 /* ShowProjectViewController.h */,
 				B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */,
 				B1D04EAE0F2AE9470054E41A /* TicketsViewController.m */,
 				B1D04EAD0F2AE9470054E41A /* TicketsViewController.h */,
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
-				B1A0BDE30F3282F500B29116 /* ApiKeyViewController.h */,
-				B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */,
-				B12D64F80F316B0200BDF814 /* AddProjectViewController.h */,
-				B1CE81ED0F2BDECB00AD82E1 /* AddProjectViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -313,12 +321,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christopher Petersen";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B9085017-2E21-4724-94A0-D44D3F2873B0";
 				SDKROOT = iphoneos2.2;
 			};
 			name = Debug;

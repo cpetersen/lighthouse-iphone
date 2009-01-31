@@ -3,6 +3,7 @@
 @implementation ProjectAdminViewController
 
 @synthesize spvController;
+@synthesize project;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

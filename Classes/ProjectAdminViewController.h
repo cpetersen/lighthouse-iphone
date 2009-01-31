@@ -7,19 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "lighthouseAppDelegate.h"
 #import "AddProjectViewController.h"
 #import "ShowProjectViewController.h"
 #import "Project.h"
-#import "lighthouseAppDelegate.h"
-
-@class TicketsViewController;
-@class ProjectAdminViewController;
-@class ShowProjectViewController;
 
 @interface ProjectAdminViewController : UITableViewController {
 	lighthouseAppDelegate *appDelegate;
 	AddProjectViewController *apvController;
 	ShowProjectViewController *spvController;
+	Project *project;
 	UINavigationController *addNavigationController;
 }
 

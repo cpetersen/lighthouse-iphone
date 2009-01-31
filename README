@@ -1,7 +1,7 @@
 TODO
 
 UPDATE TABLE VIEWS WHEN ADDING A PROJECT
-GETPROPERTY + SETPROPERTY (apiToken)
+UPDATE THE API TOKEN to view properly
 figure out webservices...
 
 DONE
@@ -9,3 +9,4 @@ DONE
 	- CHECK THAT THE FIRST PROJECT IS DISPLAYED (check array indexes)
 	- change + button to admin
 	- add api key screen
+	- GETPROPERTY + SETPROPERTY (apiToken)

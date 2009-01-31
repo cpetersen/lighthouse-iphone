@@ -34,5 +34,8 @@
 - (void) copyDatabaseIfNeeded;
 - (NSString *) getDBPath;
 
+- (NSString *) getProperty:(NSString *)name;
+- (void) setProperty:(NSString *)name value:(NSString *)newValue;
+
 @end
 

@@ -44,16 +44,20 @@ static sqlite3 *database = nil;
 }
 
 - (NSString *) getApiKey {
-	return @"thisisatest";
+	NSLog(@"getApiKey");
+	return [self getProperty:@"api_key"];
 }
 
 - (void) setApiKey:(NSString *)apiKey {
+	NSLog(@"setApiKey");
+	[self setProperty:@"api_key" value:apiKey];
 }
 
 - (NSString *) getProperty:(NSString *)name {
+	NSLog(@"getProperty");
 	NSString *value;
 	if (sqlite3_open([self.getDBPath UTF8String], &database) == SQLITE_OK) {
-		const char *sql = "select name, value from properties where name = ?";
+		const char *sql = "select value from properties where name = ?";
 		sqlite3_stmt *selectstmt;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
 			sqlite3_bind_text(selectstmt, 1, [name UTF8String], -1, SQLITE_TRANSIENT);
@@ -68,6 +72,7 @@ static sqlite3 *database = nil;
 }
 
 - (void) setProperty:(NSString *)name value:(NSString *)newValue {
+	NSLog(@"setProperty");
 	if (sqlite3_open([self.getDBPath UTF8String], &database) == SQLITE_OK) {
 		const char *sql_delete = "delete from properties where name = ?";
 		const char *sql_insert = "insert into properties (name, value) values (?,?)";
