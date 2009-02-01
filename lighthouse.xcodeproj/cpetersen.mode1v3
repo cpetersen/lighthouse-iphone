@@ -315,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>lighthouseAppDelegate.m</string>
+								<string>README</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>lighthouseAppDelegate.m</string>
+										<string>README</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B120FAC50F344E540009A4FD</string>
+										<string>B16DC2760F3633BA00C18DAB</string>
 										<key>history</key>
 										<array>
 											<string>B1CE82DC0F2C105A00AD82E1</string>
@@ -344,7 +344,6 @@
 											<string>B1A0BF1E0F32E7DA00B29116</string>
 											<string>B1A0BF1F0F32E7DA00B29116</string>
 											<string>B1A0BF200F32E7DA00B29116</string>
-											<string>B1A0BF340F336B9500B29116</string>
 											<string>B1A0BF460F33722600B29116</string>
 											<string>B1A040390F33CA710020271E</string>
 											<string>B18AD6BB0F342E230091A456</string>
@@ -360,7 +359,8 @@
 											<string>B120FABD0F344E220009A4FD</string>
 											<string>B120FAC10F344E540009A4FD</string>
 											<string>B120FAC20F344E540009A4FD</string>
-											<string>B120FAA60F344D460009A4FD</string>
+											<string>B120FACE0F344ED00009A4FD</string>
+											<string>B120FADF0F344F870009A4FD</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -393,69 +393,8 @@
 											<string>B1A0BE050F32872600B29116</string>
 											<string>B1A0BE0B0F32872600B29116</string>
 											<string>B1A0BE120F32872600B29116</string>
-											<string>B120F9F90F34387E0009A4FD</string>
-											<string>B120F9FA0F34387E0009A4FD</string>
-											<string>B120F9FB0F34387E0009A4FD</string>
-											<string>B120F9FC0F34387E0009A4FD</string>
-											<string>B120F9FD0F34387E0009A4FD</string>
-											<string>B120FA280F3445B80009A4FD</string>
-											<string>B120FA290F3445B80009A4FD</string>
-											<string>B120FA2A0F3445B80009A4FD</string>
-											<string>B120FA2B0F3445B80009A4FD</string>
-											<string>B120FA2C0F3445B80009A4FD</string>
-											<string>B120FA2D0F3445B80009A4FD</string>
 											<string>B120FA2E0F3445B80009A4FD</string>
-											<string>B120FA2F0F3445B80009A4FD</string>
-											<string>B120FA300F3445B80009A4FD</string>
-											<string>B120FA310F3445B80009A4FD</string>
-											<string>B120FA320F3445B80009A4FD</string>
-											<string>B120FA330F3445B80009A4FD</string>
-											<string>B120FA340F3445B80009A4FD</string>
-											<string>B120FA350F3445B80009A4FD</string>
-											<string>B120FA360F3445B80009A4FD</string>
-											<string>B120FA370F3445B80009A4FD</string>
-											<string>B120FA380F3445B80009A4FD</string>
-											<string>B120FA390F3445B80009A4FD</string>
-											<string>B120FA3A0F3445B80009A4FD</string>
-											<string>B120FA3B0F3445B80009A4FD</string>
-											<string>B120FA3C0F3445B80009A4FD</string>
-											<string>B120FA3D0F3445B80009A4FD</string>
-											<string>B120FA3E0F3445B80009A4FD</string>
-											<string>B120FA3F0F3445B80009A4FD</string>
-											<string>B120FA400F3445B80009A4FD</string>
-											<string>B120FA410F3445B80009A4FD</string>
-											<string>B120FA420F3445B80009A4FD</string>
-											<string>B120FA430F3445B80009A4FD</string>
-											<string>B120FA440F3445B80009A4FD</string>
 											<string>B120FA450F3445B80009A4FD</string>
-											<string>B120FA470F3445B80009A4FD</string>
-											<string>B120FA4A0F3445E60009A4FD</string>
-											<string>B120FA530F3446580009A4FD</string>
-											<string>B120FA810F344A180009A4FD</string>
-											<string>B120FA820F344A180009A4FD</string>
-											<string>B120FA830F344A180009A4FD</string>
-											<string>B120FA840F344A180009A4FD</string>
-											<string>B120FA850F344A180009A4FD</string>
-											<string>B120FA860F344A180009A4FD</string>
-											<string>B120FA870F344A180009A4FD</string>
-											<string>B120FA880F344A180009A4FD</string>
-											<string>B120FA890F344A180009A4FD</string>
-											<string>B120FAA30F344C8B0009A4FD</string>
-											<string>B120FAAB0F344D460009A4FD</string>
-											<string>B120FAAC0F344D460009A4FD</string>
-											<string>B120FAAD0F344D460009A4FD</string>
-											<string>B120FAAE0F344D460009A4FD</string>
-											<string>B120FAAF0F344D460009A4FD</string>
-											<string>B120FAB00F344D460009A4FD</string>
-											<string>B120FAB10F344D460009A4FD</string>
-											<string>B120FAB20F344D460009A4FD</string>
-											<string>B120FAB30F344D460009A4FD</string>
-											<string>B120FAB40F344D460009A4FD</string>
-											<string>B120FAB50F344D460009A4FD</string>
-											<string>B120FAB60F344D460009A4FD</string>
-											<string>B120FABE0F344E220009A4FD</string>
-											<string>B120FAC30F344E540009A4FD</string>
-											<string>B120FAC40F344E540009A4FD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -513,9 +452,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>B120F9BD0F3434F50009A4FD</string>
+				<string>B16DC26D0F36337800C18DAB</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>B120F9BE0F3434F50009A4FD</string>
+				<string>B16DC26E0F36337800C18DAB</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -649,13 +588,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>B120F9FF0F34387E0009A4FD</string>
-		<string>B120FA000F34387E0009A4FD</string>
-		<string>B19F69860F270C2D0001541B</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>/Users/cpetersen/Code/iphone/lighthouse/lighthouse.xcodeproj</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>B19F69860F270C2D0001541B</string>
+		<string>/Users/cpetersen/Code/iphone/Lighthouse/lighthouse.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1 59 1280 719 0 0 1280 778 </string>
@@ -679,7 +615,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ProjectAdminViewController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -696,8 +632,6 @@
 							<string>206pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -737,7 +671,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>B19F69860F270C2D0001541B</string>
-				<string>B120F9F10F34387B0009A4FD</string>
+				<string>B16DC26F0F36337800C18DAB</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -857,13 +791,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>B120F9BF0F3434F50009A4FD</string>
+				<string>B16DC2770F3633BA00C18DAB</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>B120F9C00F3434F50009A4FD</string>
-				<string>B120F9C10F3434F50009A4FD</string>
-				<string>B120F9C20F3434F50009A4FD</string>
-				<string>B120F9C30F3434F50009A4FD</string>
-				<string>B120F9C40F3434F50009A4FD</string>
+				<string>B16DC2780F3633BA00C18DAB</string>
+				<string>B16DC2790F3633BA00C18DAB</string>
+				<string>B16DC27A0F3633BA00C18DAB</string>
+				<string>B16DC27B0F3633BA00C18DAB</string>
+				<string>B16DC27C0F3633BA00C18DAB</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -982,8 +916,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1019,7 +951,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>B120F9F20F34387B0009A4FD</string>
+				<string>B16DC27D0F3633BA00C18DAB</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -1029,7 +961,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
