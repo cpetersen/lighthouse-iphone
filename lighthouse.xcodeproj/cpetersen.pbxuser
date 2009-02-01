@@ -45,7 +45,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = B19F69540F26FCD20001541B /* lighthouse */;
-		activeSDKPreference = iphonesimulator2.2.1;
+		activeSDKPreference = iphoneos2.2.1;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* lighthouse */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* lighthouse */,
@@ -141,8 +141,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 255211117;
-			PBXWorkspaceStateSaveDate = 255211117;
+			PBXPerProjectTemplateStateSaveDate = 255211271;
+			PBXWorkspaceStateSaveDate = 255211271;
 		};
 		perUserProjectItems = {
 			B120F9F30F34387E0009A4FD = B120F9F30F34387E0009A4FD /* PBXBookmark */;
@@ -208,6 +208,8 @@
 			B1E1741D0F2E71B400EE28C1 = B1E1741D0F2E71B400EE28C1 /* PBXTextBookmark */;
 			B1E174CF0F2E87EF00EE28C1 = B1E174CF0F2E87EF00EE28C1 /* PBXTextBookmark */;
 			B1E175250F2EE53100EE28C1 = B1E175250F2EE53100EE28C1 /* PBXTextBookmark */;
+			B1FCBE9E0F36385C002AE255 /* PBXTextBookmark */ = B1FCBE9E0F36385C002AE255 /* PBXTextBookmark */;
+			B1FCBEA90F36396A002AE255 /* PBXTextBookmark */ = B1FCBEA90F36396A002AE255 /* PBXTextBookmark */;
 		};
 		sourceControlManager = B19F69570F26FCF10001541B /* Source Control */;
 		userBuildSettings = {
@@ -390,7 +392,7 @@
 		fRef = B1A0BD3F0F319A1E00B29116 /* README */;
 		name = "README: 4";
 		rLen = 0;
-		rLoc = 84;
+		rLoc = 174;
 		rType = 0;
 		vrLen = 323;
 		vrLoc = 0;
@@ -468,7 +470,7 @@
 		fRef = B1A0BD3F0F319A1E00B29116 /* README */;
 		name = "README: 15";
 		rLen = 0;
-		rLoc = 325;
+		rLoc = 389;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 0;
@@ -610,8 +612,8 @@
 	B1A0BD3F0F319A1E00B29116 /* README */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {957, 475}}";
-			sepNavSelRange = "{325, 0}";
-			sepNavVisRange = "{0, 325}";
+			sepNavSelRange = "{62, 0}";
+			sepNavVisRange = "{0, 389}";
 		};
 	};
 	B1A0BD620F319C1400B29116 /* PBXTextBookmark */ = {
@@ -619,7 +621,7 @@
 		fRef = B1A0BD3F0F319A1E00B29116 /* README */;
 		name = "README: 6";
 		rLen = 0;
-		rLoc = 325;
+		rLoc = 389;
 		rType = 0;
 		vrLen = 119;
 		vrLoc = 0;
@@ -969,5 +971,25 @@
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 625;
+	};
+	B1FCBE9E0F36385C002AE255 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1A0BD3F0F319A1E00B29116 /* README */;
+		name = "README: 15";
+		rLen = 0;
+		rLoc = 389;
+		rType = 0;
+		vrLen = 325;
+		vrLoc = 0;
+	};
+	B1FCBEA90F36396A002AE255 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1A0BD3F0F319A1E00B29116 /* README */;
+		name = "README: 4";
+		rLen = 0;
+		rLoc = 62;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 0;
 	};
 }

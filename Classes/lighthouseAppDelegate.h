@@ -9,18 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @class Project;
+@class Ticket;
 
 @interface lighthouseAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     UINavigationController *navigationController;
 
 	NSMutableArray *projectArray;
+	NSMutableArray *ticketsArray;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
+@property (nonatomic, retain) NSMutableArray *ticketsArray;
 
 //-(void) 
 
