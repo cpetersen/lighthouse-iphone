@@ -20,6 +20,7 @@
 	[tempArray release];
 	
 	NAME_FLAG = NO;
+	ID_FLAG = NO;
 	
 	return self;
 }
@@ -30,6 +31,8 @@
 		aProject = [[Project alloc] init];
 	} else if([elementName isEqualToString:@"name"]) {
 		NAME_FLAG = YES;
+	} else if([elementName isEqualToString:@"id"]) {
+		ID_FLAG = YES;
 	}
 }
 
@@ -37,6 +40,9 @@
 	if(NAME_FLAG) {
 		aProject.projectName = string;
 		NAME_FLAG = NO;
+	} else if(ID_FLAG) {
+		aProject.projectID = [string intValue];
+		ID_FLAG = NO;
 	}
 }
 

@@ -17,7 +17,7 @@
 	NSMutableArray *ticketArray;
 }
 
-@property (nonatomic, readonly) NSInteger projectID;
+@property (nonatomic) NSInteger projectID;
 @property (nonatomic, copy) NSString *projectName;
 
 @property (nonatomic, retain) NSMutableArray *projectArray;

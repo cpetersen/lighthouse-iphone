@@ -228,8 +228,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -278,7 +276,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
+									<integer>29</integer>
+									<integer>22</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -313,12 +312,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TicketsViewController.m</string>
+								<string>Project.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TicketsViewController.m</string>
+										<string>Project.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B1FCBFE50F36DC16002AE255</string>
+										<string>B1FCC01D0F36EE47002AE255</string>
 										<key>history</key>
 										<array>
 											<string>B1CE82DC0F2C105A00AD82E1</string>
@@ -363,11 +364,12 @@
 											<string>B1FCBF710F36CD21002AE255</string>
 											<string>B1FCBF720F36CD21002AE255</string>
 											<string>B1FCBFA70F36D1DC002AE255</string>
-											<string>B1FCBFB00F36D223002AE255</string>
-											<string>B1FCBFBD0F36D5CB002AE255</string>
-											<string>B1FCBFBE0F36D5CB002AE255</string>
-											<string>B1FCBFD90F36DB82002AE255</string>
-											<string>B1A0BF1E0F32E7DA00B29116</string>
+											<string>B1FCBFE60F36E9C0002AE255</string>
+											<string>B1FCBFE70F36E9C0002AE255</string>
+											<string>B1FCC0030F36ED39002AE255</string>
+											<string>B1FCC0050F36ED39002AE255</string>
+											<string>B1FCC0190F36EE17002AE255</string>
+											<string>B1FCC01A0F36EE17002AE255</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -407,6 +409,19 @@
 											<string>B1FCBEFE0F36BE5C002AE255</string>
 											<string>B1FCBF000F36BE5C002AE255</string>
 											<string>B1FCBFDA0F36DB82002AE255</string>
+											<string>B1FCBFEA0F36E9C0002AE255</string>
+											<string>B1FCBFEB0F36E9C0002AE255</string>
+											<string>B1FCBFEC0F36E9C0002AE255</string>
+											<string>B1FCBFED0F36E9C0002AE255</string>
+											<string>B1FCC0070F36ED39002AE255</string>
+											<string>B1FCC0080F36ED39002AE255</string>
+											<string>B1FCC0090F36ED39002AE255</string>
+											<string>B1FCC00A0F36ED39002AE255</string>
+											<string>B1FCC00B0F36ED39002AE255</string>
+											<string>B1FCC00C0F36ED39002AE255</string>
+											<string>B1FCC00D0F36ED39002AE255</string>
+											<string>B1FCC00E0F36ED39002AE255</string>
+											<string>B1FCC01B0F36EE17002AE255</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -600,6 +615,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>B19F69860F270C2D0001541B</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -836,14 +852,12 @@
 							<key>Dock</key>
 							<array>
 								<dict>
-									<key>BecomeActive</key>
-									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.h</string>
+										<string></string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -864,6 +878,8 @@
 							<string>333pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -899,8 +915,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>B120FA1E0F3445B60009A4FD</string>
-				<string>B120FA1F0F3445B60009A4FD</string>
+				<string>B1FCBFF10F36EC88002AE255</string>
+				<string>B1FCBFF20F36EC88002AE255</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>
