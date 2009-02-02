@@ -17,8 +17,6 @@
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		B12D63B20F303B5A00BDF814 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D63B10F303B5A00BDF814 /* Ticket.m */; };
 		B12D648F0F3101C900BDF814 /* ProjectAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */; };
-		B12D650E0F316CE100BDF814 /* ProjectAdminView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */; };
-		B1A0BC850F3177EB00B29116 /* ShowProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */; };
 		B1A0BC8D0F31780900B29116 /* ShowProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */; };
 		B1A0BDE50F3282F500B29116 /* ApiKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */; };
 		B1A0BDE90F32845B00B29116 /* ApiKeyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */; };
@@ -38,6 +36,8 @@
 		B1FCBEB90F363CD2002AE255 /* TicketXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBEB80F363CD2002AE255 /* TicketXMLParser.m */; };
 		B1FCBEBE0F36441B002AE255 /* ProjectXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBEBD0F36441B002AE255 /* ProjectXMLParser.m */; };
 		B1FCBFD80F36DB79002AE255 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = B1FCBFD70F36DB79002AE255 /* README.markdown */; };
+		B1FCBFDE0F36DBFD002AE255 /* ProjectAdminView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FCBFDD0F36DBFD002AE255 /* ProjectAdminView.xib */; };
+		B1FCBFE00F36DC06002AE255 /* ShowProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FCBFDF0F36DC06002AE255 /* ShowProjectView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +59,6 @@
 		B12D63B10F303B5A00BDF814 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectAdminViewController.m; path = Classes/ProjectAdminViewController.m; sourceTree = "<group>"; };
 		B12D64F80F316B0200BDF814 /* AddProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddProjectViewController.h; path = Classes/AddProjectViewController.h; sourceTree = "<group>"; };
-		B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectAdminView.xib; path = Classes/ProjectAdminView.xib; sourceTree = "<group>"; };
-		B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ShowProjectView.xib; path = Classes/ShowProjectView.xib; sourceTree = "<group>"; };
 		B1A0BC8B0F31780900B29116 /* ShowProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowProjectViewController.h; path = Classes/ShowProjectViewController.h; sourceTree = "<group>"; };
 		B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowProjectViewController.m; path = Classes/ShowProjectViewController.m; sourceTree = "<group>"; };
 		B1A0BDE30F3282F500B29116 /* ApiKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiKeyViewController.h; path = Classes/ApiKeyViewController.h; sourceTree = "<group>"; };
@@ -86,6 +84,8 @@
 		B1FCBEBC0F36441B002AE255 /* ProjectXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectXMLParser.h; sourceTree = "<group>"; };
 		B1FCBEBD0F36441B002AE255 /* ProjectXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectXMLParser.m; sourceTree = "<group>"; };
 		B1FCBFD70F36DB79002AE255 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		B1FCBFDD0F36DBFD002AE255 /* ProjectAdminView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectAdminView.xib; sourceTree = "<group>"; };
+		B1FCBFDF0F36DC06002AE255 /* ShowProjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowProjectView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,12 +181,12 @@
 		B11F742B0F34083C001D4AE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1FCBFDF0F36DC06002AE255 /* ShowProjectView.xib */,
+				B1FCBFDD0F36DBFD002AE255 /* ProjectAdminView.xib */,
 				B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */,
 				B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
-				B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */,
 				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
 			);
 			name = Views;
@@ -270,11 +270,11 @@
 				B1CE817D0F2B18FF00AD82E1 /* star_blue.png in Resources */,
 				B1CE81F10F2BDF0A00AD82E1 /* AddProjectView.xib in Resources */,
 				B1E170640F2C537C00EE28C1 /* lighthouse.1.sqlite in Resources */,
-				B12D650E0F316CE100BDF814 /* ProjectAdminView.xib in Resources */,
-				B1A0BC850F3177EB00B29116 /* ShowProjectView.xib in Resources */,
 				B1A0BDE90F32845B00B29116 /* ApiKeyView.xib in Resources */,
 				B1A0BDEE0F32850D00B29116 /* api_screenshot.png in Resources */,
 				B1FCBFD80F36DB79002AE255 /* README.markdown in Resources */,
+				B1FCBFDE0F36DBFD002AE255 /* ProjectAdminView.xib in Resources */,
+				B1FCBFE00F36DC06002AE255 /* ShowProjectView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
