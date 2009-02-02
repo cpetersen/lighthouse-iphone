@@ -7,23 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class Project;
-@class Ticket;
+#import "ProjectXMLParser.h"
+#import "Project.h"
+#import "Ticket.h"
 
 @interface lighthouseAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     UINavigationController *navigationController;
 
 	NSMutableArray *projectArray;
-	NSMutableArray *ticketsArray;
+//	NSMutableArray *ticketsArray;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
-@property (nonatomic, retain) NSMutableArray *ticketsArray;
+//@property (nonatomic, retain) NSMutableArray *ticketsArray;
 
 //-(void) 
 

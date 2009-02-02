@@ -52,19 +52,27 @@ static sqlite3_stmt *deleteStmt = nil;
 	if(insertStmt) sqlite3_finalize(insertStmt);
 }
 
-- (void) loadSubProjects {
-	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-	self.projectArray = tempArray;
-	[tempArray release];
-
+- (void) loadSubProjects {	
+	/****** XML WORK ******/
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects.xml?_token=%@", projectName, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	[urlString release];
+	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+	//Initialize the delegate.
+	ProjectXMLParser *parser = [[ProjectXMLParser alloc] initXMLParser:self];
+	//Set delegate
+	[xmlParser setDelegate:parser];
+	//Start parsing the XML file.
+	BOOL success = [xmlParser parse];
 	
+	if(!success) {
+		NSLog(@"Parsing Error!!!");
+	}
 	
-	
-	
-	Project *projectObj = [[Project alloc] initWithPrimaryKey:18618];
-	projectObj.projectName = @"assayrepo";
-	[self.projectArray addObject:projectObj];
-	[projectObj release];
+//	Project *projectObj = [[Project alloc] initWithPrimaryKey:18618];
+//	projectObj.projectName = @"assayrepo";
+//	[self.projectArray addObject:projectObj];
+//	[projectObj release];
 }
 
 - (void) insertProject {

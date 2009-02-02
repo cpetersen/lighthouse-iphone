@@ -165,7 +165,7 @@
 	//cell.font = [UIFont systemFontOfSize:14];
 	if([appDelegate.projectArray objectAtIndex:indexPath.section]) {
 		if([[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row]) {
-			cell.text = [[appDelegate.projectArray objectAtIndex:indexPath.row] projectName];
+			cell.text = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
 		} else {
 			cell.text = @"ROW IS NULL";
 		}
@@ -182,7 +182,7 @@
 	if(tvController == nil) {
 		//Initialize the controller.
 		TicketsViewController *aController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-		aController.title = [NSString stringWithFormat:@"%@", [[appDelegate.projectArray objectAtIndex:indexPath.row] projectName]];
+		aController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
 
 		//Set the controller to our variable.
 		self.tvController = aController;

@@ -20,10 +20,11 @@ static sqlite3 *database = nil;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	//Copy database to the user's phone if needed.
+	/****** DATABASE WORK ******/
 	[self copyDatabaseIfNeeded];
-	
 	[self reloadProjectArray];
-	
+
+	/****** UI WORK ******/
 	// Configure and show the window
 	[window addSubview:[navigationController view]];
 	[window makeKeyAndVisible];
