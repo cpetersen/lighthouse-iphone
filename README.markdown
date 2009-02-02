@@ -1,17 +1,23 @@
-= TODO
- * figure out webservices...
- * figure out tab bar...
- * figure out threads...
+# TODO
+* figure out tab bar...
+* figure out search bar...
+* figure out threads...
+* get tickets
+* get milestones
+* get changesets
+* get messages
 
-= BUGS
- * UPDATE TABLE VIEWS WHEN ADDING A PROJECT
- * UPDATE THE API TOKEN to view properly
 
-= DONE
- * HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD
- * CHECK THAT THE FIRST PROJECT IS DISPLAYED (check array indexes)
- * change + button to admin
- * add api key screen
- * GETPROPERTY + SETPROPERTY (apiToken)
+# BUGS
+* UPDATE TABLE VIEWS WHEN ADDING A PROJECT
+* UPDATE THE API TOKEN to view properly
+
+# DONE
+* HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD
+* CHECK THAT THE FIRST PROJECT IS DISPLAYED (check array indexes)
+* change + button to admin
+* add api key screen
+* GETPROPERTY + SETPROPERTY (apiToken)
+* figure out webservices...
 
 
