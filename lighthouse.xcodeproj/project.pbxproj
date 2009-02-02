@@ -20,7 +20,6 @@
 		B12D650E0F316CE100BDF814 /* ProjectAdminView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12D650D0F316CE100BDF814 /* ProjectAdminView.xib */; };
 		B1A0BC850F3177EB00B29116 /* ShowProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */; };
 		B1A0BC8D0F31780900B29116 /* ShowProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */; };
-		B1A0BD400F319A1E00B29116 /* README in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BD3F0F319A1E00B29116 /* README */; };
 		B1A0BDE50F3282F500B29116 /* ApiKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */; };
 		B1A0BDE90F32845B00B29116 /* ApiKeyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */; };
 		B1A0BDEE0F32850D00B29116 /* api_screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = B1A0BDED0F32850D00B29116 /* api_screenshot.png */; };
@@ -38,6 +37,7 @@
 		B1E171390F2D1FF300EE28C1 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E171380F2D1FF300EE28C1 /* libsqlite3.0.dylib */; };
 		B1FCBEB90F363CD2002AE255 /* TicketXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBEB80F363CD2002AE255 /* TicketXMLParser.m */; };
 		B1FCBEBE0F36441B002AE255 /* ProjectXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBEBD0F36441B002AE255 /* ProjectXMLParser.m */; };
+		B1FCBFD80F36DB79002AE255 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = B1FCBFD70F36DB79002AE255 /* README.markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +63,6 @@
 		B1A0BC840F3177EB00B29116 /* ShowProjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ShowProjectView.xib; path = Classes/ShowProjectView.xib; sourceTree = "<group>"; };
 		B1A0BC8B0F31780900B29116 /* ShowProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowProjectViewController.h; path = Classes/ShowProjectViewController.h; sourceTree = "<group>"; };
 		B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowProjectViewController.m; path = Classes/ShowProjectViewController.m; sourceTree = "<group>"; };
-		B1A0BD3F0F319A1E00B29116 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		B1A0BDE30F3282F500B29116 /* ApiKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiKeyViewController.h; path = Classes/ApiKeyViewController.h; sourceTree = "<group>"; };
 		B1A0BDE40F3282F500B29116 /* ApiKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApiKeyViewController.m; path = Classes/ApiKeyViewController.m; sourceTree = "<group>"; };
 		B1A0BDE80F32845B00B29116 /* ApiKeyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiKeyView.xib; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		B1FCBEB80F363CD2002AE255 /* TicketXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketXMLParser.m; sourceTree = "<group>"; };
 		B1FCBEBC0F36441B002AE255 /* ProjectXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectXMLParser.h; sourceTree = "<group>"; };
 		B1FCBEBD0F36441B002AE255 /* ProjectXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectXMLParser.m; sourceTree = "<group>"; };
+		B1FCBFD70F36DB79002AE255 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				B1A0BD3F0F319A1E00B29116 /* README */,
+				B1FCBFD70F36DB79002AE255 /* README.markdown */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -272,9 +272,9 @@
 				B1E170640F2C537C00EE28C1 /* lighthouse.1.sqlite in Resources */,
 				B12D650E0F316CE100BDF814 /* ProjectAdminView.xib in Resources */,
 				B1A0BC850F3177EB00B29116 /* ShowProjectView.xib in Resources */,
-				B1A0BD400F319A1E00B29116 /* README in Resources */,
 				B1A0BDE90F32845B00B29116 /* ApiKeyView.xib in Resources */,
 				B1A0BDEE0F32850D00B29116 /* api_screenshot.png in Resources */,
+				B1FCBFD80F36DB79002AE255 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
