@@ -36,7 +36,7 @@ static sqlite3_stmt *deleteStmt = nil;
 				Project *projectObj = [[Project alloc] initWithPrimaryKey:projectID];
 				projectObj.projectName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
 				
-				[projectObj loadSubProjects];
+//				[projectObj loadSubProjects];
 				[appDelegate.projectArray addObject:projectObj];
 				[projectObj release];
 			}

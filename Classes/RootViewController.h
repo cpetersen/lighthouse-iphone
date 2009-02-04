@@ -22,4 +22,6 @@
 
 @property (nonatomic, retain) TicketsViewController *tvController;
 
+-(void)loadProject:(Project *)project;
+
 @end

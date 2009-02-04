@@ -17,20 +17,8 @@
     [super viewDidLoad];
 
 	appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
-	/*** XML PARSING STUFF
-	NSURL *url;
-	NSXMLParser *xmlParser;
-	
-	url = [[NSURL alloc] initWithString:@"http://assaydepot.lighthouseapp.com/projects.xml?_token=b6866f005646d1b8be2bece7e500f52c9f90ba37"];
-	xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-	[xmlParser setDelegate:self];
 
-	success = [xmlParser parse];
-
-	[xmlParser release];
-	[url release];
-	*/
+	[appDelegate reloadProjectArray];
 
 	//Adding a bar button item to the right side.
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
@@ -39,7 +27,23 @@
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
 											initWithTitle:@"API Token" style:UIBarButtonItemStyleBordered
 											target:self action:@selector(tokenClicked:)];
+
+	for(int i=0; i < [[appDelegate projectArray] count]; i++) {
+		[NSThread detachNewThreadSelector:@selector(loadProject:) toTarget:self withObject:[[appDelegate projectArray] objectAtIndex:i]];
+	}
 }
+
+-(void)loadProject:(Project *)project {
+	if(project) {
+		//NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+		//	[activityView startAnimating];
+		[project loadSubProjects]; 
+		[[self tableView] reloadData];
+		//	[activityView stopAnimating];
+		//[pool release];
+	}		
+}
+
 -(void)adminClicked:(id)sender {
 	//Load the view
 	if(pavController == nil) {
@@ -48,15 +52,10 @@
 	//Set the view title
 	pavController.title = @"Accounts";
 
-//	if(addNavigationController == nil) {
-//		addNavigationController = [[UINavigationController alloc] initWithRootViewController:pavController];
-//	}
-	
 	//add it to stack.
 	[[self navigationController] pushViewController:pavController animated:YES];
-	//[[self navigationController] presentModalViewController:addNavigationController animated:YES];
-	//[self.tableView reloadData];
 }
+
 -(void)tokenClicked:(id)sender {
 	//Load the view
 	ApiKeyViewController *akvController = [[ApiKeyViewController alloc] initWithNibName:@"ApiKeyView" bundle:nil];

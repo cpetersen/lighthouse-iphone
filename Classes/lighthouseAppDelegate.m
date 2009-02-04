@@ -22,7 +22,6 @@ static sqlite3 *database = nil;
 	//Copy database to the user's phone if needed.
 	/****** DATABASE WORK ******/
 	[self copyDatabaseIfNeeded];
-	[self reloadProjectArray];
 
 	/****** UI WORK ******/
 	// Configure and show the window
