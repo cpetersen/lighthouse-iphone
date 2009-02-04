@@ -11,8 +11,6 @@
 
 @implementation RootViewController
 
-@synthesize tvController;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -177,21 +175,15 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	//Check to see if the controller is nil or not.
-	if(tvController == nil) {
-		//Initialize the controller.
-		TicketsViewController *aController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-		aController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
-
-		//Set the controller to our variable.
-		self.tvController = aController;
-		
-		//Release the temp controller
-		[aController release];
-	}
+	//Initialize the controller.
+	TicketsViewController *aController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+	aController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
 
 	//Add the controller to the top of the present view.
-	[[self navigationController] pushViewController:tvController animated:YES];
+	[[self navigationController] pushViewController:aController animated:YES];
+
+	//Release the temp controller
+	[aController release];
 }
 
 
@@ -225,7 +217,6 @@
 - (void)dealloc {
 	[pavController release];
 	[addNavigationController release];
-	[tvController release];
     [super dealloc];
 }
 

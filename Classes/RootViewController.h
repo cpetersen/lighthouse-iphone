@@ -16,11 +16,8 @@
 @interface RootViewController : UITableViewController {
 	lighthouseAppDelegate *appDelegate;
 	ProjectAdminViewController *pavController;
-	TicketsViewController *tvController;
 	UINavigationController *addNavigationController;
 }
-
-@property (nonatomic, retain) TicketsViewController *tvController;
 
 -(void)loadProject:(Project *)project;
 
