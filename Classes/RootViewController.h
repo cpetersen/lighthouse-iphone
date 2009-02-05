@@ -19,6 +19,4 @@
 	UINavigationController *addNavigationController;
 }
 
--(void)loadProject:(Project *)project;
-
 @end

@@ -14,6 +14,7 @@
 	NSString *projectName;
 
 	NSMutableArray *projectArray;
+	NSMutableArray *milestonesArray;
 	NSMutableArray *ticketArray;
 }
 
@@ -21,6 +22,7 @@
 @property (nonatomic, copy) NSString *projectName;
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
+@property (nonatomic, retain) NSMutableArray *milestonesArray;
 @property (nonatomic, retain) NSMutableArray *ticketArray;
 
 //Static methods.
@@ -28,6 +30,8 @@
 + (void) finalizeStatements;
 
 //Instance methods.
+- (void) loadMilestones;
+
 - (void) loadSubProjects;
 - (void) insertProject;
 - (void) deleteProject;

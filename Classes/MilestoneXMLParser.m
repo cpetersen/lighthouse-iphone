@@ -1,0 +1,63 @@
+//
+//  MilestoneXMLParser.m
+//  lighthouse
+//
+//  Created by Christopher Petersen on 2/4/09.
+//  Copyright 2009 Assay Depot. All rights reserved.
+//
+
+#import "MilestoneXMLParser.h"
+
+
+@implementation MilestoneXMLParser
+
+@synthesize project;
+
+- (MilestoneXMLParser *) initXMLParser:(Project *)my_project {
+	[super init];
+	self.project = my_project;
+	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+	self.project.milestonesArray = tempArray;
+	[tempArray release];
+	
+	NAME_FLAG = NO;
+	ID_FLAG = NO;
+	
+	return self;
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
+	if([elementName isEqualToString:@"milestone"]) {
+		//Initialize the book.
+		aMilestone = [[Milestone alloc] init];
+	} else if([elementName isEqualToString:@"title"]) {
+		NAME_FLAG = YES;
+	} else if([elementName isEqualToString:@"id"]) {
+		ID_FLAG = YES;
+	}
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+	if(NAME_FLAG) {
+		aMilestone.milestoneName = string;
+		NAME_FLAG = NO;
+	} else if(ID_FLAG) {
+		aMilestone.milestoneID = [string intValue];
+		ID_FLAG = NO;
+	}
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+	if([elementName isEqualToString:@"milsestone"]) {
+		[self.project.milestonesArray addObject:aMilestone];
+		[aMilestone release];
+	}
+}
+
+- (void) dealloc {
+	[project release];
+	[super dealloc];
+}
+
+@end
+

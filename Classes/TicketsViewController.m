@@ -11,6 +11,8 @@
 
 @implementation TicketsViewController
 
+@synthesize project, milestonesArray;
+
 //@synthesize viewTitle;
 
 /*
@@ -29,12 +31,20 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	self.title = [[self project] projectName];
 }
-*/
+
+-(void)loadMilestones:(id)sender {
+	if(project) {
+		[project loadSubProjects]; 
+		[[self tableView] reloadData];
+	}		
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -51,6 +61,8 @@
 
 
 - (void)dealloc {
+    [project release];
+    [milestonesArray release];
     [super dealloc];
 }
 

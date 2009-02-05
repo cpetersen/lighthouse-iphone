@@ -26,20 +26,17 @@
 											initWithTitle:@"API Token" style:UIBarButtonItemStyleBordered
 											target:self action:@selector(tokenClicked:)];
 
-	for(int i=0; i < [[appDelegate projectArray] count]; i++) {
-		[NSThread detachNewThreadSelector:@selector(loadProject:) toTarget:self withObject:[[appDelegate projectArray] objectAtIndex:i]];
-	}
+	[NSThread detachNewThreadSelector:@selector(loadProjects:) toTarget:self withObject:nil];
 }
 
--(void)loadProject:(Project *)project {
-	if(project) {
-		//NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-		//	[activityView startAnimating];
+-(void)loadProjects:(Project *)project {
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	for(int i=0; i < [[appDelegate projectArray] count]; i++) {
+		Project *project = [[appDelegate projectArray] objectAtIndex:i];
 		[project loadSubProjects]; 
-		[[self tableView] reloadData];
-		//	[activityView stopAnimating];
-		//[pool release];
-	}		
+	}
+	[[self tableView] reloadData];
+	[pool release];
 }
 
 -(void)adminClicked:(id)sender {
@@ -177,7 +174,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	//Initialize the controller.
 	TicketsViewController *aController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-	aController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
+	//aController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
+	aController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 
 	//Add the controller to the top of the present view.
 	[[self navigationController] pushViewController:aController animated:YES];

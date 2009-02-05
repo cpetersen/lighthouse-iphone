@@ -1,18 +1,18 @@
 //
-//  NSProjectXMLParser.h
+//  MilestoneXMLParser.h
 //  lighthouse
 //
-//  Created by Christopher Petersen on 2/1/09.
+//  Created by Christopher Petersen on 2/4/09.
 //  Copyright 2009 Assay Depot. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "lighthouseAppDelegate.h"
+#import "Milestone.h"
 #import "Project.h"
 
-@interface ProjectXMLParser : NSObject {
+@interface MilestoneXMLParser : NSObject {
 	Project *project;
-	Project *aProject;
+	Milestone *aMilestone;
 	NSMutableString *currentElementValue;
 	BOOL NAME_FLAG;
 	BOOL ID_FLAG;
@@ -20,6 +20,6 @@
 
 @property (nonatomic, retain) Project *project;
 
-- (ProjectXMLParser *) initXMLParser:(Project *)my_project;
+- (MilestoneXMLParser *) initXMLParser:(Project *)my_project;
 
 @end

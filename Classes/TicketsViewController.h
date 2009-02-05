@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Project.h"
 
 @interface TicketsViewController : UIViewController {
-//	NSString *viewTitle;
+
+	Project *project;
+	NSMutableArray *milestonesArray;
+
 }
 
-//@property (nonatomic, retain) NSString *viewTitle;
+@property (nonatomic, retain) Project *project;
+@property (nonatomic, retain) NSMutableArray *milestonesArray;
 
 @end

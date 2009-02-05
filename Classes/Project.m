@@ -22,6 +22,7 @@ static sqlite3_stmt *deleteStmt = nil;
 
 @synthesize projectID, projectName;
 @synthesize projectArray;
+@synthesize milestonesArray;
 @synthesize ticketArray;
 
 + (void) loadProjects:(NSString *)dbPath {
@@ -50,6 +51,9 @@ static sqlite3_stmt *deleteStmt = nil;
 	if(database) sqlite3_close(database);
 	if(deleteStmt) sqlite3_finalize(deleteStmt);
 	if(insertStmt) sqlite3_finalize(insertStmt);
+}
+
+- (void) loadMilestones {	
 }
 
 - (void) loadSubProjects {	
@@ -120,6 +124,7 @@ static sqlite3_stmt *deleteStmt = nil;
 - (void) dealloc {
 	[projectName release];
 	[projectArray release];
+	[milestonesArray release];
 	[ticketArray release];
 	[super dealloc];
 }
