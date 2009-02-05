@@ -11,10 +11,10 @@
 
 @interface Milestone : NSObject {
 	NSInteger milestoneID;
-	NSString *milestoneName;
+	NSString *milestoneTitle;
 }
 
 @property (nonatomic) NSInteger milestoneID;
-@property (nonatomic, copy) NSString *milestoneName;
+@property (nonatomic, copy) NSString *milestoneTitle;
 
 @end

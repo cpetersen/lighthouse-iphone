@@ -10,13 +10,13 @@
 
 
 @interface Ticket : NSObject {
-	NSInteger ticketID;
-	NSString *ticketName;
+	NSInteger ticketNumber;
+	NSString *ticketTitle;
 	NSString *ticketDescription;
 }
 
-@property (nonatomic, readonly) NSInteger ticketID;
-@property (nonatomic, copy) NSString *ticketName;
+@property (nonatomic) NSInteger ticketNumber;
+@property (nonatomic, copy) NSString *ticketTitle;
 @property (nonatomic, copy) NSString *ticketDescription;
 
 @end

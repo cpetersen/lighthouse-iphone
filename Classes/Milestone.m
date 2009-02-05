@@ -11,10 +11,10 @@
 
 @implementation Milestone
 
-@synthesize milestoneID, milestoneName;
+@synthesize milestoneID, milestoneTitle;
 
 - (void) dealloc {
-	[milestoneName release];
+	[milestoneTitle release];
 	[super dealloc];
 }
 

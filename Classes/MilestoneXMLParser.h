@@ -14,7 +14,7 @@
 	Project *project;
 	Milestone *aMilestone;
 	NSMutableString *currentElementValue;
-	BOOL NAME_FLAG;
+	BOOL TITLE_FLAG;
 	BOOL ID_FLAG;
 }
 

@@ -20,7 +20,7 @@
 	self.project.milestonesArray = tempArray;
 	[tempArray release];
 	
-	NAME_FLAG = NO;
+	TITLE_FLAG = NO;
 	ID_FLAG = NO;
 	
 	return self;
@@ -31,16 +31,16 @@
 		//Initialize the book.
 		aMilestone = [[Milestone alloc] init];
 	} else if([elementName isEqualToString:@"title"]) {
-		NAME_FLAG = YES;
+		TITLE_FLAG = YES;
 	} else if([elementName isEqualToString:@"id"]) {
 		ID_FLAG = YES;
 	}
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-	if(NAME_FLAG) {
-		aMilestone.milestoneName = string;
-		NAME_FLAG = NO;
+	if(TITLE_FLAG) {
+		aMilestone.milestoneTitle = string;
+		TITLE_FLAG = NO;
 	} else if(ID_FLAG) {
 		aMilestone.milestoneID = [string intValue];
 		ID_FLAG = NO;

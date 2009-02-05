@@ -8,15 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "Ticket.h"
+#import "Project.h"
 #import "lighthouseAppDelegate.h"
 
 @interface TicketXMLParser : NSObject {
-	NSMutableString *currentElementValue;
-	
-	lighthouseAppDelegate *appDelegate;
+	Project *project;
 	Ticket *aTicket;
+	NSMutableString *currentElementValue;
+	BOOL TITLE_FLAG;
+	BOOL NUMBER_FLAG;
 }
 
-- (TicketXMLParser *) initXMLParser;
+@property (nonatomic, retain) Project *project;
+
+- (TicketXMLParser *) initXMLParser:(Project *)my_project;
 
 @end
