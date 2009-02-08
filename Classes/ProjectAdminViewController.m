@@ -65,7 +65,7 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ProjectAdminView";
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -76,6 +76,7 @@
 	//cell.font = [UIFont systemFontOfSize:14];
 	if([appDelegate.projectArray objectAtIndex:indexPath.row]) {
 		cell.text = [[appDelegate.projectArray objectAtIndex:indexPath.row] projectName];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	} else {
 		cell.text = @"ROW IS NULL";
 	}

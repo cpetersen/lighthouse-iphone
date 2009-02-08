@@ -148,7 +148,7 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"RootView";
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -160,6 +160,7 @@
 	if([appDelegate.projectArray objectAtIndex:indexPath.section]) {
 		if([[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row]) {
 			cell.text = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		} else {
 			cell.text = @"ROW IS NULL";
 		}
@@ -173,15 +174,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	//Initialize the controller.
-	TicketsViewController *aController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-	//aController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
-	aController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+	//ProjectDetailTabViewController *aController = [[ProjectDetailTabViewController alloc] initWithNibName:@"ProjectDetailTabView" bundle:nil];
+	//ProjectDetailTabViewController *aController = [ProjectDetailTabViewController alloc];
+	UITabBarController *tabBarController = [[UITabBarController alloc] init];
+	
+	TicketsViewController *tvController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+	UIViewController *tv2Controller = [[UIViewController alloc] initWithNibName:@"TestView" bundle:nil];
+
+	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, tv2Controller, nil]; 
+	tabBarController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
+	
+	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 
 	//Add the controller to the top of the present view.
-	[[self navigationController] pushViewController:aController animated:YES];
+	[[self navigationController] pushViewController:tabBarController animated:YES];
 
 	//Release the temp controller
-	[aController release];
+	[tvController release];
+	[tv2Controller release];
+	[tabBarController release];
 }
 
 

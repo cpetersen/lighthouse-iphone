@@ -11,7 +11,7 @@
 
 @implementation TicketsViewController
 
-@synthesize project, milestonesArray;
+@synthesize project;
 
 //@synthesize viewTitle;
 
@@ -31,20 +31,55 @@
 }
 */
 
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	self.title = [[self project] projectName];
+	[self.tableView reloadData];
+	self.title = @"Tickets";
 }
 
--(void)loadMilestones:(id)sender {
-	if(project) {
-		[project loadSubProjects]; 
-		[[self tableView] reloadData];
-	}		
+#pragma mark Table view methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 1;
 }
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return 5;	
+}
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TicketView"];
+	
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"TicketView"] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	}
+	cell.text  = @"This is a test";
+    return cell;
+	
+    
+	
+	/*static NSString *cellIdentifier = @"Cell";
+	
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:cellIdentifier] autorelease];
+    }
+    
+    // Set up the cell...
+	cell.text = [[NSString alloc] initWithFormat:@"Ticket %i", indexPath.row ];
+
+    return cell;
+	*/
+}
+
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//}
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -62,7 +97,6 @@
 
 - (void)dealloc {
     [project release];
-    [milestonesArray release];
     [super dealloc];
 }
 
