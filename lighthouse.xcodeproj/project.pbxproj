@@ -32,8 +32,6 @@
 		B1CE81F10F2BDF0A00AD82E1 /* AddProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CE81F00F2BDF0A00AD82E1 /* AddProjectView.xib */; };
 		B1D04EAF0F2AE9470054E41A /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D04EAE0F2AE9470054E41A /* TicketsViewController.m */; };
 		B1D04EB10F2AE98F0054E41A /* TicketsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D04EB00F2AE98F0054E41A /* TicketsView.xib */; };
-		B1D3B0660F3D510E0037808D /* ProjectDetailTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D3B0650F3D510E0037808D /* ProjectDetailTabView.xib */; };
-		B1D3B0700F3D53C50037808D /* ProjectDetailTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D3B06F0F3D53C50037808D /* ProjectDetailTabViewController.m */; };
 		B1D3B1360F3E36E40037808D /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D3B1350F3E36E40037808D /* TestView.xib */; };
 		B1E170640F2C537C00EE28C1 /* lighthouse.1.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */; };
 		B1E1706A0F2C555E00EE28C1 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E170690F2C555E00EE28C1 /* Project.m */; };
@@ -84,9 +82,6 @@
 		B1D04EAD0F2AE9470054E41A /* TicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketsViewController.h; path = Classes/TicketsViewController.h; sourceTree = "<group>"; };
 		B1D04EAE0F2AE9470054E41A /* TicketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicketsViewController.m; path = Classes/TicketsViewController.m; sourceTree = "<group>"; };
 		B1D04EB00F2AE98F0054E41A /* TicketsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsView.xib; sourceTree = "<group>"; };
-		B1D3B0650F3D510E0037808D /* ProjectDetailTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailTabView.xib; sourceTree = "<group>"; };
-		B1D3B06E0F3D53C50037808D /* ProjectDetailTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectDetailTabViewController.h; path = Classes/ProjectDetailTabViewController.h; sourceTree = "<group>"; };
-		B1D3B06F0F3D53C50037808D /* ProjectDetailTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectDetailTabViewController.m; path = Classes/ProjectDetailTabViewController.m; sourceTree = "<group>"; };
 		B1D3B1350F3E36E40037808D /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = lighthouse.1.sqlite; sourceTree = "<group>"; };
 		B1E170680F2C555E00EE28C1 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
@@ -205,7 +200,6 @@
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
 				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
-				B1D3B0650F3D510E0037808D /* ProjectDetailTabView.xib */,
 				B1D3B1350F3E36E40037808D /* TestView.xib */,
 			);
 			name = Views;
@@ -214,8 +208,6 @@
 		B1A0BEB40F32C12C00B29116 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1D3B06E0F3D53C50037808D /* ProjectDetailTabViewController.h */,
-				B1D3B06F0F3D53C50037808D /* ProjectDetailTabViewController.m */,
 				B120FA090F343F740009A4FD /* ProjectAdminViewController.h */,
 				B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */,
 				B12D64F80F316B0200BDF814 /* AddProjectViewController.h */,
@@ -296,7 +288,6 @@
 				B1FCBFD80F36DB79002AE255 /* README.markdown in Resources */,
 				B1FCBFDE0F36DBFD002AE255 /* ProjectAdminView.xib in Resources */,
 				B1FCBFE00F36DC06002AE255 /* ShowProjectView.xib in Resources */,
-				B1D3B0660F3D510E0037808D /* ProjectDetailTabView.xib in Resources */,
 				B1D3B1360F3E36E40037808D /* TestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +313,6 @@
 				B1FCBEBE0F36441B002AE255 /* ProjectXMLParser.m in Sources */,
 				B19153890F396E7500181282 /* Milestone.m in Sources */,
 				B19154180F39F65D00181282 /* MilestoneXMLParser.m in Sources */,
-				B1D3B0700F3D53C50037808D /* ProjectDetailTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

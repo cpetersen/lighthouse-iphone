@@ -29,16 +29,16 @@
 	};
 	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {957, 439}}";
-			sepNavSelRange = "{357, 0}";
-			sepNavVisRange = "{0, 554}";
+			sepNavIntBoundsRect = "{{0, 0}, {957, 416}}";
+			sepNavSelRange = "{315, 0}";
+			sepNavVisRange = "{0, 511}";
 		};
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1104, 3262}}";
-			sepNavSelRange = "{4120, 0}";
-			sepNavVisRange = "{4676, 1432}";
+			sepNavIntBoundsRect = "{{0, 0}, {1104, 3080}}";
+			sepNavSelRange = "{5664, 0}";
+			sepNavVisRange = "{4959, 1686}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
@@ -163,8 +163,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 255818223;
-			PBXWorkspaceStateSaveDate = 255818223;
+			PBXPerProjectTemplateStateSaveDate = 255824853;
+			PBXWorkspaceStateSaveDate = 255824853;
 		};
 		perUserProjectItems = {
 			B120F9F30F34387E0009A4FD = B120F9F30F34387E0009A4FD /* PBXBookmark */;
@@ -286,6 +286,13 @@
 			B1D3B1D80F3E77C80037808D = B1D3B1D80F3E77C80037808D /* PBXTextBookmark */;
 			B1D3B1D90F3E77C80037808D = B1D3B1D90F3E77C80037808D /* PBXTextBookmark */;
 			B1D3B1DA0F3E77C80037808D = B1D3B1DA0F3E77C80037808D /* PBXTextBookmark */;
+			B1D573960F3F986B007198F7 /* PBXTextBookmark */ = B1D573960F3F986B007198F7 /* PBXTextBookmark */;
+			B1D573970F3F986B007198F7 /* PBXTextBookmark */ = B1D573970F3F986B007198F7 /* PBXTextBookmark */;
+			B1D573980F3F986B007198F7 /* PBXTextBookmark */ = B1D573980F3F986B007198F7 /* PBXTextBookmark */;
+			B1D573990F3F986B007198F7 /* PBXTextBookmark */ = B1D573990F3F986B007198F7 /* PBXTextBookmark */;
+			B1D5739B0F3F9871007198F7 /* PBXTextBookmark */ = B1D5739B0F3F9871007198F7 /* PBXTextBookmark */;
+			B1D5739C0F3F9871007198F7 /* PBXTextBookmark */ = B1D5739C0F3F9871007198F7 /* PBXTextBookmark */;
+			B1D573A10F3F987E007198F7 /* PBXTextBookmark */ = B1D573A10F3F987E007198F7 /* PBXTextBookmark */;
 			B1E170800F2C622C00EE28C1 = B1E170800F2C622C00EE28C1 /* PlistBookmark */;
 			B1E170810F2C622C00EE28C1 = B1E170810F2C622C00EE28C1 /* PBXBookmark */;
 			B1E170820F2C622C00EE28C1 = B1E170820F2C622C00EE28C1 /* PBXBookmark */;
@@ -714,7 +721,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 13";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 503;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 0;
@@ -955,17 +962,29 @@
 		vrLoc = 0;
 	};
 	B1D3B06E0F3D53C50037808D /* ProjectDetailTabViewController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ProjectDetailTabViewController.h;
+		path = /Users/cpetersen/Code/iphone/Lighthouse/Classes/ProjectDetailTabViewController.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {957, 439}}";
+			sepNavIntBoundsRect = "{{0, 0}, {957, 416}}";
 			sepNavSelRange = "{219, 0}";
 			sepNavVisRange = "{0, 383}";
 		};
 	};
 	B1D3B06F0F3D53C50037808D /* ProjectDetailTabViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = ProjectDetailTabViewController.m;
+		path = /Users/cpetersen/Code/iphone/Lighthouse/Classes/ProjectDetailTabViewController.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {715, 994}}";
-			sepNavSelRange = "{1135, 0}";
-			sepNavVisRange = "{835, 398}";
+			sepNavIntBoundsRect = "{{0, 0}, {957, 910}}";
+			sepNavSelRange = "{1184, 0}";
+			sepNavVisRange = "{597, 888}";
 		};
 	};
 	B1D3B0770F3D549F0037808D /* PBXTextBookmark */ = {
@@ -1123,7 +1142,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 14";
 		rLen = 0;
-		rLoc = 357;
+		rLoc = 315;
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 0;
@@ -1213,7 +1232,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 14";
 		rLen = 0;
-		rLoc = 357;
+		rLoc = 315;
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 0;
@@ -1373,7 +1392,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 14";
 		rLen = 0;
-		rLoc = 357;
+		rLoc = 315;
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 0;
@@ -1393,7 +1412,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 14";
 		rLen = 0;
-		rLoc = 357;
+		rLoc = 315;
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 0;
@@ -1677,6 +1696,72 @@
 		rType = 0;
 		vrLen = 1432;
 		vrLoc = 4676;
+	};
+	B1D573960F3F986B007198F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 177";
+		rLen = 0;
+		rLoc = 5664;
+		rType = 0;
+		vrLen = 1638;
+		vrLoc = 4953;
+	};
+	B1D573970F3F986B007198F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: ProjectDetailTabViewController.h: No such file or directory";
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		rLen = 1;
+		rLoc = 13;
+		rType = 1;
+	};
+	B1D573980F3F986B007198F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 177";
+		rLen = 0;
+		rLoc = 5664;
+		rType = 0;
+		vrLen = 1638;
+		vrLoc = 4953;
+	};
+	B1D573990F3F986B007198F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 14";
+		rLen = 0;
+		rLoc = 315;
+		rType = 0;
+		vrLen = 511;
+		vrLoc = 0;
+	};
+	B1D5739B0F3F9871007198F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: ProjectDetailTabViewController.h: No such file or directory";
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		rLen = 1;
+		rLoc = 13;
+		rType = 1;
+	};
+	B1D5739C0F3F9871007198F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 14";
+		rLen = 1;
+		rLoc = 315;
+		rType = 0;
+		vrLen = 356;
+		vrLoc = 150;
+	};
+	B1D573A10F3F987E007198F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 14";
+		rLen = 0;
+		rLoc = 315;
+		rType = 0;
+		vrLen = 511;
+		vrLoc = 0;
 	};
 	B1E170680F2C555E00EE28C1 /* Project.h */ = {
 		uiCtxt = {

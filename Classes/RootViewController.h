@@ -11,7 +11,6 @@
 #import "TicketsViewController.h"
 #import "lighthouseAppDelegate.h"
 #import "ApiKeyViewController.h"
-#import "ProjectDetailTabViewController.h"
 
 @interface RootViewController : UITableViewController {
 	lighthouseAppDelegate *appDelegate;
