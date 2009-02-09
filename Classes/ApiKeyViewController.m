@@ -36,7 +36,6 @@
 	//Set the textboxes to empty string.
 	//txtApiKey.text = [[appDelegate getApiKey] UTF8String];
 	txtApiKey.text = @"THIS IS A TEST";
-	//NSLog(@"TXT API KEY %@", txtApiKey.text);
 	
 	//Make the coffe name textfield to be the first responder.
 	[txtApiKey becomeFirstResponder];
@@ -70,10 +69,7 @@
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	// Save the key
-	NSLog(@"SETTING API KEY [%@]", txtApiKey.text);
 	[appDelegate setApiKey:txtApiKey.text];
-	NSLog(@"GETTING API KEY [%@]", [appDelegate getApiKey]);
-	
 
 	[self.navigationController dismissModalViewControllerAnimated:YES];
 }

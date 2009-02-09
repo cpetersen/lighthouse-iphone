@@ -48,7 +48,7 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-	if([elementName isEqualToString:@"project"]) {
+	if([elementName isEqualToString:@"ticket"]) {
 		[self.project.ticketArray addObject:aTicket];		
 		[aTicket release];
 	}

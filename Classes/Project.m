@@ -13,6 +13,8 @@
 
 #import "lighthouseAppDelegate.h"
 #import "Project.h"
+#import "TicketXMLParser.h"
+#import "MilestoneXMLParser.h"
 
 static sqlite3 *database = nil;
 static sqlite3_stmt *insertStmt = nil;
@@ -20,7 +22,7 @@ static sqlite3_stmt *deleteStmt = nil;
 
 @implementation Project
 
-@synthesize projectID, projectName;
+@synthesize projectID, projectName, parentName;
 @synthesize projectArray;
 @synthesize milestonesArray;
 @synthesize ticketArray;
@@ -54,6 +56,42 @@ static sqlite3_stmt *deleteStmt = nil;
 }
 
 - (void) loadMilestones {	
+	/****** XML WORK ******/
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/milestones.xml?_token=%@", parentName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	[urlString release];
+	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+	//Initialize the delegate.
+	MilestoneXMLParser *parser = [[MilestoneXMLParser alloc] initXMLParser:self];
+	//Set delegate
+	[xmlParser setDelegate:parser];
+	//Start parsing the XML file.
+	BOOL success = [xmlParser parse];
+	
+	if(!success) {
+		NSLog(@"Parsing Error!!!");
+	}
+}
+
+- (void) loadTickets {	
+	/****** XML WORK ******/
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=state%%3Aopen&_token=%@", parentName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSLog(@"LOADING TICKETS WITH URL <%@>", urlString);
+	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	[urlString release];
+	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+	//Initialize the delegate.
+	TicketXMLParser *parser = [[TicketXMLParser alloc] initXMLParser:self];
+	//Set delegate
+	[xmlParser setDelegate:parser];
+	//Start parsing the XML file.
+	BOOL success = [xmlParser parse];
+	
+	if(!success) {
+		NSLog(@"Parsing Error!!!");
+	} else {
+		NSLog(@"TICKETS %i", [[self ticketArray] count]);
+	}
 }
 
 - (void) loadSubProjects {	
@@ -72,11 +110,6 @@ static sqlite3_stmt *deleteStmt = nil;
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
 	}
-	
-//	Project *projectObj = [[Project alloc] initWithPrimaryKey:18618];
-//	projectObj.projectName = @"assayrepo";
-//	[self.projectArray addObject:projectObj];
-//	[projectObj release];
 }
 
 - (void) insertProject {

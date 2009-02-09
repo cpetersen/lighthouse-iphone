@@ -179,19 +179,23 @@
 	UITabBarController *tabBarController = [[UITabBarController alloc] init];
 	
 	TicketsViewController *tvController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-	UIViewController *tv2Controller = [[UIViewController alloc] initWithNibName:@"TestView" bundle:nil];
+	MilestonesViewController *mvController = [[MilestonesViewController alloc] initWithNibName:@"MilestonesView" bundle:nil];
 
-	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, tv2Controller, nil]; 
+	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mvController, nil]; 
+
 	tabBarController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
-	
+	tvController.title = @"Tickets";
+	mvController.title = @"Milestones";
+
 	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+	mvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 
 	//Add the controller to the top of the present view.
 	[[self navigationController] pushViewController:tabBarController animated:YES];
 
 	//Release the temp controller
 	[tvController release];
-	[tv2Controller release];
+	[mvController release];
 	[tabBarController release];
 }
 

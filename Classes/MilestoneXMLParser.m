@@ -48,7 +48,7 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-	if([elementName isEqualToString:@"milsestone"]) {
+	if([elementName isEqualToString:@"milestone"]) {
 		[self.project.milestonesArray addObject:aMilestone];
 		[aMilestone release];
 	}

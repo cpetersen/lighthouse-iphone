@@ -48,6 +48,7 @@
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 	if([elementName isEqualToString:@"project"]) {
+		aProject.parentName = project.projectName;
 		[self.project.projectArray addObject:aProject];		
 		[aProject release];
 	}

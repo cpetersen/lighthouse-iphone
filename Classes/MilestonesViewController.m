@@ -1,15 +1,15 @@
 //
-//  TicketsViewController.m
+//  MilestonesViewController.m
 //  lighthouse
 //
 //  Created by Christopher Petersen on 1/23/09.
 //  Copyright 2009 Assay Depot. All rights reserved.
 //
 
-#import "TicketsViewController.h"
+#import "MilestonesViewController.h"
 
 
-@implementation TicketsViewController
+@implementation MilestonesViewController
 
 @synthesize project;
 
@@ -34,20 +34,16 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[NSThread detachNewThreadSelector:@selector(loadTickets) toTarget:self withObject:nil];
+	[NSThread detachNewThreadSelector:@selector(loadMilestones) toTarget:self withObject:nil];
 }
 
--(void)loadTickets {
-	NSLog(@"loadTickets 1");
+-(void)loadMilestones {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	NSLog(@"loadTickets 2");
-	[project loadTickets];
-	NSLog(@"loadTickets 3");
+	[project loadMilestones]; 
 	[[self tableView] reloadData];
-	NSLog(@"loadTickets 4");
 	[pool release];
-	NSLog(@"loadTickets 5");
 }
+
 
 #pragma mark Table view methods
 
@@ -57,7 +53,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[[self project] ticketArray] count];
+	return [[[self project] milestonesArray] count];
 }
 
 // Customize the appearance of table view cells.
@@ -69,13 +65,13 @@
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 
-	if([[[self project] ticketArray] objectAtIndex:indexPath.row]) {
-		cell.text = [[self.project.ticketArray objectAtIndex:indexPath.row] ticketTitle];
+	if([[[self project] milestonesArray] objectAtIndex:indexPath.row]) {
+		cell.text = [[self.project.milestonesArray objectAtIndex:indexPath.row] milestoneTitle];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	} else {
 		cell.text = @"ROW IS NULL";
 	}
-
+	
     return cell;
 }
 

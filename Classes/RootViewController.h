@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ProjectAdminViewController.h"
 #import "TicketsViewController.h"
+#import "MilestonesViewController.h"
 #import "lighthouseAppDelegate.h"
 #import "ApiKeyViewController.h"
 
