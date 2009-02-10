@@ -7,11 +7,11 @@
 //
 
 #import "TicketsViewController.h"
-
+#import "TicketXMLParser.h"
 
 @implementation TicketsViewController
 
-@synthesize project, query;
+@synthesize project, query, ticketArray;
 
 //@synthesize viewTitle;
 
@@ -38,33 +38,49 @@
 	
 	tableView.tableHeaderView = searchBar;
 	
-	searchBar.autocorrectionType = UITextAutocorrectionTypeNo;	
+	searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
+	searchBar.text = self.query;
 	searching = NO;
 	letUserSelectRow = YES;
 }
 
 -(void)loadTickets {
-	NSLog(@"loadTickets 1");
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	NSLog(@"loadTickets 2");
-	[project loadTickets:query page:1];
-	NSLog(@"loadTickets 3");
+	NSString *new_query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+
+	//[project loadTickets:new_query page:1];
+
+	/****** XML WORK ******/
+	//	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=state%%3Aopen&_token=%@", parentName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", project.parentName, project.projectID, new_query, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSLog(@"LOADING TICKETS WITH URL <%@>", urlString);
+	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	[urlString release];
+	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+	//Initialize the delegate.
+	TicketXMLParser *parser = [[TicketXMLParser alloc] initXMLParser:self];
+	//Set delegate
+	[xmlParser setDelegate:parser];
+	//Start parsing the XML file.
+	BOOL success = [xmlParser parse];
+	
+	if(!success) {
+		NSLog(@"Parsing Error!!!");
+	} else {
+		NSLog(@"TICKETS %i", [[self ticketArray] count]);
+	}
+	
 	[tableView reloadData];
-	NSLog(@"loadTickets 4");
 	[pool release];
-	NSLog(@"loadTickets 5");
 }
 
 - (void) searchTableView {
-	NSLog(@"searchTableView 1");
 	[NSThread detachNewThreadSelector:@selector(loadTickets) toTarget:self withObject:nil];
-	NSLog(@"searchTableView 2");
 }
 
 #pragma mark Search Bar methods
 
 - (void) searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar {
-	NSLog(@"searchBarTextDidBeginEditing");
 	searching = YES;
 	letUserSelectRow = NO;
 	
@@ -91,7 +107,6 @@
 }
 */
 - (void) searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {	
-	NSLog(@"searchBarSearchButtonClicked");
 	[searchBar resignFirstResponder];
 	self.query = searchBar.text;
 	[self searchTableView];
@@ -125,7 +140,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[[self project] ticketArray] count];
+	return [[self ticketArray] count];
 }
 
 // Customize the appearance of table view cells.
@@ -137,8 +152,8 @@
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 
-	if([[[self project] ticketArray] objectAtIndex:indexPath.row]) {
-		cell.text = [[self.project.ticketArray objectAtIndex:indexPath.row] ticketTitle];
+	if([[self ticketArray] objectAtIndex:indexPath.row]) {
+		cell.text = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	} else {
 		cell.text = @"ROW IS NULL";

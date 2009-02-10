@@ -8,16 +8,15 @@
 
 #import "TicketXMLParser.h"
 
-
 @implementation TicketXMLParser
 
-@synthesize project;
+@synthesize ticketView;
 
-- (TicketXMLParser *) initXMLParser:(Project *)my_project {
+- (TicketXMLParser *) initXMLParser:(TicketsViewController *)myView {
 	[super init];
-	self.project = my_project;
+	self.ticketView = myView;
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-	self.project.ticketArray = tempArray;
+	self.ticketView.ticketArray = tempArray;
 	[tempArray release];
 	
 	TITLE_FLAG = NO;
@@ -49,13 +48,13 @@
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 	if([elementName isEqualToString:@"ticket"]) {
-		[self.project.ticketArray addObject:aTicket];		
+		[self.ticketView.ticketArray addObject:aTicket];		
 		[aTicket release];
 	}
 }
 
 - (void) dealloc {
-	[project release];
+	[ticketView release];
 	[super dealloc];
 }
 

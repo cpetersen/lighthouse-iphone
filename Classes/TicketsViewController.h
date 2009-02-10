@@ -13,12 +13,14 @@
 	IBOutlet UISearchBar *searchBar;
 	IBOutlet UITableView *tableView;
 
+	NSMutableArray *ticketArray;
 	Project *project;
 	NSString *query;
 	BOOL searching;
 	BOOL letUserSelectRow;
 }
 
+@property (nonatomic, retain) NSMutableArray *ticketArray;
 @property (nonatomic, retain) Project *project;
 @property (nonatomic, retain) NSString *query;
 

@@ -74,25 +74,7 @@ static sqlite3_stmt *deleteStmt = nil;
 }
 
 - (void) loadTickets:(NSString *)query page:(NSInteger)page {	
-	/****** XML WORK ******/
-//	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=state%%3Aopen&_token=%@", parentName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", parentName, projectID, query, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
-	NSLog(@"LOADING TICKETS WITH URL <%@>", urlString);
-	NSURL *url = [[NSURL alloc] initWithString:urlString];
-	[urlString release];
-	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-	//Initialize the delegate.
-	TicketXMLParser *parser = [[TicketXMLParser alloc] initXMLParser:self];
-	//Set delegate
-	[xmlParser setDelegate:parser];
-	//Start parsing the XML file.
-	BOOL success = [xmlParser parse];
-	
-	if(!success) {
-		NSLog(@"Parsing Error!!!");
-	} else {
-		NSLog(@"TICKETS %i", [[self ticketArray] count]);
-	}
+
 }
 
 - (void) loadSubProjects {	

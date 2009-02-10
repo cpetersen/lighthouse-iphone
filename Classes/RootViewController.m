@@ -179,16 +179,23 @@
 	
 	TicketsViewController *tvController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
 	MilestonesViewController *mvController = [[MilestonesViewController alloc] initWithNibName:@"MilestonesView" bundle:nil];
+	TicketsViewController *mineController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
 
-	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mvController, nil]; 
+	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mvController, mineController, nil]; 
 
 	tabBarController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
+
 	tvController.title = @"Tickets";
 	tvController.query = @"state:open";
+
 	mvController.title = @"Milestones";
+	
+	mineController.title = @"Mine";
+	mineController.query = @"state:open responsible:me";
 
 	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 	mvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+	mineController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 
 	//Add the controller to the top of the present view.
 	[[self navigationController] pushViewController:tabBarController animated:YES];
@@ -196,6 +203,7 @@
 	//Release the temp controller
 	[tvController release];
 	[mvController release];
+	[mineController release];
 	[tabBarController release];
 }
 
