@@ -1,16 +1,19 @@
 # TODO
-* figure out tab bar...
-* figure out search bar...
-* figure out threads...
-* get tickets
-* get milestones
-* get changesets
-* get messages
-
+* show tickets
+* error message if can't connect
+* loading icon while connecting
+* load multiple pages of tickets
 
 # BUGS
 * UPDATE TABLE VIEWS WHEN ADDING A PROJECT
 * UPDATE THE API TOKEN to view properly
+* CANCEL TICKET SEARCHING
+
+# FUTURE
+* get changesets
+* get messages
+* create tickets
+* edit tickets
 
 # DONE
 * HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD
@@ -19,5 +22,8 @@
 * add api key screen
 * GETPROPERTY + SETPROPERTY (apiToken)
 * figure out webservices...
-
-
+* get tickets
+* get milestones
+* figure out threads...
+* figure out tab bar...
+* figure out search bar...

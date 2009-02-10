@@ -171,7 +171,6 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	//Initialize the controller.
 	//ProjectDetailTabViewController *aController = [[ProjectDetailTabViewController alloc] initWithNibName:@"ProjectDetailTabView" bundle:nil];
@@ -185,6 +184,7 @@
 
 	tabBarController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
 	tvController.title = @"Tickets";
+	tvController.query = @"state:open";
 	mvController.title = @"Milestones";
 
 	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];

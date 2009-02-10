@@ -33,6 +33,7 @@
 
 //Instance methods.
 - (void) loadMilestones;
+- (void) loadTickets:(NSString *)query page:(NSInteger)page;
 
 - (void) loadSubProjects;
 - (void) insertProject;
