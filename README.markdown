@@ -3,13 +3,17 @@
 * error message if can't connect
 * loading icon while connecting
 * load multiple pages of tickets
+* no tickets/milestones found table cell view
 
 # BUGS
+* UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
 * UPDATE TABLE VIEWS WHEN ADDING A PROJECT
 * UPDATE THE API TOKEN to view properly
 * CANCEL TICKET SEARCHING
+* USE THE ACTUAL API KEY
 
 # FUTURE
+* custom ticket table cell view
 * get changesets
 * get messages
 * create tickets

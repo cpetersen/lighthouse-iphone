@@ -181,9 +181,6 @@
 	MilestonesViewController *mvController = [[MilestonesViewController alloc] initWithNibName:@"MilestonesView" bundle:nil];
 	TicketsViewController *mineController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
 
-	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mvController, mineController, nil]; 
-
-	tabBarController.title = [NSString stringWithFormat:@"%@", [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName]];
 
 	tvController.title = @"Tickets";
 	tvController.query = @"state:open";
@@ -196,7 +193,10 @@
 	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 	mvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 	mineController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
-
+	
+	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mvController, mineController, nil]; 	
+	tabBarController.title = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
+	
 	//Add the controller to the top of the present view.
 	[[self navigationController] pushViewController:tabBarController animated:YES];
 

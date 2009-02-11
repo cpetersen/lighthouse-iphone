@@ -85,7 +85,7 @@
 	letUserSelectRow = NO;
 	
 	//Add the done button.
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+	self.tabBarController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
 											   initWithBarButtonSystemItem:UIBarButtonSystemItemDone
 											   target:self action:@selector(doneSearching_Clicked:)] autorelease];
 }
@@ -112,10 +112,9 @@
 	[self searchTableView];
 }
 
-/*
 - (void) doneSearching_Clicked:(id)sender {
 	NSLog(@"doneSearching_Clicked");
-	searchBar.text = @"";
+	searchBar.text = self.query;
 	[searchBar resignFirstResponder];
 	
 	letUserSelectRow = YES;
@@ -124,7 +123,7 @@
 	
 	[tableView reloadData];
 }
-*/
+
 #pragma mark Table view methods
 
 - (NSIndexPath *)tableView :(UITableView *)theTableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Project.h"
+#import "Milestone.h"
+#import "TicketsViewController.h"
 
 @interface MilestonesViewController : UITableViewController<UITableViewDelegate> {
 	Project *project;
+	UINavigationController *addNavigationController;
 }
 
 @property (nonatomic, retain) Project *project;
