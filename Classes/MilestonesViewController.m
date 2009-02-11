@@ -79,27 +79,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSLog(@"didSelectRowAtIndexPath 1");
 	TicketsViewController *ticketsController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:ticketsController];
 
-	if(addNavigationController == nil) {
-		addNavigationController = [[UINavigationController alloc] initWithRootViewController:ticketsController];
-	}
-	
-	NSLog(@"didSelectRowAtIndexPath 2");
 	Milestone *milestone = [project.milestonesArray objectAtIndex:indexPath.row];
 	
-	NSLog(@"didSelectRowAtIndexPath 3");
 	ticketsController.title = @"Tickets";
-	NSLog(@"didSelectRowAtIndexPath 4");
+	ticketsController.project = project;
+	
 	NSString *query = [[NSString alloc] initWithFormat:@"state:open milestone:\"%@\"", milestone.milestoneTitle];
-	NSLog(@"didSelectRowAtIndexPath 5");
 	ticketsController.query = query;
 
-	NSLog(@"didSelectRowAtIndexPath 6");
 	[[[self tabBarController] navigationController] pushViewController:ticketsController animated:YES];
 
-	NSLog(@"didSelectRowAtIndexPath 7");
 	[ticketsController release];
-	NSLog(@"didSelectRowAtIndexPath 8");
+	[navigationController release];
 }
 
 

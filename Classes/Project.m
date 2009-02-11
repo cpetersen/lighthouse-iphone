@@ -22,7 +22,7 @@ static sqlite3_stmt *deleteStmt = nil;
 
 @implementation Project
 
-@synthesize projectID, projectName, parentName;
+@synthesize projectID, projectName, accountName;
 @synthesize projectArray;
 @synthesize milestonesArray;
 @synthesize ticketArray;
@@ -57,7 +57,7 @@ static sqlite3_stmt *deleteStmt = nil;
 
 - (void) loadMilestones {	
 	/****** XML WORK ******/
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/milestones.xml?_token=%@", parentName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/milestones.xml?_token=%@", accountName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];

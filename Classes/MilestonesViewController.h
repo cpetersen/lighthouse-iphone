@@ -13,7 +13,6 @@
 
 @interface MilestonesViewController : UITableViewController<UITableViewDelegate> {
 	Project *project;
-	UINavigationController *addNavigationController;
 }
 
 @property (nonatomic, retain) Project *project;

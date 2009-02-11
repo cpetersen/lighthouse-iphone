@@ -12,7 +12,7 @@
 @interface Project : NSObject {
 	NSInteger projectID;
 	NSString *projectName;
-	NSString *parentName;
+	NSString *accountName;
 
 	NSMutableArray *projectArray;
 	NSMutableArray *milestonesArray;
@@ -21,7 +21,7 @@
 
 @property (nonatomic) NSInteger projectID;
 @property (nonatomic, copy) NSString *projectName;
-@property (nonatomic, copy) NSString *parentName;
+@property (nonatomic, copy) NSString *accountName;
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
 @property (nonatomic, retain) NSMutableArray *milestonesArray;
