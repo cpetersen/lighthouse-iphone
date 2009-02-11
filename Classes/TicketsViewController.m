@@ -47,12 +47,13 @@
 -(void)loadTickets {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	NSString *new_query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+	NSString *new_query2 = [new_query stringByReplacingOccurrencesOfString:@"\"" withString:@"%22"];
 
 	//[project loadTickets:new_query page:1];
 
 	/****** XML WORK ******/
 	//	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=state%%3Aopen&_token=%@", accountName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", project.accountName, project.projectID, new_query, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", project.accountName, project.projectID, new_query2, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
 	NSLog(@"LOADING TICKETS WITH URL <%@>", urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];

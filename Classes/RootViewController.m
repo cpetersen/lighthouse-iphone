@@ -180,6 +180,7 @@
 	TicketsViewController *tvController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
 	MilestonesViewController *mvController = [[MilestonesViewController alloc] initWithNibName:@"MilestonesView" bundle:nil];
 	TicketsViewController *mineController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+	TicketsViewController *nextController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
 
 
 	tvController.title = @"Tickets";
@@ -189,12 +190,16 @@
 	
 	mineController.title = @"Mine";
 	mineController.query = @"state:open responsible:me";
-
+	
+	nextController.title = @"Next";
+	nextController.query = @"state:open milestone:next";
+	
 	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 	mvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 	mineController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+	nextController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
 	
-	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mvController, mineController, nil]; 	
+	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mineController, nextController, mvController, nil]; 	
 	tabBarController.title = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
 	
 	//Add the controller to the top of the present view.
@@ -204,6 +209,7 @@
 	[tvController release];
 	[mvController release];
 	[mineController release];
+	[nextController release];
 	[tabBarController release];
 }
 
