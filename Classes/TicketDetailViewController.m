@@ -7,7 +7,7 @@
 //
 
 #import "TicketDetailViewController.h"
-
+#import "TicketXMLParser.h"
 
 @implementation TicketDetailViewController
 
@@ -22,14 +22,43 @@
 }
 */
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[NSThread detachNewThreadSelector:@selector(loadTicket) toTarget:self withObject:nil];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
+
+-(void)loadTicket {
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	
+	//[project loadTickets:new_query page:1];
+	
+	/****** XML WORK ******/
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets/%i.xml?_token=%@", project.accountName, project.projectID, ticket.ticketNumber, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	NSLog(@"LOADING TICKET WITH URL <%@>", urlString);
+	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	[urlString release];
+	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+	//Initialize the delegate.
+	TicketXMLParser *parser = [[TicketXMLParser alloc] initXMLParser];
+	//Set delegate
+	[xmlParser setDelegate:parser];
+	//Start parsing the XML file.
+	BOOL success = [xmlParser parse];
+	
+	if(!success) {
+		NSLog(@"Parsing Error!!!");
+	} else {
+		self.ticket = [parser.tickets objectAtIndex:0];
+		NSLog(@"TICKET.BODY [%@]", ticket.body);
+	}
+
+	[tableView reloadData];
+	[pool release];
+}
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -83,11 +112,12 @@
 	if(section == 0) {
 		return ticket.ticketTitle;
 	}
+	return @"";
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"cellForRowAtIndexPath 1");
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -124,7 +154,8 @@
 			NSString *tp = [[NSString alloc] initWithFormat:@"URL: %@", ticket.url];
 			cell.text = tp;
 			[tp release];
-		} else if (indexPath.row == 6) {
+		} else if (indexPath.row == 7) {
+			NSLog(@"cellForRowAtIndexPath 1 [%@]", ticket.body);
 			cell.text = ticket.body;
 		}
 	}

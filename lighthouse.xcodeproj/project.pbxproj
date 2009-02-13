@@ -211,8 +211,8 @@
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
 				B1FCBFDF0F36DC06002AE255 /* ShowProjectView.xib */,
 				B1D3B1350F3E36E40037808D /* TestView.xib */,
-				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
 				B14ADBFC0F42B5C000EAF021 /* TicketDetailView.xib */,
+				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";

@@ -11,6 +11,8 @@
 #import "Ticket.h"
 
 @interface TicketDetailViewController : UITableViewController {
+	IBOutlet UITableView *tableView;
+
 	Ticket *ticket;
 	Project *project;
 }

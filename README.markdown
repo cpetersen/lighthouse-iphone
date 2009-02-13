@@ -6,10 +6,9 @@
 
 # BUGS
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
-* UPDATE TABLE VIEWS WHEN ADDING A PROJECT
 * UPDATE THE API TOKEN to view properly
 * USE THE ACTUAL API KEY
-* LOAD TICKET BODY
+* ticket detail tableview doesn't update properly when body loads
 
 # FUTURE
 * custom ticket table cell view
@@ -19,6 +18,8 @@
 * edit tickets
 * users/memberships
 * view image attachments
+* webkit view for html ticket bodies
+* store current state in database
 
 # DONE
 * HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD
@@ -34,3 +35,4 @@
 * figure out search bar...
 * CANCEL TICKET SEARCHING
 * show tickets
+* LOAD TICKET BODY

@@ -51,6 +51,7 @@
 	} else if([elementName isEqualToString:@"milestone-title"]) {
 		MILESTONE_FLAG = YES;
 	} else if([elementName isEqualToString:@"body"]) {
+		NSLog(@"BODY START!");
 		BODY_FLAG = YES;
 	}
 }
@@ -81,6 +82,7 @@
 		aTicket.milestone = string;
 		MILESTONE_FLAG = NO;
 	} else if(BODY_FLAG) {
+		NSLog(@"BODY [%@]", string);
 		aTicket.body = string;
 		BODY_FLAG = NO;
 	}

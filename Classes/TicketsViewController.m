@@ -177,6 +177,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
 	Ticket *ticket = [self.ticketArray objectAtIndex:indexPath.row];
+	tdController.project = project;
 	tdController.ticket = ticket;
 	tdController.title = [[NSString alloc] initWithFormat:@"Ticket %i", ticket.ticketNumber];
 	if(tabbedView) {
