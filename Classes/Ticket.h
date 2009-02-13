@@ -18,6 +18,7 @@
 	NSString *creatorUserName;
 	NSString *url;
 	NSString *milestone;
+	NSString *body;
 	NSMutableArray *tags;
 }
 
@@ -29,6 +30,7 @@
 @property (nonatomic, copy) NSString *creatorUserName;
 @property (nonatomic, copy) NSString *url;
 @property (nonatomic, copy) NSString *milestone;
+@property (nonatomic, copy) NSString *body;
 @property (nonatomic, retain) NSMutableArray *tags;
 
 @end

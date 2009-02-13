@@ -75,7 +75,7 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	if(section == 0) {
-		return 7;
+		return 8;
 	} else {
 		return 0;
 	}
@@ -126,6 +126,8 @@
 			NSString *tp = [[NSString alloc] initWithFormat:@"URL: %@", ticket.url];
 			cell.text = tp;
 			[tp release];
+		} else if (indexPath.row == 6) {
+			cell.text = ticket.body;
 		}
 	}
 	

@@ -25,6 +25,9 @@
 	PRIORITY_FLAG = NO;
 	ASSIGNED_FLAG = NO;
 	CREATOR_FLAG = NO;
+	URL_FLAG = NO;
+	MILESTONE_FLAG = NO;
+	BODY_FLAG = NO;
 	
 	return self;
 }
@@ -49,6 +52,8 @@
 		URL_FLAG = YES;
 	} else if([elementName isEqualToString:@"milestone-title"]) {
 		MILESTONE_FLAG = YES;
+	} else if([elementName isEqualToString:@"body"]) {
+		BODY_FLAG = YES;
 	}
 }
 
@@ -77,6 +82,9 @@
 	} else if(MILESTONE_FLAG) {
 		aTicket.milestone = string;
 		MILESTONE_FLAG = NO;
+	} else if(BODY_FLAG) {
+		aTicket.body = string;
+		BODY_FLAG = NO;
 	}
 }
 

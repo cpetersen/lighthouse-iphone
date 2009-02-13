@@ -23,6 +23,7 @@
 	BOOL CREATOR_FLAG;
 	BOOL URL_FLAG;
 	BOOL MILESTONE_FLAG;
+	BOOL BODY_FLAG;
 }
 
 @property (nonatomic, retain) TicketsViewController *ticketView;
