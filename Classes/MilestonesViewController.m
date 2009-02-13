@@ -85,6 +85,7 @@
 	
 	ticketsController.title = @"Tickets";
 	ticketsController.project = project;
+	[ticketsController notTabbedView];
 	
 	NSString *query = [[NSString alloc] initWithFormat:@"state:open milestone:\"%@\"", milestone.milestoneTitle];
 	ticketsController.query = query;

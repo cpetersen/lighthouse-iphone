@@ -12,11 +12,15 @@
 @interface Ticket : NSObject {
 	NSInteger ticketNumber;
 	NSString *ticketTitle;
-	NSString *ticketDescription;
+	NSString *ticketState;
+	NSInteger ticketPriority;
+	NSMutableArray *tags;
 }
 
 @property (nonatomic) NSInteger ticketNumber;
 @property (nonatomic, copy) NSString *ticketTitle;
-@property (nonatomic, copy) NSString *ticketDescription;
+@property (nonatomic, copy) NSString *ticketState;
+@property (nonatomic) NSInteger ticketPriority;
+@property (nonatomic, retain) NSMutableArray *tags;
 
 @end

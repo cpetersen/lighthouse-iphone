@@ -13,17 +13,17 @@
 
 @synthesize project, query, ticketArray;
 
-//@synthesize viewTitle;
+- (void) notTabbedView {
+	tabbedView = NO;
+}
 
-/*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
+		tabbedView = YES;
     }
     return self;
 }
-*/
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -67,8 +67,6 @@
 	
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
-	} else {
-		NSLog(@"TICKETS %i", [[self ticketArray] count]);
 	}
 	
 	[tableView reloadData];
@@ -86,14 +84,17 @@
 	letUserSelectRow = NO;
 	
 	//Add the done button.
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
-												initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-												target:self action:@selector(doneSearching_Clicked:)] autorelease
-											  ];
-	self.tabBarController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
-																initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-																target:self action:@selector(doneSearching_Clicked:)] autorelease
-															   ];
+	if(tabbedView == YES) {
+		self.tabBarController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+																	initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+																	target:self action:@selector(doneSearching_Clicked:)] autorelease
+																   ];
+	} else {
+		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+												   initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+												   target:self action:@selector(doneSearching_Clicked:)] autorelease
+												  ];
+	}
 }
 
 /*
@@ -119,15 +120,17 @@
 }
 
 - (void) doneSearching_Clicked:(id)sender {
-	NSLog(@"doneSearching_Clicked");
 	searchBar.text = self.query;
 	[searchBar resignFirstResponder];
-	
+
 	letUserSelectRow = YES;
 	searching = NO;
-	self.navigationItem.rightBarButtonItem = nil;
-	self.tabBarController.navigationItem.rightBarButtonItem = nil;
-	
+	if(tabbedView) {
+		self.tabBarController.navigationItem.rightBarButtonItem = nil;
+	} else {
+		self.navigationItem.rightBarButtonItem = nil;
+	}
+
 	[tableView reloadData];
 }
 
@@ -169,8 +172,16 @@
 }
 
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
+	if(tabbedView) {
+		[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
+	} else {
+		NSLog(@"NO");
+		[[self navigationController] pushViewController:tdController animated:YES];
+	}
+	[tdController release];
+}
 
 
 /*

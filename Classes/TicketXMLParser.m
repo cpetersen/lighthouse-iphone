@@ -21,6 +21,8 @@
 	
 	TITLE_FLAG = NO;
 	NUMBER_FLAG = NO;
+	STATE_FLAG = NO;
+	PRIORITY_FLAG = NO;
 	
 	return self;
 }
@@ -33,6 +35,10 @@
 		TITLE_FLAG = YES;
 	} else if([elementName isEqualToString:@"number"]) {
 		NUMBER_FLAG = YES;
+	} else if([elementName isEqualToString:@"state"]) {
+		STATE_FLAG = YES;
+	} else if([elementName isEqualToString:@"priority"]) {
+		PRIORITY_FLAG = YES;
 	}
 }
 
@@ -43,6 +49,12 @@
 	} else if(NUMBER_FLAG) {
 		aTicket.ticketNumber = [string intValue];
 		NUMBER_FLAG = NO;
+	} else if(STATE_FLAG) {
+		aTicket.ticketState = string;
+		STATE_FLAG = NO;
+	} else if(PRIORITY_FLAG) {
+		aTicket.ticketPriority = [string intValue];
+		PRIORITY_FLAG = NO;
 	}
 }
 

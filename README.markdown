@@ -18,6 +18,7 @@
 * get messages
 * create tickets
 * edit tickets
+* users/memberships
 
 # DONE
 * HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD

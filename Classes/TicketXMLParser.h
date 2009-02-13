@@ -17,6 +17,8 @@
 	NSMutableString *currentElementValue;
 	BOOL TITLE_FLAG;
 	BOOL NUMBER_FLAG;
+	BOOL STATE_FLAG;
+	BOOL PRIORITY_FLAG;
 }
 
 @property (nonatomic, retain) TicketsViewController *ticketView;

@@ -11,11 +11,12 @@
 
 @implementation Ticket
 
-@synthesize ticketNumber, ticketTitle, ticketDescription;
+@synthesize ticketNumber, ticketTitle, ticketState, ticketPriority, tags;
 
 - (void) dealloc {
 	[ticketTitle release];
-	[ticketDescription release];
+	[ticketState release];
+	[tags release];
 	[super dealloc];
 }
 
