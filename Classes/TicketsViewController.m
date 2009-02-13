@@ -59,7 +59,7 @@
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 	//Initialize the delegate.
-	TicketXMLParser *parser = [[TicketXMLParser alloc] initXMLParser:self];
+	TicketXMLParser *parser = [[TicketXMLParser alloc] initXMLParser];
 	//Set delegate
 	[xmlParser setDelegate:parser];
 	//Start parsing the XML file.
@@ -67,6 +67,8 @@
 	
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
+	} else {
+		ticketArray = parser.tickets;
 	}
 	
 	[tableView reloadData];
@@ -174,7 +176,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
-	tdController.ticket = [self.ticketArray objectAtIndex:indexPath.row];
+	Ticket *ticket = [self.ticketArray objectAtIndex:indexPath.row];
+	tdController.ticket = ticket;
+	tdController.title = [[NSString alloc] initWithFormat:@"Ticket %i", ticket.ticketNumber];
 	if(tabbedView) {
 		[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
 	} else {

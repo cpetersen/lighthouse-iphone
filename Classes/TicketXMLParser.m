@@ -10,14 +10,12 @@
 
 @implementation TicketXMLParser
 
-@synthesize ticketView;
+@synthesize tickets;
 
-- (TicketXMLParser *) initXMLParser:(TicketsViewController *)myView {
+- (TicketXMLParser *) initXMLParser {
 	[super init];
-	self.ticketView = myView;
-	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-	self.ticketView.ticketArray = tempArray;
-	[tempArray release];
+
+	tickets = [[NSMutableArray alloc] init];
 	
 	TITLE_FLAG = NO;
 	NUMBER_FLAG = NO;
@@ -90,13 +88,13 @@
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 	if([elementName isEqualToString:@"ticket"]) {
-		[self.ticketView.ticketArray addObject:aTicket];		
+		[tickets addObject:aTicket];		
 		[aTicket release];
 	}
 }
 
 - (void) dealloc {
-	[ticketView release];
+	[tickets release];
 	[super dealloc];
 }
 

@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Ticket.h"
-#import "TicketsViewController.h"
 #import "lighthouseAppDelegate.h"
 
 @interface TicketXMLParser : NSObject {
-	TicketsViewController *ticketView;
+	NSMutableArray *tickets;
+
 	Ticket *aTicket;
 	NSMutableString *currentElementValue;
 	BOOL TITLE_FLAG;
@@ -26,8 +26,8 @@
 	BOOL BODY_FLAG;
 }
 
-@property (nonatomic, retain) TicketsViewController *ticketView;
+@property (nonatomic, retain) NSMutableArray *tickets;
 
-- (TicketXMLParser *) initXMLParser:(TicketsViewController *)myView;
+- (TicketXMLParser *) initXMLParser;
 
 @end
