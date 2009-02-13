@@ -13,6 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[activityIndicator setHidesWhenStopped:YES];
 
 	appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 
@@ -30,13 +31,17 @@
 }
 
 -(void)loadProjects:(Project *)project {
+	[activityIndicator startAnimating];
+
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	for(int i=0; i < [[appDelegate projectArray] count]; i++) {
 		Project *project = [[appDelegate projectArray] objectAtIndex:i];
 		[project loadSubProjects]; 
 	}
-	[[self tableView] reloadData];
+	[tableView reloadData];
 	[pool release];
+
+	[activityIndicator stopAnimating];
 }
 
 -(void)adminClicked:(id)sender {
@@ -238,7 +243,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	[self.tableView reloadData];
+	[tableView reloadData];
 }
 
 - (void)dealloc {

@@ -13,6 +13,7 @@
 @interface TicketsViewController : UIViewController<UITableViewDelegate> {
 	IBOutlet UISearchBar *searchBar;
 	IBOutlet UITableView *tableView;
+	IBOutlet UIActivityIndicatorView *activityIndicator;
 
 	NSMutableArray *ticketArray;
 	Project *project;
@@ -25,7 +26,6 @@
 @property (nonatomic, retain) NSMutableArray *ticketArray;
 @property (nonatomic, retain) Project *project;
 @property (nonatomic, retain) NSString *query;
-
 
 - (void) notTabbedView;
 - (void) searchTableView;

@@ -13,7 +13,10 @@
 #import "lighthouseAppDelegate.h"
 #import "ApiKeyViewController.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UIViewController<UITableViewDelegate> {
+	IBOutlet UITableView *tableView;
+	IBOutlet UIActivityIndicatorView *activityIndicator;
+
 	lighthouseAppDelegate *appDelegate;
 	ProjectAdminViewController *pavController;
 	UINavigationController *addNavigationController;

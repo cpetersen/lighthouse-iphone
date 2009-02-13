@@ -42,9 +42,13 @@
 	searchBar.text = self.query;
 	searching = NO;
 	letUserSelectRow = YES;
+	
+	[activityIndicator setHidesWhenStopped:YES];
 }
 
 -(void)loadTickets {
+	[activityIndicator startAnimating];
+
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	NSString *new_query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 	NSString *new_query2 = [new_query stringByReplacingOccurrencesOfString:@"\"" withString:@"%22"];
@@ -73,6 +77,8 @@
 	
 	[tableView reloadData];
 	[pool release];
+
+	[activityIndicator stopAnimating];
 }
 
 - (void) searchTableView {

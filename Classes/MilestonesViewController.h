@@ -11,7 +11,10 @@
 #import "Milestone.h"
 #import "TicketsViewController.h"
 
-@interface MilestonesViewController : UITableViewController<UITableViewDelegate> {
+@interface MilestonesViewController : UIViewController<UITableViewDelegate> {
+	IBOutlet UITableView *tableView;
+	IBOutlet UIActivityIndicatorView *activityIndicator;
+
 	Project *project;
 }
 

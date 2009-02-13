@@ -35,13 +35,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[NSThread detachNewThreadSelector:@selector(loadMilestones) toTarget:self withObject:nil];
+	[activityIndicator setHidesWhenStopped:YES];
 }
 
 -(void)loadMilestones {
+	[activityIndicator startAnimating];
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	[project loadMilestones]; 
-	[[self tableView] reloadData];
+	[tableView reloadData];
 	[pool release];
+	[activityIndicator stopAnimating];
 }
 
 
