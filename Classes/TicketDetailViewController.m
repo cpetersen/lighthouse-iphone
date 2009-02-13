@@ -75,14 +75,16 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	if(section == 0) {
-		return 4;
+		return 7;
 	} else {
 		return 0;
 	}
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return @"Ticket Details";
+	if(section == 0) {
+		return ticket.ticketTitle;
+	}
 }
 
 // Customize the appearance of table view cells.
@@ -95,9 +97,38 @@
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Set up the cell...
-	cell.text = @"test";
-
+	if(indexPath.section == 0) {
+		if(indexPath.row == 0) {
+			NSString *tp = [[NSString alloc] initWithFormat:@"Assigned To: %@", ticket.assignedUserName];
+			cell.text = tp;
+			[tp release];
+		} else if (indexPath.row == 1) {
+			NSString *tp = [[NSString alloc] initWithFormat:@"State: %@", ticket.ticketState];
+			cell.text = tp;
+			[tp release];
+		} else if (indexPath.row == 2) {
+			NSString *tp = [[NSString alloc] initWithFormat:@"%i", ticket.ticketPriority];
+			cell.text = tp;
+			[tp release];
+		} else if (indexPath.row == 3) {
+			NSString *tp = [[NSString alloc] initWithFormat:@"Milestone: %@", ticket.milestone];
+			cell.text = tp;
+			[tp release];
+		} else if (indexPath.row == 4) {
+			NSString *tp = [[NSString alloc] initWithFormat:@"Created By: %@", ticket.creatorUserName];
+			cell.text = tp;
+			[tp release];
+		} else if (indexPath.row == 5) {
+			NSString *tp = [[NSString alloc] initWithFormat:@"Tags: %@", ticket.tags];
+			cell.text = tp;
+			[tp release];
+		} else if (indexPath.row == 6) {
+			NSString *tp = [[NSString alloc] initWithFormat:@"URL: %@", ticket.url];
+			cell.text = tp;
+			[tp release];
+		}
+	}
+	
     return cell;
 }
 

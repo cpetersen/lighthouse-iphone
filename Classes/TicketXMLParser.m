@@ -23,6 +23,8 @@
 	NUMBER_FLAG = NO;
 	STATE_FLAG = NO;
 	PRIORITY_FLAG = NO;
+	ASSIGNED_FLAG = NO;
+	CREATOR_FLAG = NO;
 	
 	return self;
 }
@@ -39,6 +41,14 @@
 		STATE_FLAG = YES;
 	} else if([elementName isEqualToString:@"priority"]) {
 		PRIORITY_FLAG = YES;
+	} else if([elementName isEqualToString:@"creator-name"]) {
+		CREATOR_FLAG = YES;
+	} else if([elementName isEqualToString:@"assigned-user-name"]) {
+		ASSIGNED_FLAG = YES;
+	} else if([elementName isEqualToString:@"url"]) {
+		URL_FLAG = YES;
+	} else if([elementName isEqualToString:@"milestone-title"]) {
+		MILESTONE_FLAG = YES;
 	}
 }
 
@@ -55,6 +65,18 @@
 	} else if(PRIORITY_FLAG) {
 		aTicket.ticketPriority = [string intValue];
 		PRIORITY_FLAG = NO;
+	} else if(CREATOR_FLAG) {
+		aTicket.creatorUserName = string;
+		CREATOR_FLAG = NO;
+	} else if(ASSIGNED_FLAG) {
+		aTicket.assignedUserName = string;
+		ASSIGNED_FLAG = NO;
+	} else if(URL_FLAG) {
+		aTicket.url = string;
+		URL_FLAG = NO;
+	} else if(MILESTONE_FLAG) {
+		aTicket.milestone = string;
+		MILESTONE_FLAG = NO;
 	}
 }
 

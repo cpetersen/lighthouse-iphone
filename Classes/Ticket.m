@@ -11,11 +11,15 @@
 
 @implementation Ticket
 
-@synthesize ticketNumber, ticketTitle, ticketState, ticketPriority, tags;
+@synthesize ticketNumber, ticketTitle, ticketState, ticketPriority, tags, url, milestone, creatorUserName, assignedUserName;
 
 - (void) dealloc {
 	[ticketTitle release];
 	[ticketState release];
+	[assignedUserName release];
+	[creatorUserName release];
+	[url release];
+	[milestone release];
 	[tags release];
 	[super dealloc];
 }

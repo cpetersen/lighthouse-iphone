@@ -174,6 +174,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
+	tdController.ticket = [self.ticketArray objectAtIndex:indexPath.row];
 	if(tabbedView) {
 		[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
 	} else {

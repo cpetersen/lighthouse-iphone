@@ -40,6 +40,7 @@
 		B1E170640F2C537C00EE28C1 /* lighthouse.1.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */; };
 		B1E1706A0F2C555E00EE28C1 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E170690F2C555E00EE28C1 /* Project.m */; };
 		B1E171390F2D1FF300EE28C1 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E171380F2D1FF300EE28C1 /* libsqlite3.0.dylib */; };
+		B1FA0C390F45345B001C1B3A /* TicketVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FA0C380F45345B001C1B3A /* TicketVersion.m */; };
 		B1FCBEB90F363CD2002AE255 /* TicketXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBEB80F363CD2002AE255 /* TicketXMLParser.m */; };
 		B1FCBEBE0F36441B002AE255 /* ProjectXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBEBD0F36441B002AE255 /* ProjectXMLParser.m */; };
 		B1FCBFD80F36DB79002AE255 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = B1FCBFD70F36DB79002AE255 /* README.markdown */; };
@@ -97,6 +98,8 @@
 		B1E170680F2C555E00EE28C1 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		B1E170690F2C555E00EE28C1 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		B1E171380F2D1FF300EE28C1 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B1FA0C370F45345B001C1B3A /* TicketVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketVersion.h; sourceTree = "<group>"; };
+		B1FA0C380F45345B001C1B3A /* TicketVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketVersion.m; sourceTree = "<group>"; };
 		B1FCBEB70F363CD2002AE255 /* TicketXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketXMLParser.h; sourceTree = "<group>"; };
 		B1FCBEB80F363CD2002AE255 /* TicketXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketXMLParser.m; sourceTree = "<group>"; };
 		B1FCBEBC0F36441B002AE255 /* ProjectXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectXMLParser.h; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				B1FCBEBD0F36441B002AE255 /* ProjectXMLParser.m */,
 				B12D63B00F303B5A00BDF814 /* Ticket.h */,
 				B12D63B10F303B5A00BDF814 /* Ticket.m */,
+				B1FA0C370F45345B001C1B3A /* TicketVersion.h */,
+				B1FA0C380F45345B001C1B3A /* TicketVersion.m */,
 				B1FCBEB70F363CD2002AE255 /* TicketXMLParser.h */,
 				B1FCBEB80F363CD2002AE255 /* TicketXMLParser.m */,
 			);
@@ -333,6 +338,7 @@
 				B19154180F39F65D00181282 /* MilestoneXMLParser.m in Sources */,
 				B1D573A50F3F98EB007198F7 /* MilestonesViewController.m in Sources */,
 				B14ADC040F42B6A600EAF021 /* TicketDetailViewController.m in Sources */,
+				B1FA0C390F45345B001C1B3A /* TicketVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,10 @@
 	BOOL NUMBER_FLAG;
 	BOOL STATE_FLAG;
 	BOOL PRIORITY_FLAG;
+	BOOL ASSIGNED_FLAG;
+	BOOL CREATOR_FLAG;
+	BOOL URL_FLAG;
+	BOOL MILESTONE_FLAG;
 }
 
 @property (nonatomic, retain) TicketsViewController *ticketView;
