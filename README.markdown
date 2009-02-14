@@ -7,7 +7,6 @@
 * UPDATE THE API TOKEN to view properly
 * USE THE ACTUAL API KEY
 * ticket detail tableview doesn't update properly when body loads
-* activity inidicator doesn't disappear on root view
 * ticket details don't load from milestone view
 
 # FUTURE
@@ -38,3 +37,4 @@
 * LOAD TICKET BODY
 * loading icon while connecting
 * no tickets/milestones found table cell view
+* activity inidicator doesn't disappear on root view
