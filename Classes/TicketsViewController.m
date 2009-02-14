@@ -33,6 +33,8 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	[activityIndicator setHidesWhenStopped:YES];
+
     [super viewDidLoad];
 	[NSThread detachNewThreadSelector:@selector(loadTickets) toTarget:self withObject:nil];
 	
@@ -42,8 +44,7 @@
 	searchBar.text = self.query;
 	searching = NO;
 	letUserSelectRow = YES;
-	
-	[activityIndicator setHidesWhenStopped:YES];
+	empty = NO;
 }
 
 -(void)loadTickets {
@@ -73,6 +74,9 @@
 		NSLog(@"Parsing Error!!!");
 	} else {
 		ticketArray = parser.tickets;
+		if([ticketArray count] == 0) {
+			empty = YES;
+		}
 	}
 	
 	[tableView reloadData];
@@ -124,6 +128,13 @@
 - (void) searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {	
 	[searchBar resignFirstResponder];
 	self.query = searchBar.text;
+
+	if(tabbedView) {
+		self.tabBarController.navigationItem.rightBarButtonItem = nil;
+	} else {
+		self.navigationItem.rightBarButtonItem = nil;
+	}
+	
 	[self searchTableView];
 }
 
@@ -157,7 +168,11 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[self ticketArray] count];
+	if(empty) {
+		return 1;
+	} else {
+		return [[self ticketArray] count];
+	}
 }
 
 // Customize the appearance of table view cells.
@@ -169,11 +184,16 @@
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 
-	if([[self ticketArray] objectAtIndex:indexPath.row]) {
-		cell.text = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	if(empty) {
+		cell.text = @"NO TICKETS";
+		cell.accessoryType = UITableViewCellAccessoryNone;
 	} else {
-		cell.text = @"ROW IS NULL";
+		if([[self ticketArray] objectAtIndex:indexPath.row]) {
+			cell.text = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		} else {
+			cell.text = @"ROW IS NULL";
+		}
 	}
 
     return cell;
@@ -181,18 +201,20 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
-	Ticket *ticket = [self.ticketArray objectAtIndex:indexPath.row];
-	tdController.project = project;
-	tdController.ticket = ticket;
-	tdController.title = [[NSString alloc] initWithFormat:@"Ticket %i", ticket.ticketNumber];
-	if(tabbedView) {
-		[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
-	} else {
-		NSLog(@"NO");
-		[[self navigationController] pushViewController:tdController animated:YES];
+	if(!empty) {
+		TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
+		Ticket *ticket = [self.ticketArray objectAtIndex:indexPath.row];
+		tdController.project = project;
+		tdController.ticket = ticket;
+		tdController.title = [[NSString alloc] initWithFormat:@"Ticket %i", ticket.ticketNumber];
+		if(tabbedView) {
+			[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
+		} else {
+			NSLog(@"NO");
+			[[self navigationController] pushViewController:tdController animated:YES];
+		}
+		[tdController release];
 	}
-	[tdController release];
 }
 
 

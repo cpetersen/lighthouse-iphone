@@ -21,6 +21,7 @@
 	BOOL searching;
 	BOOL letUserSelectRow;
 	BOOL tabbedView;
+	BOOL empty;
 }
 
 @property (nonatomic, retain) NSMutableArray *ticketArray;

@@ -1,14 +1,15 @@
 # TODO
 * error message if can't connect
-* loading icon while connecting
-* load multiple pages of tickets
 * no tickets/milestones found table cell view
+* load multiple pages of tickets
 
 # BUGS
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
 * UPDATE THE API TOKEN to view properly
 * USE THE ACTUAL API KEY
 * ticket detail tableview doesn't update properly when body loads
+* activity inidicator doesn't disappear on root view
+* ticket details don't load from milestone view
 
 # FUTURE
 * custom ticket table cell view
@@ -36,3 +37,4 @@
 * CANCEL TICKET SEARCHING
 * show tickets
 * LOAD TICKET BODY
+* loading icon while connecting
