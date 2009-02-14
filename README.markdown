@@ -1,6 +1,5 @@
 # TODO
 * error message if can't connect
-* no tickets/milestones found table cell view
 * load multiple pages of tickets
 
 # BUGS
@@ -38,3 +37,4 @@
 * show tickets
 * LOAD TICKET BODY
 * loading icon while connecting
+* no tickets/milestones found table cell view

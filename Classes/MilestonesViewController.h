@@ -16,6 +16,7 @@
 	IBOutlet UIActivityIndicatorView *activityIndicator;
 
 	Project *project;
+	BOOL empty;
 }
 
 @property (nonatomic, retain) Project *project;

@@ -36,12 +36,16 @@
     [super viewDidLoad];
 	[NSThread detachNewThreadSelector:@selector(loadMilestones) toTarget:self withObject:nil];
 	[activityIndicator setHidesWhenStopped:YES];
+	empty = NO;
 }
 
 -(void)loadMilestones {
 	[activityIndicator startAnimating];
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	[project loadMilestones]; 
+	[project loadMilestones];
+	if([[project milestonesArray] count] == 0) {
+		empty = YES;
+	}
 	[tableView reloadData];
 	[pool release];
 	[activityIndicator stopAnimating];
@@ -56,7 +60,11 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[[self project] milestonesArray] count];
+	if(empty) {
+		return 1;
+	} else {
+		return [[[self project] milestonesArray] count];
+	}
 }
 
 // Customize the appearance of table view cells.
@@ -68,11 +76,16 @@
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 
-	if([[[self project] milestonesArray] objectAtIndex:indexPath.row]) {
-		cell.text = [[self.project.milestonesArray objectAtIndex:indexPath.row] milestoneTitle];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	if(empty) {
+		cell.text = @"NO MILESTONES";
+		cell.accessoryType = UITableViewCellAccessoryNone;
 	} else {
-		cell.text = @"ROW IS NULL";
+		if([[[self project] milestonesArray] objectAtIndex:indexPath.row]) {
+			cell.text = [[self.project.milestonesArray objectAtIndex:indexPath.row] milestoneTitle];
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		} else {
+			cell.text = @"ROW IS NULL";
+		}
 	}
 	
     return cell;
@@ -80,23 +93,24 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"didSelectRowAtIndexPath 1");
-	TicketsViewController *ticketsController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:ticketsController];
+	if(!empty) {
+		TicketsViewController *ticketsController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:ticketsController];
 
-	Milestone *milestone = [project.milestonesArray objectAtIndex:indexPath.row];
-	
-	ticketsController.title = @"Tickets";
-	ticketsController.project = project;
-	[ticketsController notTabbedView];
-	
-	NSString *query = [[NSString alloc] initWithFormat:@"state:open milestone:\"%@\"", milestone.milestoneTitle];
-	ticketsController.query = query;
+		Milestone *milestone = [project.milestonesArray objectAtIndex:indexPath.row];
+		
+		ticketsController.title = @"Tickets";
+		ticketsController.project = project;
+		[ticketsController notTabbedView];
+		
+		NSString *query = [[NSString alloc] initWithFormat:@"state:open milestone:\"%@\"", milestone.milestoneTitle];
+		ticketsController.query = query;
 
-	[[[self tabBarController] navigationController] pushViewController:ticketsController animated:YES];
+		[[[self tabBarController] navigationController] pushViewController:ticketsController animated:YES];
 
-	[ticketsController release];
-	[navigationController release];
+		[ticketsController release];
+		[navigationController release];
+	}
 }
 
 
