@@ -6,7 +6,6 @@
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
 * UPDATE THE API TOKEN to view properly
 * USE THE ACTUAL API KEY
-* ticket detail tableview doesn't update properly when body loads
 * ticket details don't load from milestone view
 
 # FUTURE
@@ -38,3 +37,4 @@
 * loading icon while connecting
 * no tickets/milestones found table cell view
 * activity inidicator doesn't disappear on root view
+* ticket detail tableview doesn't update properly when body loads

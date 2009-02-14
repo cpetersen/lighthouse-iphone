@@ -56,7 +56,7 @@
 		NSLog(@"TICKET.BODY [%@]", ticket.body);
 	}
 
-	[tableView reloadData];
+	[[self tableView] reloadData];
 	[pool release];
 }
 
@@ -117,7 +117,6 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"cellForRowAtIndexPath 1");
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
