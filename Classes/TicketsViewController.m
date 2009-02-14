@@ -59,7 +59,6 @@
 	/****** XML WORK ******/
 	//	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=state%%3Aopen&_token=%@", accountName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
 	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", project.accountName, project.projectID, new_query2, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
-	NSLog(@"LOADING TICKETS WITH URL <%@>", urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -72,6 +71,16 @@
 	
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
+//		UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
+//		[dialog setDelegate:self];
+//		[dialog setTitle:@"Enter Name"];
+//		[dialog setMessage:@" "];
+//		[dialog addButtonWithTitle:@"Cancel"];
+//		[dialog addButtonWithTitle:@"OK"];
+//		CGAffineTransform moveUp = CGAffineTransformMakeTranslation(0.0, 100.0);
+//		[dialog setTransform: moveUp];
+//		[dialog show];
+//		[dialog release];		
 	} else {
 		ticketArray = parser.tickets;
 		if([ticketArray count] == 0) {
@@ -111,7 +120,6 @@
 
 /*
 - (void)searchBar:(UISearchBar *)theSearchBar textDidChange:(NSString *)searchText {
-	NSLog(@"textDidChange");
 	//Remove all objects first.
 	//[copyListOfItems removeAllObjects];
 	if([searchText length] > 0) {
@@ -210,7 +218,6 @@
 		if(tabbedView) {
 			[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
 		} else {
-			NSLog(@"NO");
 			[[self navigationController] pushViewController:tdController animated:YES];
 		}
 		[tdController release];

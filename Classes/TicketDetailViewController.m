@@ -38,7 +38,6 @@
 	
 	/****** XML WORK ******/
 	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets/%i.xml?_token=%@", project.accountName, project.projectID, ticket.ticketNumber, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
-	NSLog(@"LOADING TICKET WITH URL <%@>", urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -53,7 +52,6 @@
 		NSLog(@"Parsing Error!!!");
 	} else {
 		self.ticket = [parser.tickets objectAtIndex:0];
-		NSLog(@"TICKET.BODY [%@]", ticket.body);
 	}
 
 	[[self tableView] reloadData];
@@ -154,7 +152,6 @@
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 7) {
-			NSLog(@"cellForRowAtIndexPath 1 [%@]", ticket.body);
 			cell.text = ticket.body;
 		}
 	}
