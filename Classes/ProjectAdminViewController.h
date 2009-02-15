@@ -12,15 +12,9 @@
 #import "ShowProjectViewController.h"
 #import "Project.h"
 
-@interface ProjectAdminViewController : UITableViewController {
+@interface ProjectAdminViewController : UIViewController<UITableViewDelegate> {
 	lighthouseAppDelegate *appDelegate;
-	AddProjectViewController *apvController;
-	ShowProjectViewController *spvController;
-	Project *project;
-	UINavigationController *addNavigationController;
+	IBOutlet UITableView *tableView;
 }
-
-@property (nonatomic, retain) Project *project;
-@property (nonatomic, retain) ShowProjectViewController *spvController;
 
 @end

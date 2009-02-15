@@ -65,7 +65,7 @@ static sqlite3_stmt *deleteStmt = nil;
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 	//Initialize the delegate.
-	MilestoneXMLParser *parser = [[MilestoneXMLParser alloc] initXMLParser:self];
+	MilestoneXMLParser *parser = (MilestoneXMLParser *)[[MilestoneXMLParser alloc] initXMLParser:self];
 	//Set delegate
 	[xmlParser setDelegate:parser];
 	//Start parsing the XML file.

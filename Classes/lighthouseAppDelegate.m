@@ -98,7 +98,8 @@ static sqlite3 *database = nil;
 	// Reload the project array.
 	[self reloadProjectArray];
 	// Add it to the array.
-	// [projectArray addObject:projectObj];
+	//[projectObj retain];
+	//[projectArray addObject:projectObj];
 }
 
 - (void) removeProject:(Project *)projectObj {	

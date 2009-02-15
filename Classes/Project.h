@@ -24,7 +24,6 @@
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
 @property (nonatomic, retain) NSMutableArray *milestonesArray;
-@property (nonatomic, retain) NSMutableArray *ticketArray;
 
 //Static methods.
 + (void) loadProjects:(NSString *)dbPath;

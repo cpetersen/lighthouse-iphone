@@ -2,9 +2,6 @@
 
 @implementation ProjectAdminViewController
 
-@synthesize spvController;
-@synthesize project;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -22,27 +19,23 @@
 
 -(void)addClicked:(id)sender {
 	//Load the view
-	if(apvController == nil) {
-		apvController = [[AddProjectViewController alloc] initWithNibName:@"AddProjectView" bundle:nil];
-	}
-	if(addNavigationController == nil) {
-		addNavigationController = [[UINavigationController alloc] initWithRootViewController:apvController];
-	}
+	AddProjectViewController *apvController = [[AddProjectViewController alloc] initWithNibName:@"AddProjectView" bundle:nil];
+	UINavigationController *addNavigationController = [[UINavigationController alloc] initWithRootViewController:apvController];
 	
 	//add it to stack.
 	//	[[self navigationController] pushViewController:aController animated:YES];
 	[[self navigationController] presentModalViewController:addNavigationController animated:YES];
-	[self.tableView reloadData];
+	[tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	[self.tableView reloadData];
+	[tableView reloadData];
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
 	[super setEditing:editing animated:animated];
-	[self.tableView setEditing:editing animated:YES];
+	[tableView setEditing:editing animated:YES];
 	
 	//Do not let the user add if the app is in edit mode.
 	if(editing) {
@@ -64,7 +57,7 @@
 }
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"ProjectAdminView";
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -85,22 +78,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	//Check to see if the controller is nil or not.
-	if(spvController == nil) {
-		//Initialize the controller.
-		ShowProjectViewController *controller = [[ShowProjectViewController alloc] initWithNibName:@"ShowProjectView" bundle:nil];
-		controller.title = [NSString stringWithFormat:@"%@", [[appDelegate.projectArray objectAtIndex:indexPath.row] projectName]];
-		controller.project = [appDelegate.projectArray objectAtIndex:indexPath.row];
+	//Initialize the controller.
+	ShowProjectViewController *controller = [[ShowProjectViewController alloc] initWithNibName:@"ShowProjectView" bundle:nil];
+	controller.title = [NSString stringWithFormat:@"%@", [[appDelegate.projectArray objectAtIndex:indexPath.row] projectName]];
+	controller.project = [appDelegate.projectArray objectAtIndex:indexPath.row];
 		
-		//Set the controller to our variable.
-		self.spvController = controller;
-		
-		//Release the temp controller
-		[controller release];
-	}
-	
 	//Add the controller to the top of the present view.
-	[[self navigationController] pushViewController:spvController animated:YES];
+	[[self navigationController] pushViewController:controller animated:YES];
+
+	//Release the temp controller
+	[controller release];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,14 +96,14 @@
 }
 
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView2 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(editingStyle == UITableViewCellEditingStyleDelete) {
 		//Get the object to delete from the array.
 		Project *projectObj = [appDelegate.projectArray objectAtIndex:indexPath.row];
 		[appDelegate removeProject:projectObj];
 		
 		//Delete the object from the table.
-		[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 	}
 }
 
