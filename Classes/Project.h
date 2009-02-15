@@ -16,7 +16,6 @@
 
 	NSMutableArray *projectArray;
 	NSMutableArray *milestonesArray;
-	NSMutableArray *ticketArray;
 }
 
 @property (nonatomic) NSInteger projectID;
@@ -32,10 +31,9 @@
 + (void) finalizeStatements;
 
 //Instance methods.
-- (void) loadMilestones;
-- (void) loadTickets:(NSString *)query page:(NSInteger)page;
+- (BOOL) loadMilestones;
 
-- (void) loadSubProjects;
+- (BOOL) loadSubProjects;
 - (void) insertProject;
 - (void) deleteProject;
 - (id) initWithPrimaryKey:(NSInteger)pk;

@@ -42,10 +42,20 @@
 -(void)loadMilestones {
 	[activityIndicator startAnimating];
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	[project loadMilestones];
+	BOOL RESULT = [project loadMilestones];
 	if([[project milestonesArray] count] == 0) {
 		empty = YES;
 	}
+	
+	if(!RESULT) {
+		UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
+		[dialog setDelegate:self];
+		[dialog setTitle:@"Error Connecting"];
+		[dialog addButtonWithTitle:@"OK"];
+		[dialog show];
+		[dialog release];		
+	}
+	
 	[tableView reloadData];
 	[pool release];
 	[activityIndicator stopAnimating];

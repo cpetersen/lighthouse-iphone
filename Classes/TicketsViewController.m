@@ -71,16 +71,13 @@
 	
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
-//		UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
-//		[dialog setDelegate:self];
-//		[dialog setTitle:@"Enter Name"];
-//		[dialog setMessage:@" "];
-//		[dialog addButtonWithTitle:@"Cancel"];
-//		[dialog addButtonWithTitle:@"OK"];
-//		CGAffineTransform moveUp = CGAffineTransformMakeTranslation(0.0, 100.0);
-//		[dialog setTransform: moveUp];
-//		[dialog show];
-//		[dialog release];		
+
+		UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
+		[dialog setDelegate:self];
+		[dialog setTitle:@"Error Connecting"];
+		[dialog addButtonWithTitle:@"OK"];
+		[dialog show];
+		[dialog release];		
 	} else {
 		ticketArray = parser.tickets;
 		if([ticketArray count] == 0) {

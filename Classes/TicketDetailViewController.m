@@ -50,6 +50,13 @@
 	
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
+
+		UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
+		[dialog setDelegate:self];
+		[dialog setTitle:@"Error Connecting"];
+		[dialog addButtonWithTitle:@"OK"];
+		[dialog show];
+		[dialog release];
 	} else {
 		self.ticket = [parser.tickets objectAtIndex:0];
 	}

@@ -31,16 +31,27 @@
 }
 
 -(void)loadProjects:(Project *)project {
+	BOOL PASSED = YES;
 	[activityIndicator startAnimating];
 
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	for(int i=0; i < [[appDelegate projectArray] count]; i++) {
 		Project *project = [[appDelegate projectArray] objectAtIndex:i];
-		[project loadSubProjects]; 
+		BOOL RESULT = [project loadSubProjects];
+		PASSED = RESULT && PASSED;
+		[tableView reloadData];
 	}
-	[tableView reloadData];
 	[pool release];
-
+	
+	if(!PASSED) {
+		UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
+		[dialog setDelegate:self];
+		[dialog setTitle:@"Error Connecting"];
+		[dialog addButtonWithTitle:@"OK"];
+		[dialog show];
+		[dialog release];		
+	}
+	
 	[activityIndicator stopAnimating];
 }
 

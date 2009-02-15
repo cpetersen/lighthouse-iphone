@@ -1,10 +1,8 @@
 # TODO
-* error message if can't connect
 * load multiple pages of tickets
 
 # BUGS
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
-* UPDATE THE API TOKEN to view properly
 * USE THE ACTUAL API KEY
 * ticket details don't load from milestone view
 
@@ -18,6 +16,7 @@
 * view image attachments
 * webkit view for html ticket bodies
 * store current state in database
+* protocol handler for api key, tickets, projects, milestones
 
 # DONE
 * HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD
@@ -38,3 +37,5 @@
 * no tickets/milestones found table cell view
 * activity inidicator doesn't disappear on root view
 * ticket detail tableview doesn't update properly when body loads
+* error message if can't connect
+* UPDATE THE API TOKEN to view properly

@@ -25,7 +25,6 @@ static sqlite3_stmt *deleteStmt = nil;
 @synthesize projectID, projectName, accountName;
 @synthesize projectArray;
 @synthesize milestonesArray;
-@synthesize ticketArray;
 
 + (void) loadProjects:(NSString *)dbPath {
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -55,7 +54,8 @@ static sqlite3_stmt *deleteStmt = nil;
 	if(insertStmt) sqlite3_finalize(insertStmt);
 }
 
-- (void) loadMilestones {	
+- (BOOL) loadMilestones {
+	BOOL RESULT = YES;
 	/****** XML WORK ******/
 	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/milestones.xml?_token=%@", accountName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
@@ -70,14 +70,13 @@ static sqlite3_stmt *deleteStmt = nil;
 	
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
+		RESULT = NO;
 	}
+	return RESULT;
 }
 
-- (void) loadTickets:(NSString *)query page:(NSInteger)page {	
-
-}
-
-- (void) loadSubProjects {	
+- (BOOL) loadSubProjects {
+	BOOL RESULT = YES;
 	/****** XML WORK ******/
 	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects.xml?_token=%@", projectName, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
@@ -92,7 +91,9 @@ static sqlite3_stmt *deleteStmt = nil;
 	
 	if(!success) {
 		NSLog(@"Parsing Error!!!");
+		RESULT = NO;
 	}
+	return RESULT;
 }
 
 - (void) insertProject {
@@ -141,7 +142,6 @@ static sqlite3_stmt *deleteStmt = nil;
 	[projectName release];
 	[projectArray release];
 	[milestonesArray release];
-	[ticketArray release];
 	[super dealloc];
 }
 
