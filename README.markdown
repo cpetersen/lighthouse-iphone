@@ -2,10 +2,12 @@
 * load multiple pages of tickets
 
 # BUGS
-* UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
+* Update root view when adding a projects
 * ticket details don't load from milestone view
-* Error when api key is wrong
-* show error for private projects
+* ERRORS
+	* Error when api key is wrong
+	* show error for private projects
+	* project doesn't exist
 
 # FUTURE
 * custom ticket table cell view
@@ -41,3 +43,4 @@
 * error message if can't connect
 * UPDATE THE API TOKEN to view properly
 * USE THE ACTUAL API KEY
+* UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
