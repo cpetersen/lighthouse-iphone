@@ -3,7 +3,6 @@
 
 # BUGS
 * Update root view when adding a projects
-* ticket details don't load from milestone view
 * ERRORS
 	* Error when api key is wrong
 	* show error for private projects
@@ -44,3 +43,4 @@
 * UPDATE THE API TOKEN to view properly
 * USE THE ACTUAL API KEY
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
+* ticket details don't load from milestone view

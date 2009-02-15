@@ -105,7 +105,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(!empty) {
 		TicketsViewController *ticketsController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:ticketsController];
 
 		Milestone *milestone = [project.milestonesArray objectAtIndex:indexPath.row];
 		
@@ -119,7 +118,6 @@
 		[[[self tabBarController] navigationController] pushViewController:ticketsController animated:YES];
 
 		[ticketsController release];
-		[navigationController release];
 	}
 }
 

@@ -57,14 +57,13 @@
 
 -(void)adminClicked:(id)sender {
 	//Load the view
-	if(pavController == nil) {
-		pavController = [[ProjectAdminViewController alloc] initWithNibName:@"ProjectAdminView" bundle:nil];
-	}
-	//Set the view title
+	ProjectAdminViewController *pavController = [[ProjectAdminViewController alloc] initWithNibName:@"ProjectAdminView" bundle:nil];
 	pavController.title = @"Accounts";
 
 	//add it to stack.
 	[[self navigationController] pushViewController:pavController animated:YES];
+	
+	[pavController release];
 }
 
 -(void)tokenClicked:(id)sender {
@@ -258,8 +257,6 @@
 }
 
 - (void)dealloc {
-	[pavController release];
-	[addNavigationController release];
     [super dealloc];
 }
 

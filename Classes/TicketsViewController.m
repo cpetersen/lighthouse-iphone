@@ -217,7 +217,7 @@
 		if(tabbedView) {
 			[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
 		} else {
-			[[self navigationController] pushViewController:tdController animated:YES];
+			[self.navigationController pushViewController:tdController animated:YES];
 		}
 		[tdController release];
 	}

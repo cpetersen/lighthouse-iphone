@@ -18,8 +18,6 @@
 	IBOutlet UIActivityIndicatorView *activityIndicator;
 
 	lighthouseAppDelegate *appDelegate;
-	ProjectAdminViewController *pavController;
-	UINavigationController *addNavigationController;
 }
 
 @end
