@@ -3,8 +3,9 @@
 
 # BUGS
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
-* USE THE ACTUAL API KEY
 * ticket details don't load from milestone view
+* Error when api key is wrong
+* show error for private projects
 
 # FUTURE
 * custom ticket table cell view
@@ -39,3 +40,4 @@
 * ticket detail tableview doesn't update properly when body loads
 * error message if can't connect
 * UPDATE THE API TOKEN to view properly
+* USE THE ACTUAL API KEY

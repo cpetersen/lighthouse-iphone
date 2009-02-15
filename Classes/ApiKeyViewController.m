@@ -34,12 +34,8 @@
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 
 	//Set the textboxes to empty string.
-	NSLog(@"txtApiKey.text 1 = [%@]", txtApiKey.text);
 	txtApiKey.placeholder = @"API Token";
 	txtApiKey.text = [appDelegate getApiKey];
-	NSLog(@"txtApiKey.text 2 = [%@]", txtApiKey.text);
-//	txtApiKey.text = @"THIS IS A TEST";
-//	NSLog(@"txtApiKey.text 3 = [%@]", txtApiKey.text);
 	
 	//Make the coffe name textfield to be the first responder.
 	[txtApiKey becomeFirstResponder];
@@ -73,9 +69,7 @@
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	// Save the key
-	NSLog(@"txtApiKey.text 4 = [%@]", txtApiKey.text);
 	[appDelegate setApiKey:txtApiKey.text];
-	NSLog(@"txtApiKey.text 5 = [%@]", txtApiKey.text);
 
 	[self.navigationController dismissModalViewControllerAnimated:YES];
 }

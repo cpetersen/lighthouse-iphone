@@ -57,8 +57,10 @@
 	//[project loadTickets:new_query page:1];
 
 	/****** XML WORK ******/
-	//	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=state%%3Aopen&_token=%@", accountName, projectID, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", project.accountName, project.projectID, new_query2, @"b6866f005646d1b8be2bece7e500f52c9f90ba37" ];
+	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSString *apiKey = [appDelegate getApiKey];
+
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", project.accountName, project.projectID, new_query2, apiKey ];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];

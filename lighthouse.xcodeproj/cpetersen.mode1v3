@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B15EE73F0F47A4970042D422</string>
+										<string>B15EE7630F47A61C0042D422</string>
 										<key>history</key>
 										<array>
 											<string>B1CE82DC0F2C105A00AD82E1</string>
@@ -368,15 +368,15 @@
 											<string>B15EE6CC0F4795280042D422</string>
 											<string>B15EE6CD0F4795280042D422</string>
 											<string>B15EE6CE0F4795280042D422</string>
-											<string>B15EE6DD0F4795F10042D422</string>
 											<string>B15EE6E20F4796280042D422</string>
 											<string>B15EE6E70F4796930042D422</string>
 											<string>B15EE71C0F47A07D0042D422</string>
 											<string>B15EE72A0F47A2D40042D422</string>
 											<string>B15EE7350F47A3B10042D422</string>
 											<string>B15EE73A0F47A4970042D422</string>
-											<string>B15EE73B0F47A4970042D422</string>
-											<string>B15EE73C0F47A4970042D422</string>
+											<string>B15EE7520F47A51B0042D422</string>
+											<string>B15EE7610F47A61C0042D422</string>
+											<string>B15EE7510F47A51B0042D422</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -467,6 +467,9 @@
 											<string>B15EE7370F47A3B10042D422</string>
 											<string>B15EE73D0F47A4970042D422</string>
 											<string>B15EE73E0F47A4970042D422</string>
+											<string>B15EE7540F47A51B0042D422</string>
+											<string>B15EE7550F47A51B0042D422</string>
+											<string>B15EE7620F47A61C0042D422</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1038,7 +1041,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
