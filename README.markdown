@@ -1,8 +1,12 @@
 # TODO
 * load multiple pages of tickets
+* add images for tab bar
+* webkit view for html ticket bodies
 
 # BUGS
 * Update root view when adding a projects
+* update projects/subprojects when api key is saved
+* activity indicator doesn't appear on second and third page view
 * ERRORS
 	* Error when api key is wrong
 	* show error for private projects
@@ -16,7 +20,6 @@
 * edit tickets
 * users/memberships
 * view image attachments
-* webkit view for html ticket bodies
 * store current state in database
 * protocol handler for api key, tickets, projects, milestones
 
