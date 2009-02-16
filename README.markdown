@@ -1,6 +1,5 @@
 # TODO
 * load multiple pages of tickets
-* add images for tab bar
 * webkit view for html ticket bodies
 
 # BUGS
@@ -47,3 +46,4 @@
 * USE THE ACTUAL API KEY
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
 * ticket details don't load from milestone view
+* add images for tab bar

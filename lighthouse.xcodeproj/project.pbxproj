@@ -19,6 +19,8 @@
 		B12D648F0F3101C900BDF814 /* ProjectAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */; };
 		B14ADBFD0F42B5C000EAF021 /* TicketDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14ADBFC0F42B5C000EAF021 /* TicketDetailView.xib */; };
 		B14ADC040F42B6A600EAF021 /* TicketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */; };
+		B15EE8DC0F494E740042D422 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = B15EE8DB0F494E740042D422 /* user.png */; };
+		B15EE8E20F494F430042D422 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = B15EE8E10F494F430042D422 /* next.png */; };
 		B19153890F396E7500181282 /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = B19153880F396E7500181282 /* Milestone.m */; };
 		B19154180F39F65D00181282 /* MilestoneXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B19154170F39F65D00181282 /* MilestoneXMLParser.m */; };
 		B1A0BC8D0F31780900B29116 /* ShowProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A0BC8C0F31780900B29116 /* ShowProjectViewController.m */; };
@@ -69,6 +71,8 @@
 		B14ADBFC0F42B5C000EAF021 /* TicketDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketDetailView.xib; sourceTree = "<group>"; };
 		B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketDetailViewController.h; path = Classes/TicketDetailViewController.h; sourceTree = "<group>"; };
 		B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicketDetailViewController.m; path = Classes/TicketDetailViewController.m; sourceTree = "<group>"; };
+		B15EE8DB0F494E740042D422 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		B15EE8E10F494F430042D422 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		B19153870F396E7500181282 /* Milestone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Milestone.h; sourceTree = "<group>"; };
 		B19153880F396E7500181282 /* Milestone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestone.m; sourceTree = "<group>"; };
 		B19154160F39F65D00181282 /* MilestoneXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MilestoneXMLParser.h; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B15EE8E10F494F430042D422 /* next.png */,
+				B15EE8DB0F494E740042D422 /* user.png */,
 				B1A0BDED0F32850D00B29116 /* api_screenshot.png */,
 				B1E170620F2C521E00EE28C1 /* lighthouse.1.sqlite */,
 				B1CE817C0F2B18FF00AD82E1 /* star_blue.png */,
@@ -307,6 +313,8 @@
 				B1D3B1360F3E36E40037808D /* TestView.xib in Resources */,
 				B1D573AA0F3F9A1A007198F7 /* MilestonesView.xib in Resources */,
 				B14ADBFD0F42B5C000EAF021 /* TicketDetailView.xib in Resources */,
+				B15EE8DC0F494E740042D422 /* user.png in Resources */,
+				B15EE8E20F494F430042D422 /* next.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
