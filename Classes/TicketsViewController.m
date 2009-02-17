@@ -148,6 +148,7 @@
 		self.navigationItem.rightBarButtonItem = nil;
 	}
 	
+	self.ticketArray = NULL;
 	[self searchTableView];
 }
 

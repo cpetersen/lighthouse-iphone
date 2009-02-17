@@ -7,9 +7,12 @@
 	* Error when api key is wrong
 	* show error for private projects
 	* project doesn't exist
+	* remove "more tickets" row when there are no more tickets
+* CUSTOM TABLE CELLS
+	* custom ticket table cell view
+	* customize "more tickets" cell
 
 # FUTURE
-* custom ticket table cell view
 * get changesets
 * get messages
 * create tickets
