@@ -1,5 +1,4 @@
 # TODO
-* load multiple pages of tickets
 * webkit view for html ticket bodies
 
 # BUGS
@@ -47,3 +46,4 @@
 * add images for tab bar
 * Update root view when adding a projects
 * update projects/subprojects when api key is saved
+* load multiple pages of tickets

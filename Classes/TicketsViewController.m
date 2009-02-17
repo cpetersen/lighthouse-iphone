@@ -45,6 +45,7 @@
 	searching = NO;
 	letUserSelectRow = YES;
 	empty = NO;
+	currentPage = 1;
 }
 
 -(void)loadTickets {
@@ -60,7 +61,7 @@
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSString *apiKey = [appDelegate getApiKey];
 
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@", project.accountName, project.projectID, new_query2, apiKey ];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@&page=%i", project.accountName, project.projectID, new_query2, apiKey, currentPage ];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -81,7 +82,12 @@
 		[dialog show];
 		[dialog release];		
 	} else {
-		ticketArray = parser.tickets;
+		if(ticketArray == NULL) {
+			ticketArray = [[NSMutableArray alloc] init];
+		}
+		for(int i=0; i<[parser.tickets count]; i++) {
+			[ticketArray addObject:[parser.tickets objectAtIndex:i]];
+		}
 		if([ticketArray count] == 0) {
 			empty = YES;
 		}
@@ -163,10 +169,11 @@
 #pragma mark Table view methods
 
 - (NSIndexPath *)tableView :(UITableView *)theTableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	if(letUserSelectRow)
+	if(letUserSelectRow) {
 		return indexPath;
-	else
+	} else {
 		return nil;
+	}
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfSectionsInTableView:(UITableView *)tableView2 {
@@ -178,7 +185,7 @@
 	if(empty) {
 		return 1;
 	} else {
-		return [[self ticketArray] count];
+		return [[self ticketArray] count] + 1;
 	}
 }
 
@@ -195,11 +202,15 @@
 		cell.text = @"NO TICKETS";
 		cell.accessoryType = UITableViewCellAccessoryNone;
 	} else {
-		if([[self ticketArray] objectAtIndex:indexPath.row]) {
+		if(indexPath.row == [[self ticketArray] count]) {
+			cell.text = @"More Tickets";
+			cell.accessoryType = UITableViewCellAccessoryNone;
+		} else if([[self ticketArray] objectAtIndex:indexPath.row]) {
 			cell.text = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		} else {
 			cell.text = @"ROW IS NULL";
+			cell.accessoryType = UITableViewCellAccessoryNone;
 		}
 	}
 
@@ -209,17 +220,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(!empty) {
-		TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
-		Ticket *ticket = [self.ticketArray objectAtIndex:indexPath.row];
-		tdController.project = project;
-		tdController.ticket = ticket;
-		tdController.title = [[NSString alloc] initWithFormat:@"Ticket %i", ticket.ticketNumber];
-		if(tabbedView) {
-			[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
+		if(indexPath.row == [[self ticketArray] count]) {
+			currentPage++;
+			[NSThread detachNewThreadSelector:@selector(loadTickets) toTarget:self withObject:nil];
 		} else {
-			[self.navigationController pushViewController:tdController animated:YES];
+			TicketDetailViewController *tdController = [[TicketDetailViewController alloc] initWithNibName:@"TicketDetailView" bundle:nil];
+			Ticket *ticket = [self.ticketArray objectAtIndex:indexPath.row];
+			tdController.project = project;
+			tdController.ticket = ticket;
+			tdController.title = [[NSString alloc] initWithFormat:@"Ticket %i", ticket.ticketNumber];
+			if(tabbedView) {
+				[[self.tabBarController navigationController] pushViewController:tdController animated:YES];
+			} else {
+				[self.navigationController pushViewController:tdController animated:YES];
+			}
+			[tdController release];
 		}
-		[tdController release];
 	}
 }
 
@@ -239,6 +255,7 @@
 
 
 - (void)dealloc {
+    [ticketArray release];
     [project release];
     [query release];
     [super dealloc];

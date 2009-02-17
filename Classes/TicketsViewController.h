@@ -22,6 +22,7 @@
 	BOOL letUserSelectRow;
 	BOOL tabbedView;
 	BOOL empty;
+	NSInteger currentPage;
 }
 
 @property (nonatomic, retain) NSMutableArray *ticketArray;
