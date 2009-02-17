@@ -32,6 +32,8 @@
 
 -(void)loadProjects:(Project *)project {
 	BOOL PASSED = YES;
+	appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
+
 	[activityIndicator startAnimating];
 
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -53,6 +55,7 @@
 	}
 	
 	[activityIndicator stopAnimating];
+	appDelegate.reloadProjects = NO;
 }
 
 -(void)adminClicked:(id)sender {
@@ -98,12 +101,22 @@
 	[[self navigationController] presentModalViewController:addNavigationController animated:YES];
 	[self.tableView reloadData];
 }
+*/
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	[self.tableView reloadData];
+	
+	appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
+	if(appDelegate.reloadProjects) {
+		[appDelegate reloadProjectArray];
+		[tableView reloadData];
+
+		[NSThread detachNewThreadSelector:@selector(loadProjects:) toTarget:self withObject:nil];
+	} else {
+		[tableView reloadData];
+	}
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -254,11 +267,6 @@
     return YES;
 }
 */
-
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[tableView reloadData];
-}
 
 - (void)dealloc {
     [super dealloc];

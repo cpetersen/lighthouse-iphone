@@ -3,8 +3,6 @@
 * webkit view for html ticket bodies
 
 # BUGS
-* Update root view when adding a projects
-* update projects/subprojects when api key is saved
 * activity indicator doesn't appear on second and third page view
 * ERRORS
 	* Error when api key is wrong
@@ -47,3 +45,5 @@
 * UPDATE PROJECTADMIN VIEW WHEN ADDING/DELETING A PROJECT
 * ticket details don't load from milestone view
 * add images for tab bar
+* Update root view when adding a projects
+* update projects/subprojects when api key is saved

@@ -72,6 +72,7 @@
 	
 	//Add the object
 	[appDelegate addProject:project];
+	appDelegate.reloadProjects = YES;
 
 	[self.navigationController dismissModalViewControllerAnimated:YES];
 

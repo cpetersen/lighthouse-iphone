@@ -17,8 +17,10 @@ static sqlite3 *database = nil;
 @synthesize window;
 @synthesize navigationController;
 @synthesize projectArray;
+@synthesize reloadProjects;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
+	reloadProjects = NO;
 	//Copy database to the user's phone if needed.
 	/****** DATABASE WORK ******/
 	[self copyDatabaseIfNeeded];

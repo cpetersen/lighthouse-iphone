@@ -70,6 +70,7 @@
 	
 	// Save the key
 	[appDelegate setApiKey:txtApiKey.text];
+	appDelegate.reloadProjects = YES;
 
 	[self.navigationController dismissModalViewControllerAnimated:YES];
 }

@@ -17,6 +17,7 @@
 
 	NSMutableArray *projectArray;
 //	NSMutableArray *ticketsArray;
+	BOOL reloadProjects;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -24,6 +25,8 @@
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
 //@property (nonatomic, retain) NSMutableArray *ticketsArray;
+
+@property BOOL reloadProjects;
 
 //-(void) 
 
