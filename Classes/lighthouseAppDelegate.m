@@ -36,7 +36,7 @@ static sqlite3 *database = nil;
 	
 	//Once the db is copied, get the initial data to display on the screen.
 	[Project loadProjects:[self getDBPath]];	
-}	
+}
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Save data if appropriate
