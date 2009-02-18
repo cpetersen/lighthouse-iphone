@@ -33,6 +33,8 @@
 		NAME_FLAG = YES;
 	} else if([elementName isEqualToString:@"id"]) {
 		ID_FLAG = YES;
+	} else if([elementName isEqualToString:@"error"]) {
+		ERROR_FLAG = YES;
 	}
 }
 
@@ -43,6 +45,9 @@
 	} else if(ID_FLAG) {
 		aProject.projectID = [string intValue];
 		ID_FLAG = NO;
+	} else if(ERROR_FLAG) {
+		project.loadErrorMessage = string;
+		ERROR_FLAG = NO;
 	}
 }
 
@@ -51,6 +56,15 @@
 		aProject.accountName = project.projectName;
 		[self.project.projectArray addObject:aProject];		
 		[aProject release];
+	} else if(NAME_FLAG) {
+		NAME_FLAG = NO;
+	} else if(ID_FLAG) {
+		ID_FLAG = NO;
+	} else if(ERROR_FLAG) {
+		if(project.loadErrorMessage == NULL) {
+			project.loadErrorMessage = @"You don't have access to this project";
+		}
+		ERROR_FLAG = NO;
 	}
 }
 

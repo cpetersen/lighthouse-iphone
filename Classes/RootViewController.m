@@ -167,7 +167,11 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[[appDelegate.projectArray objectAtIndex:section] projectArray] count];	
+	if([[appDelegate.projectArray objectAtIndex:section] loadErrorMessage] != NULL) {
+		return 1;
+	} else {
+		return [[[appDelegate.projectArray objectAtIndex:section] projectArray] count];
+	}
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -185,64 +189,70 @@
     
     // Set up the cell...
 	//cell.font = [UIFont systemFontOfSize:14];
-	if([appDelegate.projectArray objectAtIndex:indexPath.section]) {
-		if([[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row]) {
-			cell.text = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		} else {
-			cell.text = @"ROW IS NULL";
-		}
+	if([[appDelegate.projectArray objectAtIndex:indexPath.section] loadErrorMessage] != NULL) {
+		cell.text = [[appDelegate.projectArray objectAtIndex:indexPath.section] loadErrorMessage];
 	} else {
-		cell.text = @"SECTION IS NULL";
+		if([appDelegate.projectArray objectAtIndex:indexPath.section]) {
+			if([[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row]) {
+				cell.text = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
+				cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			} else {
+				cell.text = @"ROW IS NULL";
+			}
+		} else {
+			cell.text = @"SECTION IS NULL";
+		}
 	}
 	
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	//Initialize the controller.
-	//ProjectDetailTabViewController *aController = [[ProjectDetailTabViewController alloc] initWithNibName:@"ProjectDetailTabView" bundle:nil];
-	//ProjectDetailTabViewController *aController = [ProjectDetailTabViewController alloc];
-	UITabBarController *tabBarController = [[UITabBarController alloc] init];
-	
-	TicketsViewController *tvController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-	MilestonesViewController *mvController = [[MilestonesViewController alloc] initWithNibName:@"MilestonesView" bundle:nil];
-	TicketsViewController *mineController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
-	TicketsViewController *nextController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+	if([[appDelegate.projectArray objectAtIndex:indexPath.section] loadErrorMessage] == NULL) {
+		//Initialize the controller.
+		//ProjectDetailTabViewController *aController = [[ProjectDetailTabViewController alloc] initWithNibName:@"ProjectDetailTabView" bundle:nil];
+		//ProjectDetailTabViewController *aController = [ProjectDetailTabViewController alloc];
+		UITabBarController *tabBarController = [[UITabBarController alloc] init];
+		
+		TicketsViewController *tvController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+		MilestonesViewController *mvController = [[MilestonesViewController alloc] initWithNibName:@"MilestonesView" bundle:nil];
+		TicketsViewController *mineController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
+		TicketsViewController *nextController = [[TicketsViewController alloc] initWithNibName:@"TicketsView" bundle:nil];
 
 
-	tvController.title = @"Tickets";
-	tvController.query = @"state:open!";
-	tvController.tabBarItem.image = [UIImage imageNamed:@"ticket_blue.png"];
+		tvController.title = @"Tickets";
+		tvController.query = @"state:open!";
+		tvController.tabBarItem.image = [UIImage imageNamed:@"ticket_blue.png"];
 
-	mvController.title = @"Milestones";
-	mvController.tabBarItem.image = [UIImage imageNamed:@"signpost.png"];
-	
-	mineController.title = @"Mine";
-	mineController.query = @"state:open! responsible:me";
-	mineController.tabBarItem.image = [UIImage imageNamed:@"user.png"];
-	
-	nextController.title = @"Next";
-	nextController.query = @"state:open! milestone:next";
-	nextController.tabBarItem.image = [UIImage imageNamed:@"next.png"];
-	
-	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
-	mvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
-	mineController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
-	nextController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
-	
-	tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mineController, nextController, mvController, nil]; 	
-	tabBarController.title = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
-	
-	//Add the controller to the top of the present view.
-	[[self navigationController] pushViewController:tabBarController animated:YES];
+		mvController.title = @"Milestones";
+		mvController.tabBarItem.image = [UIImage imageNamed:@"signpost.png"];
+		
+		mineController.title = @"Mine";
+		mineController.query = @"state:open! responsible:me";
+		mineController.tabBarItem.image = [UIImage imageNamed:@"user.png"];
+		
+		nextController.title = @"Next";
+		nextController.query = @"state:open! milestone:next";
+		nextController.tabBarItem.image = [UIImage imageNamed:@"next.png"];
+		
+		tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+		mvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+		mineController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+		nextController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];
+		
+		tabBarController.viewControllers = [NSArray arrayWithObjects:tvController, mineController, nextController, mvController, nil]; 	
+		tabBarController.title = [[[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row] projectName];
+		
+		//Add the controller to the top of the present view.
+		[[self navigationController] pushViewController:tabBarController animated:YES];
 
-	//Release the temp controller
-	[tvController release];
-	[mvController release];
-	[mineController release];
-	[nextController release];
-	[tabBarController release];
+		//Release the temp controller
+		[tvController release];
+		[mvController release];
+		[mineController release];
+		[nextController release];
+		[tabBarController release];
+	}
 }
 
 

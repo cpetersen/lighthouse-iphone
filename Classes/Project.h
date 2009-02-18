@@ -14,6 +14,7 @@
 	NSString *projectName;
 	NSString *accountName;
 
+	NSString *loadErrorMessage;
 	NSMutableArray *projectArray;
 	NSMutableArray *milestonesArray;
 }
@@ -21,6 +22,7 @@
 @property (nonatomic) NSInteger projectID;
 @property (nonatomic, copy) NSString *projectName;
 @property (nonatomic, copy) NSString *accountName;
+@property (nonatomic, copy) NSString *loadErrorMessage;
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
 @property (nonatomic, retain) NSMutableArray *milestonesArray;

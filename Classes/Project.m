@@ -22,7 +22,7 @@ static sqlite3_stmt *deleteStmt = nil;
 
 @implementation Project
 
-@synthesize projectID, projectName, accountName;
+@synthesize projectID, projectName, accountName, loadErrorMessage;
 @synthesize projectArray;
 @synthesize milestonesArray;
 

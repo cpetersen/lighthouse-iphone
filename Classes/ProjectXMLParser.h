@@ -16,6 +16,7 @@
 	NSMutableString *currentElementValue;
 	BOOL NAME_FLAG;
 	BOOL ID_FLAG;
+	BOOL ERROR_FLAG;
 }
 
 @property (nonatomic, retain) Project *project;

@@ -4,12 +4,8 @@
 # BUGS
 * activity indicator doesn't appear on second and third page view
 * ERRORS
-	* Error when api key is wrong
-	* show error for private projects
-	* project doesn't exist
 	* remove "more tickets" row when there are no more tickets
 * CUSTOM TABLE CELLS
-	* custom ticket table cell view
 	* customize "more tickets" cell
 
 # FUTURE
@@ -50,3 +46,7 @@
 * Update root view when adding a projects
 * update projects/subprojects when api key is saved
 * load multiple pages of tickets
+* custom ticket table cell view
+* Error when api key is wrong
+* show error for private projects
+* project doesn't exist
