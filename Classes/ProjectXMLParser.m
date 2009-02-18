@@ -41,13 +41,10 @@
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
 	if(NAME_FLAG) {
 		aProject.projectName = string;
-		NAME_FLAG = NO;
 	} else if(ID_FLAG) {
 		aProject.projectID = [string intValue];
-		ID_FLAG = NO;
 	} else if(ERROR_FLAG) {
 		project.loadErrorMessage = string;
-		ERROR_FLAG = NO;
 	}
 }
 

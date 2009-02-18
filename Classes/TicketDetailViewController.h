@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Project.h"
 #import "Ticket.h"
+#import "WebViewController.h"
 
 @interface TicketDetailViewController : UITableViewController {
 	IBOutlet UITableView *tableView;

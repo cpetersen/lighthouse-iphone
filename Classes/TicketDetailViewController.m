@@ -172,9 +172,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController];
-	// [anotherViewController release];
+	WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+	//[[self navigationController] pushViewController:webViewController];
+	[webViewController release];
 }
 
 
@@ -219,6 +219,8 @@
 
 
 - (void)dealloc {
+//    [ticket dealloc];
+//    [project dealloc];
     [super dealloc];
 }
 

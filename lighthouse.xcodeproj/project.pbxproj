@@ -15,6 +15,8 @@
 		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		B1269B4F0F4C05BB009B9439 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1269B4E0F4C05BB009B9439 /* WebView.xib */; };
+		B1269BBC0F4C0B40009B9439 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1269BBB0F4C0B40009B9439 /* WebViewController.m */; };
 		B12D63B20F303B5A00BDF814 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D63B10F303B5A00BDF814 /* Ticket.m */; };
 		B12D648F0F3101C900BDF814 /* ProjectAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */; };
 		B14ADBFD0F42B5C000EAF021 /* TicketDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14ADBFC0F42B5C000EAF021 /* TicketDetailView.xib */; };
@@ -64,6 +66,9 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B120FA090F343F740009A4FD /* ProjectAdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectAdminViewController.h; path = ../Lighthouse/Classes/ProjectAdminViewController.h; sourceTree = SOURCE_ROOT; };
+		B1269B4E0F4C05BB009B9439 /* WebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
+		B1269BBA0F4C0B40009B9439 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = Classes/WebViewController.h; sourceTree = "<group>"; };
+		B1269BBB0F4C0B40009B9439 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = Classes/WebViewController.m; sourceTree = "<group>"; };
 		B12D63B00F303B5A00BDF814 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		B12D63B10F303B5A00BDF814 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectAdminViewController.m; path = Classes/ProjectAdminViewController.m; sourceTree = "<group>"; };
@@ -219,6 +224,7 @@
 				B1D3B1350F3E36E40037808D /* TestView.xib */,
 				B14ADBFC0F42B5C000EAF021 /* TicketDetailView.xib */,
 				B1D04EB00F2AE98F0054E41A /* TicketsView.xib */,
+				B1269B4E0F4C05BB009B9439 /* WebView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -242,6 +248,8 @@
 				B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */,
 				B1D04EAD0F2AE9470054E41A /* TicketsViewController.h */,
 				B1D04EAE0F2AE9470054E41A /* TicketsViewController.m */,
+				B1269BBA0F4C0B40009B9439 /* WebViewController.h */,
+				B1269BBB0F4C0B40009B9439 /* WebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +323,7 @@
 				B14ADBFD0F42B5C000EAF021 /* TicketDetailView.xib in Resources */,
 				B15EE8DC0F494E740042D422 /* user.png in Resources */,
 				B15EE8E20F494F430042D422 /* next.png in Resources */,
+				B1269B4F0F4C05BB009B9439 /* WebView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 				B19154180F39F65D00181282 /* MilestoneXMLParser.m in Sources */,
 				B1D573A50F3F98EB007198F7 /* MilestonesViewController.m in Sources */,
 				B14ADC040F42B6A600EAF021 /* TicketDetailViewController.m in Sources */,
+				B1269BBC0F4C0B40009B9439 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
