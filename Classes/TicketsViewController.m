@@ -194,30 +194,65 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TicketView"];
-	
-	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"TicketView"] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	}
+	static NSString *CellIdentifier = @"Cell";
 
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+	if(cell == nil) {
+		cell = [self getCellContentView:CellIdentifier];
+	}
+	
+	UILabel *lblTemp1 = (UILabel *)[cell viewWithTag:1];
+	UILabel *lblTemp2 = (UILabel *)[cell viewWithTag:2];
+	
 	if(empty) {
-		cell.text = @"NO TICKETS";
+		lblTemp1.text = @"No Tickets Found";
+		lblTemp2.text = @"";
 		cell.accessoryType = UITableViewCellAccessoryNone;
 	} else {
 		if(indexPath.row == [[self ticketArray] count]) {
-			cell.text = @"More Tickets";
+			lblTemp1.text = @"More Tickets";
+			lblTemp2.text = @"";
 			cell.accessoryType = UITableViewCellAccessoryNone;
 		} else if([[self ticketArray] objectAtIndex:indexPath.row]) {
-			cell.text = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
+			NSString *cellValue = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
+			lblTemp1.text = cellValue;
+			lblTemp2.text = [[NSString alloc] initWithFormat:@"state:%@, assigned:%@",[[self.ticketArray objectAtIndex:indexPath.row] ticketState], [[self.ticketArray objectAtIndex:indexPath.row] assignedUserName]];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			//[cellValue release];
 		} else {
-			cell.text = @"ROW IS NULL";
+			lblTemp1.text = @"Row Is Null";
+			lblTemp2.text = @"";
 			cell.accessoryType = UITableViewCellAccessoryNone;
 		}
 	}
 
-    return cell;
+	return cell;
+	
+//	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TicketView"];
+//	
+//	if (cell == nil) {
+//		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"TicketView"] autorelease];
+//		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//	}
+//
+//	if(empty) {
+//		cell.text = @"NO TICKETS";
+//		cell.accessoryType = UITableViewCellAccessoryNone;
+//	} else {
+//		if(indexPath.row == [[self ticketArray] count]) {
+//			cell.text = @"More Tickets";
+//			cell.accessoryType = UITableViewCellAccessoryNone;
+//		} else if([[self ticketArray] objectAtIndex:indexPath.row]) {
+//			cell.text = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
+//			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//		} else {
+//			cell.text = @"ROW IS NULL";
+//			cell.accessoryType = UITableViewCellAccessoryNone;
+//		}
+//	}
+//
+//    return cell;
 }
 
 
@@ -264,6 +299,11 @@
 	[lblTemp release];
 	
 	return cell;
+}
+
+//RootViewController.m
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {	
+	return 60;
 }
 
 /*

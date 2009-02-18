@@ -33,4 +33,6 @@
 - (void) searchTableView;
 - (void) doneSearching_Clicked:(id)sender;
 
+- (UITableViewCell *) getCellContentView:(NSString *)cellIdentifier;
+
 @end
