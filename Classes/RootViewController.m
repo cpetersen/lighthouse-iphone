@@ -212,18 +212,18 @@
 
 
 	tvController.title = @"Tickets";
-	tvController.query = @"state:open";
+	tvController.query = @"state:open!";
 	tvController.tabBarItem.image = [UIImage imageNamed:@"ticket_blue.png"];
 
 	mvController.title = @"Milestones";
 	mvController.tabBarItem.image = [UIImage imageNamed:@"signpost.png"];
 	
 	mineController.title = @"Mine";
-	mineController.query = @"state:open responsible:me";
+	mineController.query = @"state:open! responsible:me";
 	mineController.tabBarItem.image = [UIImage imageNamed:@"user.png"];
 	
 	nextController.title = @"Next";
-	nextController.query = @"state:open milestone:next";
+	nextController.query = @"state:open! milestone:next";
 	nextController.tabBarItem.image = [UIImage imageNamed:@"next.png"];
 	
 	tvController.project = [[[appDelegate.projectArray objectAtIndex:indexPath.section] projectArray] objectAtIndex:indexPath.row];

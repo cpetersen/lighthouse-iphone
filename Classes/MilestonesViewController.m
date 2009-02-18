@@ -112,7 +112,7 @@
 		ticketsController.project = project;
 		[ticketsController notTabbedView];
 		
-		NSString *query = [[NSString alloc] initWithFormat:@"state:open milestone:\"%@\"", milestone.milestoneTitle];
+		NSString *query = [[NSString alloc] initWithFormat:@"state:open! milestone:\"%@\"", milestone.milestoneTitle];
 		ticketsController.query = query;
 
 		[[[self tabBarController] navigationController] pushViewController:ticketsController animated:YES];

@@ -62,6 +62,7 @@
 	NSString *apiKey = [appDelegate getApiKey];
 
 	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@&page=%i", project.accountName, project.projectID, new_query2, apiKey, currentPage ];
+	NSLog(@"URL [%@]", urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -80,11 +81,12 @@
 		[dialog setTitle:@"Error Connecting"];
 		[dialog addButtonWithTitle:@"OK"];
 		[dialog show];
-		[dialog release];		
+		[dialog release];
 	} else {
 		if(ticketArray == NULL) {
 			ticketArray = [[NSMutableArray alloc] init];
 		}
+		NSLog(@"tickets [%i]", [parser.tickets count]);
 		for(int i=0; i<[parser.tickets count]; i++) {
 			[ticketArray addObject:[parser.tickets objectAtIndex:i]];
 		}
@@ -240,6 +242,29 @@
 	}
 }
 
+- (UITableViewCell *) getCellContentView:(NSString *)cellIdentifier {
+	CGRect CellFrame = CGRectMake(0, 0, 300, 60);
+	CGRect Label1Frame = CGRectMake(10, 10, 290, 25);
+	CGRect Label2Frame = CGRectMake(10, 33, 290, 25);
+	UILabel *lblTemp;
+	
+	UITableViewCell *cell = [[[UITableViewCell alloc] initWithFrame:CellFrame reuseIdentifier:cellIdentifier] autorelease];
+	//Initialize Label with tag 1.
+	lblTemp = [[UILabel alloc] initWithFrame:Label1Frame];
+	lblTemp.tag = 1;
+	[cell.contentView addSubview:lblTemp];
+	[lblTemp release];
+	
+	//Initialize Label with tag 2.
+	lblTemp = [[UILabel alloc] initWithFrame:Label2Frame];
+	lblTemp.tag = 2;
+	lblTemp.font = [UIFont boldSystemFontOfSize:12];
+	lblTemp.textColor = [UIColor lightGrayColor];
+	[cell.contentView addSubview:lblTemp];
+	[lblTemp release];
+	
+	return cell;
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
