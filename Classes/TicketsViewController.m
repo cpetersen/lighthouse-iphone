@@ -151,6 +151,7 @@
 	}
 	
 	self.ticketArray = NULL;
+	currentPage = 1;
 	[self searchTableView];
 }
 
