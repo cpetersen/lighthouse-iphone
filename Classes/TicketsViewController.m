@@ -57,6 +57,9 @@
 
 	//[project loadTickets:new_query page:1];
 
+	empty = NO;
+	currentPage = 1;
+	
 	/****** XML WORK ******/
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSString *apiKey = [appDelegate getApiKey];
