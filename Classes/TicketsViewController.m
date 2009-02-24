@@ -221,7 +221,11 @@
 		} else if([[self ticketArray] objectAtIndex:indexPath.row]) {
 			NSString *cellValue = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
 			lblTemp1.text = cellValue;
-			lblTemp2.text = [[NSString alloc] initWithFormat:@"state:%@, assigned:%@",[[self.ticketArray objectAtIndex:indexPath.row] ticketState], [[self.ticketArray objectAtIndex:indexPath.row] assignedUserName]];
+			if([[self.ticketArray objectAtIndex:indexPath.row] assignedUserName]) {
+				lblTemp2.text = [[NSString alloc] initWithFormat:@"state:%@, assigned:%@",[[self.ticketArray objectAtIndex:indexPath.row] ticketState], [[self.ticketArray objectAtIndex:indexPath.row] assignedUserName]];
+			} else {
+				lblTemp2.text = [[NSString alloc] initWithFormat:@"state:%@, unassigned",[[self.ticketArray objectAtIndex:indexPath.row] ticketState]];
+			}
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			//[cellValue release];
 		} else {

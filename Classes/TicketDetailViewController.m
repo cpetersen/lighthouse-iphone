@@ -172,9 +172,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-	//[[self navigationController] pushViewController:webViewController];
-	[webViewController release];
+	if(indexPath.row == 7) {
+		NSLog(@"PUSHING THE WEBVIEW");
+		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+		//[[self navigationController] pushViewController:webViewController];
+		[self pushViewController:webViewController];
+		[webViewController release];
+	}	
 }
 
 

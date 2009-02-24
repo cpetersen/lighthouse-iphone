@@ -276,13 +276,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
+									<integer>27</integer>
 									<integer>13</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 114}, {240, 660}}</string>
+							<string>{{0, 149}, {240, 660}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -319,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>TicketsViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.m</string>
+										<string>TicketsViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B16DE3AD0F53BBAA00E773AC</string>
+										<string>B16DE3EB0F53D28300E773AC</string>
 										<key>history</key>
 										<array>
 											<string>B1CE82DC0F2C105A00AD82E1</string>
@@ -361,14 +361,16 @@
 											<string>B153B42B0F4AA01100B918A0</string>
 											<string>B14D75D60F4BE4EB007485A1</string>
 											<string>B14D75D70F4BE4EB007485A1</string>
-											<string>B14D75ED0F4BE953007485A1</string>
 											<string>B14D75EF0F4BE953007485A1</string>
 											<string>B1269B2B0F4BEEEC009B9439</string>
 											<string>B1269B2C0F4BEEEC009B9439</string>
-											<string>B16DE3A50F53BBAA00E773AC</string>
-											<string>B16DE3A60F53BBAA00E773AC</string>
-											<string>B16DE3A70F53BBAA00E773AC</string>
-											<string>B16DE3A80F53BBAA00E773AC</string>
+											<string>B16DE3B40F53C98800E773AC</string>
+											<string>B16DE3B50F53C98800E773AC</string>
+											<string>B16DE3CA0F53CFE700E773AC</string>
+											<string>B16DE3DE0F53D07A00E773AC</string>
+											<string>B16DE3DF0F53D07A00E773AC</string>
+											<string>B16DE3E80F53D26F00E773AC</string>
+											<string>B16DE3AF0F53BEAE00E773AC</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -419,6 +421,18 @@
 											<string>B16DE3AA0F53BBAA00E773AC</string>
 											<string>B16DE3AB0F53BBAA00E773AC</string>
 											<string>B16DE3AC0F53BBAA00E773AC</string>
+											<string>B16DE3B70F53C98800E773AC</string>
+											<string>B16DE3B80F53C98800E773AC</string>
+											<string>B16DE3CD0F53CFE700E773AC</string>
+											<string>B16DE3CE0F53CFE700E773AC</string>
+											<string>B16DE3CF0F53CFE700E773AC</string>
+											<string>B16DE3D00F53CFE700E773AC</string>
+											<string>B16DE3D10F53CFE700E773AC</string>
+											<string>B16DE3D20F53CFE700E773AC</string>
+											<string>B16DE3E10F53D07A00E773AC</string>
+											<string>B16DE3E20F53D07A00E773AC</string>
+											<string>B16DE3E30F53D07A00E773AC</string>
+											<string>B16DE3E90F53D26F00E773AC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -612,6 +626,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>B16DE3BF0F53CB5C00E773AC</string>
+		<string>B16DE3C00F53CB5C00E773AC</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>B19F69860F270C2D0001541B</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -640,7 +656,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>TicketDetailViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -657,6 +673,8 @@
 							<string>206pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -856,7 +874,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.m</string>
+										<string>TicketsViewController.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
