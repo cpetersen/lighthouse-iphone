@@ -131,7 +131,8 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
-    
+	
+	cell.accessoryType = UITableViewCellAccessoryNone;
 	if(indexPath.section == 0) {
 		if(indexPath.row == 0) {
 			NSString *tp = [[NSString alloc] initWithFormat:@"Assigned To: %@", ticket.assignedUserName];
@@ -159,9 +160,11 @@
 			[tp release];
 		} else if (indexPath.row == 6) {
 			NSString *tp = [[NSString alloc] initWithFormat:@"URL: %@", ticket.url];
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 7) {
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			cell.text = ticket.body;
 		}
 	}
@@ -172,13 +175,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	if(indexPath.row == 7) {
-		NSLog(@"PUSHING THE WEBVIEW");
+	NSLog(@"didSelectRowAtIndexPath 1");
+	if(indexPath.row == 6) {
+		NSLog(@"didSelectRowAtIndexPath 2");
 		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-		//[[self navigationController] pushViewController:webViewController];
-		[self pushViewController:webViewController];
+		NSLog(@"didSelectRowAtIndexPath 3");
+		webViewController.url = ticket.url;
+		
+		NSLog(@"didSelectRowAtIndexPath 4");
+		[[self navigationController] pushViewController:webViewController animated:YES];
+
+		NSLog(@"didSelectRowAtIndexPath 5");
+		[webViewController release];
+		NSLog(@"didSelectRowAtIndexPath 6");
+	} else if(indexPath.row == 7) {
+		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+		[[self navigationController] pushViewController:webViewController animated:YES];
 		[webViewController release];
 	}	
+	NSLog(@"didSelectRowAtIndexPath 7");
 }
 
 

@@ -11,6 +11,8 @@
 
 @implementation WebViewController
 
+@synthesize url, body;
+
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -27,12 +29,22 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+	if([self url]) {
+		NSURL *ns_url = [NSURL URLWithString:[self url]];
+		NSURLRequest *request = [NSURLRequest requestWithURL:ns_url];
+		[webView loadRequest:request];
+	} else if([self body]) {
+		NSLog(@"viewDidLoad 8");
+	}
+
+    [pool release];
 }
-*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -49,6 +61,8 @@
 
 
 - (void)dealloc {
+    [url dealloc];
+    [body dealloc];
     [super dealloc];
 }
 
