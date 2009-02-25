@@ -33,17 +33,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-
 	if([self url]) {
+		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 		NSURL *ns_url = [NSURL URLWithString:[self url]];
 		NSURLRequest *request = [NSURLRequest requestWithURL:ns_url];
 		[webView loadRequest:request];
+		[pool release];
 	} else if([self body]) {
-		NSLog(@"viewDidLoad 8");
+		NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 36pt; }</style><body>%@</body></html>", [self body]];
+		[webView loadHTMLString:html baseURL:NULL];
+		[html release];
+		
+		NSLog(@"viewDidLoad 8 [%@]", [self body]);
 	}
-
-    [pool release];
 }
 
 /*
@@ -61,8 +63,6 @@
 
 
 - (void)dealloc {
-    [url dealloc];
-    [body dealloc];
     [super dealloc];
 }
 

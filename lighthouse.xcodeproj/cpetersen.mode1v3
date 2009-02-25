@@ -282,7 +282,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 149}, {240, 660}}</string>
+							<string>{{0, 251}, {240, 660}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B16DE4A20F55285300E773AC</string>
+										<string>B16DE4DC0F55374800E773AC</string>
 										<key>history</key>
 										<array>
 											<string>B1CE82DC0F2C105A00AD82E1</string>
@@ -354,7 +354,6 @@
 											<string>B153B40D0F4A995800B918A0</string>
 											<string>B153B4210F4A99F500B918A0</string>
 											<string>B153B42B0F4AA01100B918A0</string>
-											<string>B14D75D60F4BE4EB007485A1</string>
 											<string>B14D75D70F4BE4EB007485A1</string>
 											<string>B14D75EF0F4BE953007485A1</string>
 											<string>B1269B2B0F4BEEEC009B9439</string>
@@ -368,11 +367,12 @@
 											<string>B16DE42C0F53D89100E773AC</string>
 											<string>B16DE4690F53E68F00E773AC</string>
 											<string>B16DE46B0F53E68F00E773AC</string>
-											<string>B16DE47B0F55232000E773AC</string>
-											<string>B16DE48D0F55268700E773AC</string>
-											<string>B16DE49B0F55282F00E773AC</string>
 											<string>B16DE49C0F55282F00E773AC</string>
-											<string>B16DE49D0F55282F00E773AC</string>
+											<string>B16DE4B40F552A0C00E773AC</string>
+											<string>B16DE4C10F552C3800E773AC</string>
+											<string>B16DE4CA0F55323B00E773AC</string>
+											<string>B16DE4D70F55349C00E773AC</string>
+											<string>B16DE4D80F55349C00E773AC</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -481,6 +481,19 @@
 											<string>B16DE49E0F55282F00E773AC</string>
 											<string>B16DE49F0F55282F00E773AC</string>
 											<string>B16DE4A00F55282F00E773AC</string>
+											<string>B16DE4A90F55293900E773AC</string>
+											<string>B16DE4AA0F55293900E773AC</string>
+											<string>B16DE4B00F5529DA00E773AC</string>
+											<string>B16DE4B70F552A0C00E773AC</string>
+											<string>B16DE4B80F552A0C00E773AC</string>
+											<string>B16DE4B90F552A0C00E773AC</string>
+											<string>B16DE4BA0F552A0C00E773AC</string>
+											<string>B16DE4C30F552C3800E773AC</string>
+											<string>B16DE4C40F552C3800E773AC</string>
+											<string>B16DE4CC0F55323B00E773AC</string>
+											<string>B16DE4CD0F55323B00E773AC</string>
+											<string>B16DE4D10F5532A700E773AC</string>
+											<string>B16DE4D90F55349C00E773AC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -678,8 +691,8 @@
 		<string>B16DE3C00F53CB5C00E773AC</string>
 		<string>B19F69860F270C2D0001541B</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/cpetersen/Code/iphone/Lighthouse/lighthouse.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

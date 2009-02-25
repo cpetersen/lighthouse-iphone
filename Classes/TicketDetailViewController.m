@@ -175,25 +175,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	NSLog(@"didSelectRowAtIndexPath 1");
 	if(indexPath.row == 6) {
-		NSLog(@"didSelectRowAtIndexPath 2");
 		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-		NSLog(@"didSelectRowAtIndexPath 3");
 		webViewController.url = ticket.url;
-		
-		NSLog(@"didSelectRowAtIndexPath 4");
 		[[self navigationController] pushViewController:webViewController animated:YES];
-
-		NSLog(@"didSelectRowAtIndexPath 5");
 		[webViewController release];
-		NSLog(@"didSelectRowAtIndexPath 6");
 	} else if(indexPath.row == 7) {
 		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+		webViewController.body = ticket.body;
 		[[self navigationController] pushViewController:webViewController animated:YES];
 		[webViewController release];
 	}	
-	NSLog(@"didSelectRowAtIndexPath 7");
 }
 
 
