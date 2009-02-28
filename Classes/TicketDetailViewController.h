@@ -18,9 +18,13 @@
 	
 	Ticket *ticket;
 	Project *project;
+	NSString *ticketDescription;
 }
 
 @property (nonatomic, retain) Ticket *ticket;
 @property (nonatomic, retain) Project *project;
+@property (nonatomic, retain) NSString *ticketDescription;
+
+- (void)refreshTicketDescription:(NSString *)html;
 
 @end

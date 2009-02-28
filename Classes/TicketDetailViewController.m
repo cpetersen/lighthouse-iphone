@@ -11,7 +11,9 @@
 
 @implementation TicketDetailViewController
 
-@synthesize project, ticket;
+@synthesize project;
+@synthesize ticket;
+@synthesize ticketDescription;
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -63,9 +65,24 @@
 	} else {
 		self.ticket = [parser.tickets objectAtIndex:0];
 	}
+	
+	// LOAD UP THE HTML
+	NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 40pt; font-family: sans-serif; }</style><body>%@</body></html>", ticket.body];
+	//[webView loadHTMLString:html baseURL:NULL];
+	//ticketDescription = html;
 
+	// HAVE THE MAIN THREAD LOAD THE UIWEBVIEW
+	//[self performSelectorOnMainThread:refreshTicketDescription withObject:html waitUntilDone:YES];
+
+	//[self performSelectorOnMainThread:@selector(refreshTicketDescription:) withObject:html waitUntilDone:YES];
+	//[webView performSelectorOnMainThread:@selector(loadHTMLString:) withObject:html waitUntilDone:YES];
+	ticketDescription = html;
 	[[self tableView] reloadData];
 	[pool release];
+}
+
+- (void)refreshTicketDescription:(NSString *)html {
+	[webView loadHTMLString:html baseURL:NULL];
 }
 
 /*
@@ -165,13 +182,7 @@
 			[tp release];
 		} else if (indexPath.row == 7) {
 			cell = tableViewCell;
-
-			if(ticket.body) {
-				NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 32pt; font-family: sans-serif; }</style><body>%@</body></html>", ticket.body];
-				[webView loadHTMLString:html baseURL:NULL];
-				[html release];
-			}
-			
+			[webView loadHTMLString:ticketDescription baseURL:NULL];
 //			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 //			cell.text = ticket.body;
 		}
@@ -179,7 +190,6 @@
 	
     return cell;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
@@ -196,6 +206,14 @@
 	}	
 }
 
+//RootViewController.m
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {	
+	if(indexPath.row == 7) {
+		return 150;
+	} else {
+		return 40;
+	}
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -238,8 +256,10 @@
 
 
 - (void)dealloc {
-//    [ticket dealloc];
-//    [project dealloc];
+    [ticket dealloc];
+// DELETING THE PROJECT CAUSES CRASHES
+//  [project dealloc];
+	[ticketDescription dealloc];
     [super dealloc];
 }
 

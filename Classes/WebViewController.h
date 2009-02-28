@@ -13,10 +13,10 @@
 	IBOutlet UIWebView *webView;
 	
 	NSString *url;
-	NSString *body;
+//	NSString *body;
 }
 
 @property (nonatomic, retain) NSString *url;
-@property (nonatomic, retain) NSString *body;
+//@property (nonatomic, retain) NSString *body;
 
 @end

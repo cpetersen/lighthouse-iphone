@@ -3,11 +3,11 @@
 
 # BUGS
 * activity indicator doesn't appear on second and third page view
+* load ticket body-html instead of body
+* UiWebView Race Condition
 * ERRORS
 	* remove "more tickets" row when there are no more tickets
 	* when you reach the last page of tickets, it keeps reloading
-* CUSTOM TABLE CELLS
-	* customize "more tickets" cell
 
 # FUTURE
 * get changesets
@@ -51,3 +51,5 @@
 * Error when api key is wrong
 * show error for private projects
 * project doesn't exist
+* CUSTOM TABLE CELLS
+	* customize "more tickets" cell

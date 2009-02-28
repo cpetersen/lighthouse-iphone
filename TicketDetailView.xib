@@ -49,21 +49,21 @@
 				<float key="IBUISectionHeaderHeight">1.000000e+01</float>
 				<float key="IBUISectionFooterHeight">1.000000e+01</float>
 			</object>
-			<object class="IBUITableViewCell" id="491326221">
+			<object class="IBUITableViewCell" id="157353200">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIView" id="582521410">
-						<reference key="NSNextResponder" ref="491326221"/>
+					<object class="IBUIView" id="566002841">
+						<reference key="NSNextResponder" ref="157353200"/>
 						<int key="NSvFlags">256</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIWebView" id="732233679">
-								<reference key="NSNextResponder" ref="582521410"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrameSize">{432, 140}</string>
-								<reference key="NSSuperview" ref="582521410"/>
+							<object class="IBUIWebView" id="576365655">
+								<reference key="NSNextResponder" ref="566002841"/>
+								<int key="NSvFlags">279</int>
+								<string key="NSFrameSize">{355, 140}</string>
+								<reference key="NSSuperview" ref="566002841"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -73,8 +73,8 @@
 								<bool key="IBUIScalesPageToFit">YES</bool>
 							</object>
 						</object>
-						<string key="NSFrameSize">{432, 140}</string>
-						<reference key="NSSuperview" ref="491326221"/>
+						<string key="NSFrameSize">{375, 140}</string>
+						<reference key="NSSuperview" ref="157353200"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
@@ -85,7 +85,7 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 					</object>
 				</object>
-				<string key="NSFrameSize">{432, 140}</string>
+				<string key="NSFrameSize">{375, 140}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -94,7 +94,7 @@
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<int key="IBUISelectionStyle">0</int>
-				<reference key="IBUIContentView" ref="582521410"/>
+				<reference key="IBUIContentView" ref="566002841"/>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -136,7 +136,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tableViewCell</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="491326221"/>
+						<reference key="destination" ref="157353200"/>
 					</object>
 					<int key="connectionID">14</int>
 				</object>
@@ -144,7 +144,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">webView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="732233679"/>
+						<reference key="destination" ref="576365655"/>
 					</object>
 					<int key="connectionID">15</int>
 				</object>
@@ -178,17 +178,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="491326221"/>
+						<reference key="object" ref="157353200"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="732233679"/>
+							<reference ref="576365655"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
-						<reference key="object" ref="732233679"/>
-						<reference key="parent" ref="491326221"/>
+						<reference key="object" ref="576365655"/>
+						<reference key="parent" ref="157353200"/>
 					</object>
 				</object>
 			</object>
@@ -208,7 +208,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TicketDetailViewController</string>
 					<string>UIResponder</string>
-					<string>{{219, 556}, {432, 140}}</string>
+					<string>{{227, 523}, {375, 140}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{321, 228}, {347, 454}}</string>
