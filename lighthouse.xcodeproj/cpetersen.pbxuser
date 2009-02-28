@@ -30,15 +30,15 @@
 	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {893, 618}}";
-			sepNavSelRange = "{551, 0}";
-			sepNavVisRange = "{0, 559}";
+			sepNavSelRange = "{516, 0}";
+			sepNavVisRange = "{0, 599}";
 		};
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 3836}}";
-			sepNavSelRange = "{6470, 70}";
-			sepNavVisRange = "{5652, 2313}";
+			sepNavIntBoundsRect = "{{0, 0}, {900, 4102}}";
+			sepNavSelRange = "{6056, 0}";
+			sepNavVisRange = "{4791, 1866}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
@@ -51,7 +51,7 @@
 			1D6058900D05DD3D006BFB54 /* lighthouse */,
 		);
 		breakpoints = (
-			B14C14960F58FB910019C178 /* TicketDetailViewController.m:144 */,
+			B14C14960F58FB910019C178 /* TicketDetailViewController.m:145 */,
 		);
 		codeSenseManager = B19F69580F26FCF10001541B /* Code sense */;
 		executables = (
@@ -195,6 +195,31 @@
 			B13D955A0F59ED1300FC240C /* PBXTextBookmark */ = B13D955A0F59ED1300FC240C /* PBXTextBookmark */;
 			B13D955B0F59ED1300FC240C /* PBXTextBookmark */ = B13D955B0F59ED1300FC240C /* PBXTextBookmark */;
 			B13D955C0F59ED1300FC240C /* PBXTextBookmark */ = B13D955C0F59ED1300FC240C /* PBXTextBookmark */;
+			B13D95740F59FC8700FC240C /* PBXTextBookmark */ = B13D95740F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95750F59FC8700FC240C /* PBXTextBookmark */ = B13D95750F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95760F59FC8700FC240C /* PBXTextBookmark */ = B13D95760F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95770F59FC8700FC240C /* PBXTextBookmark */ = B13D95770F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95780F59FC8700FC240C /* PBXTextBookmark */ = B13D95780F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95790F59FC8700FC240C /* PBXTextBookmark */ = B13D95790F59FC8700FC240C /* PBXTextBookmark */;
+			B13D957A0F59FC8700FC240C /* PBXTextBookmark */ = B13D957A0F59FC8700FC240C /* PBXTextBookmark */;
+			B13D957B0F59FC8700FC240C /* PBXTextBookmark */ = B13D957B0F59FC8700FC240C /* PBXTextBookmark */;
+			B13D957C0F59FC8700FC240C /* PBXTextBookmark */ = B13D957C0F59FC8700FC240C /* PBXTextBookmark */;
+			B13D957D0F59FC8700FC240C /* PBXTextBookmark */ = B13D957D0F59FC8700FC240C /* PBXTextBookmark */;
+			B13D957E0F59FC8700FC240C /* PBXTextBookmark */ = B13D957E0F59FC8700FC240C /* PBXTextBookmark */;
+			B13D957F0F59FC8700FC240C /* PBXTextBookmark */ = B13D957F0F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95800F59FC8700FC240C /* PBXTextBookmark */ = B13D95800F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95810F59FC8700FC240C /* PBXTextBookmark */ = B13D95810F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95820F59FC8700FC240C /* PBXTextBookmark */ = B13D95820F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95830F59FC8700FC240C /* PBXTextBookmark */ = B13D95830F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95840F59FC8700FC240C /* PBXTextBookmark */ = B13D95840F59FC8700FC240C /* PBXTextBookmark */;
+			B13D95850F59FC8700FC240C /* PBXTextBookmark */ = B13D95850F59FC8700FC240C /* PBXTextBookmark */;
+			B13D958B0F59FCD600FC240C /* PBXTextBookmark */ = B13D958B0F59FCD600FC240C /* PBXTextBookmark */;
+			B13D958D0F59FD3600FC240C /* PBXTextBookmark */ = B13D958D0F59FD3600FC240C /* PBXTextBookmark */;
+			B13D958E0F59FD3600FC240C /* PBXTextBookmark */ = B13D958E0F59FD3600FC240C /* PBXTextBookmark */;
+			B13D958F0F59FD3600FC240C /* PBXTextBookmark */ = B13D958F0F59FD3600FC240C /* PBXTextBookmark */;
+			B13D95900F59FD3600FC240C /* PBXTextBookmark */ = B13D95900F59FD3600FC240C /* PBXTextBookmark */;
+			B13D95910F59FD3600FC240C /* PBXTextBookmark */ = B13D95910F59FD3600FC240C /* PBXTextBookmark */;
+			B13D95920F59FD3600FC240C /* PBXTextBookmark */ = B13D95920F59FD3600FC240C /* PBXTextBookmark */;
 			B14ADC170F42BBC900EAF021 = B14ADC170F42BBC900EAF021 /* PBXTextBookmark */;
 			B14ADC1C0F42BBC900EAF021 = B14ADC1C0F42BBC900EAF021 /* PBXTextBookmark */;
 			B14C14860F58F64E0019C178 = B14C14860F58F64E0019C178 /* PBXTextBookmark */;
@@ -508,7 +533,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 63";
 		rLen = 0;
-		rLoc = 2042;
+		rLoc = 2065;
 		rType = 0;
 		vrLen = 1810;
 		vrLoc = 1066;
@@ -528,23 +553,273 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 212";
 		rLen = 0;
-		rLoc = 7105;
+		rLoc = 7128;
 		rType = 0;
 		vrLen = 1563;
 		vrLoc = 5823;
 	};
+	B13D95740F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1FCBFD70F36DB79002AE255 /* README.markdown */;
+		name = "README.markdown: 5";
+		rLen = 0;
+		rLoc = 52;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 0;
+	};
+	B13D95750F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1E170690F2C555E00EE28C1 /* Project.m */;
+		name = "Project.m: 25";
+		rLen = 0;
+		rLoc = 853;
+		rType = 0;
+		vrLen = 1717;
+		vrLoc = 3;
+	};
+	B13D95760F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1E170680F2C555E00EE28C1 /* Project.h */;
+		name = "Project.h: 25";
+		rLen = 16;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 968;
+		vrLoc = 0;
+	};
+	B13D95770F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 193";
+		rLen = 0;
+		rLoc = 6056;
+		rType = 0;
+		vrLen = 1866;
+		vrLoc = 4791;
+	};
+	B13D95780F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 19";
+		rLen = 0;
+		rLoc = 516;
+		rType = 0;
+		vrLen = 599;
+		vrLoc = 0;
+	};
+	B13D95790F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
+		name = "TicketDetailViewController.m: 212";
+		rLen = 0;
+		rLoc = 7128;
+		rType = 0;
+		vrLen = 1563;
+		vrLoc = 5823;
+	};
+	B13D957A0F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
+		name = "TicketDetailViewController.m: 212";
+		rLen = 0;
+		rLoc = 7128;
+		rType = 0;
+		vrLen = 1563;
+		vrLoc = 5823;
+	};
+	B13D957B0F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 19";
+		rLen = 0;
+		rLoc = 542;
+		rType = 0;
+		vrLen = 597;
+		vrLoc = 0;
+	};
+	B13D957C0F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 193";
+		rLen = 0;
+		rLoc = 6064;
+		rType = 0;
+		vrLen = 1194;
+		vrLoc = 3278;
+	};
+	B13D957D0F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1E170690F2C555E00EE28C1 /* Project.m */;
+		name = "Project.m: 25";
+		rLen = 0;
+		rLoc = 853;
+		rType = 0;
+		vrLen = 1710;
+		vrLoc = 0;
+	};
+	B13D957E0F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 193";
+		rLen = 0;
+		rLoc = 6064;
+		rType = 0;
+		vrLen = 1367;
+		vrLoc = 770;
+	};
+	B13D957F0F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1E170680F2C555E00EE28C1 /* Project.h */;
+		name = "Project.h: 24";
+		rLen = 0;
+		rLoc = 529;
+		rType = 0;
+		vrLen = 968;
+		vrLoc = 0;
+	};
+	B13D95800F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1FCBFD70F36DB79002AE255 /* README.markdown */;
+		name = "README.markdown: 5";
+		rLen = 0;
+		rLoc = 52;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 0;
+	};
+	B13D95810F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1E170690F2C555E00EE28C1 /* Project.m */;
+		name = "Project.m: 25";
+		rLen = 0;
+		rLoc = 853;
+		rType = 0;
+		vrLen = 1717;
+		vrLoc = 3;
+	};
+	B13D95820F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B1E170680F2C555E00EE28C1 /* Project.h */;
+		name = "Project.h: 25";
+		rLen = 16;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 968;
+		vrLoc = 0;
+	};
+	B13D95830F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 193";
+		rLen = 0;
+		rLoc = 6056;
+		rType = 0;
+		vrLen = 1866;
+		vrLoc = 4791;
+	};
+	B13D95840F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 19";
+		rLen = 0;
+		rLoc = 516;
+		rType = 0;
+		vrLen = 599;
+		vrLoc = 0;
+	};
+	B13D95850F59FC8700FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
+		name = "TicketDetailViewController.m: 30";
+		rLen = 0;
+		rLoc = 669;
+		rType = 0;
+		vrLen = 1600;
+		vrLoc = 227;
+	};
+	B13D958B0F59FCD600FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
+		name = "TicketDetailViewController.m: 31";
+		rLen = 0;
+		rLoc = 777;
+		rType = 0;
+		vrLen = 1607;
+		vrLoc = 227;
+	};
+	B13D958D0F59FD3600FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
+		name = "TicketDetailViewController.m: 37";
+		rLen = 20;
+		rLoc = 962;
+		rType = 0;
+		vrLen = 1539;
+		vrLoc = 227;
+	};
+	B13D958E0F59FD3600FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
+		name = "TicketDetailViewController.h: 14";
+		rLen = 0;
+		rLoc = 300;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 0;
+	};
+	B13D958F0F59FD3600FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
+		name = "TicketDetailViewController.m: 31";
+		rLen = 0;
+		rLoc = 765;
+		rType = 0;
+		vrLen = 1539;
+		vrLoc = 227;
+	};
+	B13D95900F59FD3600FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
+		name = "TicketDetailViewController.h: 14";
+		rLen = 0;
+		rLoc = 300;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 0;
+	};
+	B13D95910F59FD3600FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
+		name = "TicketDetailViewController.m: 37";
+		rLen = 20;
+		rLoc = 962;
+		rType = 0;
+		vrLen = 1539;
+		vrLoc = 227;
+	};
+	B13D95920F59FD3600FC240C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
+		name = "TicketDetailViewController.h: 28";
+		rLen = 0;
+		rLoc = 666;
+		rType = 0;
+		vrLen = 724;
+		vrLoc = 0;
+	};
 	B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {893, 618}}";
-			sepNavSelRange = "{300, 0}";
-			sepNavVisRange = "{0, 705}";
+			sepNavSelRange = "{666, 0}";
+			sepNavVisRange = "{0, 724}";
 		};
 	};
 	B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1200, 3724}}";
-			sepNavSelRange = "{7105, 0}";
-			sepNavVisRange = "{5823, 1563}";
+			sepNavIntBoundsRect = "{{0, 0}, {1200, 3806}}";
+			sepNavSelRange = "{962, 20}";
+			sepNavVisRange = "{227, 1605}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
@@ -553,7 +828,7 @@
 		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
 		name = "TicketDetailViewController.h: 17";
 		rLen = 0;
-		rLoc = 705;
+		rLoc = 724;
 		rType = 0;
 		vrLen = 258;
 		vrLoc = 0;
@@ -583,12 +858,12 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 146";
 		rLen = 0;
-		rLoc = 5173;
+		rLoc = 5196;
 		rType = 0;
 		vrLen = 1837;
 		vrLoc = 3286;
 	};
-	B14C14960F58FB910019C178 /* TicketDetailViewController.m:144 */ = {
+	B14C14960F58FB910019C178 /* TicketDetailViewController.m:145 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -600,8 +875,8 @@
 		functionName = "-tableView:cellForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 144;
-		modificationTime = 257546335.053872;
+		lineNumber = 145;
+		modificationTime = 257555559.329089;
 		state = 2;
 	};
 	B14C149C0F58FBE10019C178 /* PBXTextBookmark */ = {
@@ -619,7 +894,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 167";
 		rLen = 0;
-		rLoc = 5980;
+		rLoc = 6003;
 		rType = 0;
 		vrLen = 1813;
 		vrLoc = 3970;
@@ -639,7 +914,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 169";
 		rLen = 0;
-		rLoc = 6121;
+		rLoc = 6144;
 		rType = 0;
 		vrLen = 1797;
 		vrLoc = 3997;
@@ -659,7 +934,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 191";
 		rLen = 305;
-		rLoc = 6636;
+		rLoc = 6659;
 		rType = 0;
 		vrLen = 1727;
 		vrLoc = 4907;
@@ -709,7 +984,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 175";
 		rLen = 0;
-		rLoc = 6048;
+		rLoc = 6071;
 		rType = 0;
 		vrLen = 1834;
 		vrLoc = 4485;
@@ -729,7 +1004,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 169";
 		rLen = 0;
-		rLoc = 6047;
+		rLoc = 6070;
 		rType = 0;
 		vrLen = 1657;
 		vrLoc = 4959;
@@ -789,7 +1064,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 184";
 		rLen = 0;
-		rLoc = 6177;
+		rLoc = 6200;
 		rType = 0;
 		vrLen = 1641;
 		vrLoc = 4924;
@@ -799,7 +1074,7 @@
 		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
 		name = "TicketDetailViewController.h: 26";
 		rLen = 0;
-		rLoc = 698;
+		rLoc = 717;
 		rType = 0;
 		vrLen = 616;
 		vrLoc = 0;
@@ -809,7 +1084,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 184";
 		rLen = 0;
-		rLoc = 6177;
+		rLoc = 6200;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 4959;
@@ -819,7 +1094,7 @@
 		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
 		name = "TicketDetailViewController.h: 26";
 		rLen = 0;
-		rLoc = 697;
+		rLoc = 716;
 		rType = 0;
 		vrLen = 606;
 		vrLoc = 0;
@@ -829,7 +1104,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 184";
 		rLen = 0;
-		rLoc = 6177;
+		rLoc = 6200;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 4959;
@@ -849,7 +1124,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 86";
 		rLen = 52;
-		rLoc = 2824;
+		rLoc = 2847;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 1719;
@@ -859,7 +1134,7 @@
 		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
 		name = "TicketDetailViewController.h: 28";
 		rLen = 0;
-		rLoc = 698;
+		rLoc = 717;
 		rType = 0;
 		vrLen = 695;
 		vrLoc = 0;
@@ -869,7 +1144,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 85";
 		rLen = 0;
-		rLoc = 2905;
+		rLoc = 2928;
 		rType = 0;
 		vrLen = 1171;
 		vrLoc = 1787;
@@ -879,7 +1154,7 @@
 		fRef = B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */;
 		name = "TicketDetailViewController.h: 28";
 		rLen = 0;
-		rLoc = 697;
+		rLoc = 716;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 0;
@@ -919,7 +1194,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 230";
 		rLen = 0;
-		rLoc = 8005;
+		rLoc = 8028;
 		rType = 0;
 		vrLen = 1845;
 		vrLoc = 4829;
@@ -949,7 +1224,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 261";
 		rLen = 0;
-		rLoc = 8557;
+		rLoc = 8580;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 7326;
@@ -979,7 +1254,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 261";
 		rLen = 0;
-		rLoc = 8557;
+		rLoc = 8580;
 		rType = 0;
 		vrLen = 1775;
 		vrLoc = 5273;
@@ -999,7 +1274,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 185";
 		rLen = 0;
-		rLoc = 6032;
+		rLoc = 6055;
 		rType = 0;
 		vrLen = 1754;
 		vrLoc = 5380;
@@ -1049,7 +1324,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 63";
 		rLen = 0;
-		rLoc = 2042;
+		rLoc = 2065;
 		rType = 0;
 		vrLen = 1729;
 		vrLoc = 1094;
@@ -1109,7 +1384,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 71";
 		rLen = 0;
-		rLoc = 2312;
+		rLoc = 2335;
 		rType = 0;
 		vrLen = 1340;
 		vrLoc = 1774;
@@ -1149,7 +1424,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 79";
 		rLen = 103;
-		rLoc = 2642;
+		rLoc = 2665;
 		rType = 0;
 		vrLen = 1340;
 		vrLoc = 1774;
@@ -1169,7 +1444,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 71";
 		rLen = 0;
-		rLoc = 2313;
+		rLoc = 2336;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 1626;
@@ -1219,7 +1494,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 63";
 		rLen = 0;
-		rLoc = 2042;
+		rLoc = 2065;
 		rType = 0;
 		vrLen = 1755;
 		vrLoc = 1068;
@@ -1269,7 +1544,7 @@
 		fRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */;
 		name = "TicketDetailViewController.m: 63";
 		rLen = 0;
-		rLoc = 2042;
+		rLoc = 2065;
 		rType = 0;
 		vrLen = 1729;
 		vrLoc = 1094;
@@ -1369,7 +1644,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 198";
 		rLen = 70;
-		rLoc = 6470;
+		rLoc = 6492;
 		rType = 0;
 		vrLen = 2313;
 		vrLoc = 5652;
@@ -1586,7 +1861,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 13";
 		rLen = 0;
-		rLoc = 551;
+		rLoc = 591;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 0;
@@ -1831,7 +2106,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 177";
 		rLen = 0;
-		rLoc = 6852;
+		rLoc = 6874;
 		rType = 0;
 		vrLen = 1638;
 		vrLoc = 4953;
@@ -1883,7 +2158,7 @@
 	B1E170680F2C555E00EE28C1 /* Project.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {893, 618}}";
-			sepNavSelRange = "{288, 0}";
+			sepNavSelRange = "{568, 16}";
 			sepNavVisRange = "{0, 968}";
 		};
 	};
@@ -1891,7 +2166,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {893, 2100}}";
 			sepNavSelRange = "{853, 0}";
-			sepNavVisRange = "{0, 1710}";
+			sepNavVisRange = "{3, 1717}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
@@ -2088,8 +2363,8 @@
 	};
 	B1FCBFD70F36DB79002AE255 /* README.markdown */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {893, 784}}";
-			sepNavSelRange = "{184, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {893, 798}}";
+			sepNavSelRange = "{52, 0}";
 			sepNavVisRange = "{0, 1336}";
 		};
 	};

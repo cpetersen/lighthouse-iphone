@@ -25,6 +25,7 @@
 @property (nonatomic, retain) Project *project;
 @property (nonatomic, retain) NSString *ticketDescription;
 
+-(void)loadTicket;
 - (void)refreshTicketDescription:(NSString *)html;
 
 @end

@@ -27,8 +27,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[NSThread detachNewThreadSelector:@selector(loadTicket) toTarget:self withObject:nil];
-
+	//[NSThread detachNewThreadSelector:@selector(loadTicket) toTarget:self withObject:nil];
+	[self loadTicket];
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }

@@ -16,6 +16,7 @@
 @interface RootViewController : UIViewController<UITableViewDelegate> {
 	IBOutlet UITableView *tableView;
 	IBOutlet UIActivityIndicatorView *activityIndicator;
+	//IBOutlet UITableViewCell *errorCell;
 
 	lighthouseAppDelegate *appDelegate;
 }

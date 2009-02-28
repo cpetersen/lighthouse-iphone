@@ -190,6 +190,7 @@
     // Set up the cell...
 	//cell.font = [UIFont systemFontOfSize:14];
 	if([[appDelegate.projectArray objectAtIndex:indexPath.section] loadErrorMessage] != NULL) {
+		//cell = errorCell;
 		cell.text = [[appDelegate.projectArray objectAtIndex:indexPath.section] loadErrorMessage];
 	} else {
 		if([appDelegate.projectArray objectAtIndex:indexPath.section]) {
