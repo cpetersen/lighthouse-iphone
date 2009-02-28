@@ -14,6 +14,8 @@
 	IBOutlet UISearchBar *searchBar;
 	IBOutlet UITableView *tableView;
 	IBOutlet UIActivityIndicatorView *activityIndicator;
+	IBOutlet UITableViewCell *moreCell;
+	IBOutlet UIActivityIndicatorView *moreActivityIndicator;
 
 	NSMutableArray *ticketArray;
 	Project *project;

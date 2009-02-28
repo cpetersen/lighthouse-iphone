@@ -143,7 +143,7 @@
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 2) {
-			NSString *tp = [[NSString alloc] initWithFormat:@"%i", ticket.ticketPriority];
+			NSString *tp = [[NSString alloc] initWithFormat:@"Priority: %i", ticket.ticketPriority];
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 3) {
@@ -164,8 +164,16 @@
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 7) {
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-			cell.text = ticket.body;
+			cell = tableViewCell;
+
+			if(ticket.body) {
+				NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 32pt; font-family: sans-serif; }</style><body>%@</body></html>", ticket.body];
+				[webView loadHTMLString:html baseURL:NULL];
+				[html release];
+			}
+			
+//			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//			cell.text = ticket.body;
 		}
 	}
 	
@@ -180,11 +188,11 @@
 		webViewController.url = ticket.url;
 		[[self navigationController] pushViewController:webViewController animated:YES];
 		[webViewController release];
-	} else if(indexPath.row == 7) {
-		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-		webViewController.body = ticket.body;
-		[[self navigationController] pushViewController:webViewController animated:YES];
-		[webViewController release];
+//	} else if(indexPath.row == 7) {
+//		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+//		webViewController.body = ticket.body;
+//		[[self navigationController] pushViewController:webViewController animated:YES];
+//		[webViewController release];
 	}	
 }
 

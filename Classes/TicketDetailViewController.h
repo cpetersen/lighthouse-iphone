@@ -13,7 +13,9 @@
 
 @interface TicketDetailViewController : UITableViewController {
 	IBOutlet UITableView *tableView;
-
+	IBOutlet UITableViewCell *tableViewCell;
+	IBOutlet UIWebView *webView;
+	
 	Ticket *ticket;
 	Project *project;
 }

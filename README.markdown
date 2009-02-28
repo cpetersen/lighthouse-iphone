@@ -5,6 +5,7 @@
 * activity indicator doesn't appear on second and third page view
 * ERRORS
 	* remove "more tickets" row when there are no more tickets
+	* when you reach the last page of tickets, it keeps reloading
 * CUSTOM TABLE CELLS
 	* customize "more tickets" cell
 

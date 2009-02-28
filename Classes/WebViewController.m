@@ -40,7 +40,7 @@
 		[webView loadRequest:request];
 		[pool release];
 	} else if([self body]) {
-		NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 36pt; }</style><body>%@</body></html>", [self body]];
+		NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 40pt; font-family: sans-serif; }</style><body>%@</body></html>", [self body]];
 		[webView loadHTMLString:html baseURL:NULL];
 		[html release];
 		

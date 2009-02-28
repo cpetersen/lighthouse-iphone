@@ -49,7 +49,10 @@
 }
 
 -(void)loadTickets {
+//	moreActivityIndicator.hidden = NO;
+	[moreActivityIndicator startAnimating];
 	[activityIndicator startAnimating];
+//	[tableView reloadData];
 
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	NSString *new_query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
@@ -102,6 +105,7 @@
 	[pool release];
 
 	[activityIndicator stopAnimating];
+	[moreActivityIndicator stopAnimating];
 }
 
 - (void) searchTableView {
@@ -215,9 +219,10 @@
 		cell.accessoryType = UITableViewCellAccessoryNone;
 	} else {
 		if(indexPath.row == [[self ticketArray] count]) {
-			lblTemp1.text = @"More Tickets";
-			lblTemp2.text = @"";
-			cell.accessoryType = UITableViewCellAccessoryNone;
+			cell = moreCell;
+//			lblTemp1.text = @"More Tickets";
+//			lblTemp2.text = @"";
+//			cell.accessoryType = UITableViewCellAccessoryNone;
 		} else if([[self ticketArray] objectAtIndex:indexPath.row]) {
 			NSString *cellValue = [[self.ticketArray objectAtIndex:indexPath.row] ticketTitle];
 			lblTemp1.text = cellValue;
