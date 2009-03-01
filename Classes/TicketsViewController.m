@@ -33,7 +33,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	[activityIndicator setHidesWhenStopped:YES];
+//	[activityIndicator setHidesWhenStopped:YES];
 
     [super viewDidLoad];
 	[NSThread detachNewThreadSelector:@selector(loadTickets) toTarget:self withObject:nil];
@@ -51,7 +51,7 @@
 -(void)loadTickets {
 //	moreActivityIndicator.hidden = NO;
 	[moreActivityIndicator startAnimating];
-	[activityIndicator startAnimating];
+//	[activityIndicator startAnimating];
 //	[tableView reloadData];
 
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -104,7 +104,7 @@
 	[tableView reloadData];
 	[pool release];
 
-	[activityIndicator stopAnimating];
+//	[activityIndicator stopAnimating];
 	[moreActivityIndicator stopAnimating];
 }
 

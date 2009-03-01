@@ -64,7 +64,7 @@
 
 
 - (void)dealloc {
-    [url dealloc];
+//    [url dealloc];
 //    [body dealloc];
     [super dealloc];
 }

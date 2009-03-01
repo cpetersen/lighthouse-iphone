@@ -44,6 +44,7 @@
 	NSString *apiKey = [appDelegate getApiKey];
 
 	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets/%i.xml?_token=%@", project.accountName, project.projectID, ticket.ticketNumber, apiKey ];
+	NSLog(@"Loading ticket [%@]", urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -194,11 +195,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
+	NSLog(@"click 1");
 	if(indexPath.row == 6) {
+		NSLog(@"click 2");
 		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+		NSLog(@"click 2a");
+		if(ticket) {
+			NSLog(@"click 3 [%@]", ticket.url);
+		} else {
+			NSLog(@"click 3 [NULL TICKET]");
+		}
 		webViewController.url = ticket.url;
+		NSLog(@"click 4");
 		[[self navigationController] pushViewController:webViewController animated:YES];
+		NSLog(@"click 5");
 		[webViewController release];
+		NSLog(@"click 6");
 //	} else if(indexPath.row == 7) {
 //		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
 //		webViewController.body = ticket.body;
@@ -257,7 +269,7 @@
 
 
 - (void)dealloc {
-    [ticket dealloc];
+//    [ticket dealloc];
 // DELETING THE PROJECT CAUSES CRASHES
 //  [project dealloc];
 	[ticketDescription dealloc];

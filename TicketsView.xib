@@ -57,17 +57,6 @@
 						<float key="IBUISectionHeaderHeight">2.200000e+01</float>
 						<float key="IBUISectionFooterHeight">2.200000e+01</float>
 					</object>
-					<object class="IBUIActivityIndicatorView" id="67289864">
-						<reference key="NSNextResponder" ref="90335479"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{150, 205}, {20, 20}}</string>
-						<reference key="NSSuperview" ref="90335479"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<bool key="IBUIHidesWhenStopped">NO</bool>
-						<int key="IBUIStyle">2</int>
-					</object>
 				</object>
 				<string key="NSFrameSize">{320, 431}</string>
 				<reference key="NSSuperview"/>
@@ -209,14 +198,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">activityIndicator</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="67289864"/>
-					</object>
-					<int key="connectionID">60</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">moreCell</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="466323486"/>
@@ -260,7 +241,6 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="156035563"/>
-							<reference ref="67289864"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -273,11 +253,6 @@
 						<int key="objectID">55</int>
 						<reference key="object" ref="782049083"/>
 						<reference key="parent" ref="360949347"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">59</int>
-						<reference key="object" ref="67289864"/>
-						<reference key="parent" ref="90335479"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">61</int>
@@ -312,7 +287,6 @@
 					<string>49.IBEditorWindowLastContentRect</string>
 					<string>49.IBPluginDependency</string>
 					<string>55.IBPluginDependency</string>
-					<string>59.IBPluginDependency</string>
 					<string>61.IBEditorWindowLastContentRect</string>
 					<string>61.IBPluginDependency</string>
 					<string>62.IBPluginDependency</string>
@@ -325,7 +299,6 @@
 					<string>{{321, 63}, {331, 511}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{342, 171}, {320, 480}}</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{279, 533}, {320, 44}}</string>

@@ -1,15 +1,15 @@
 # TODO
-* webkit view for html ticket bodies
 
 # BUGS
 * activity indicator doesn't appear on second and third page view
 * load ticket body-html instead of body
-* UiWebView Race Condition
 * ERRORS
 	* remove "more tickets" row when there are no more tickets
 	* when you reach the last page of tickets, it keeps reloading
 
 # FUTURE
+* load all ticket versions
+* thread loading ticket descriptions
 * get changesets
 * get messages
 * create tickets
@@ -53,3 +53,6 @@
 * project doesn't exist
 * CUSTOM TABLE CELLS
 	* customize "more tickets" cell
+* webkit view for html ticket bodies
+* UiWebView Race Condition
+* crashes on second load of ticket web view
