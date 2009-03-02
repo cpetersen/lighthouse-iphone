@@ -13,7 +13,7 @@
 
 @synthesize project;
 @synthesize ticket;
-@synthesize ticketDescription;
+//@synthesize ticketDescription;
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -69,7 +69,7 @@
 	}
 	
 	// LOAD UP THE HTML
-	NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 40pt; font-family: sans-serif; }</style><body>%@</body></html>", ticket.body];
+	//NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 40pt; font-family: sans-serif; }</style><body>%@</body></html>", ticket.body];
 	//[webView loadHTMLString:html baseURL:NULL];
 	//ticketDescription = html;
 
@@ -78,14 +78,14 @@
 
 	//[self performSelectorOnMainThread:@selector(refreshTicketDescription:) withObject:html waitUntilDone:YES];
 	//[webView performSelectorOnMainThread:@selector(loadHTMLString:) withObject:html waitUntilDone:YES];
-	ticketDescription = html;
+	//ticketDescription = html;
 	[[self tableView] reloadData];
 	[pool release];
 }
 
-- (void)refreshTicketDescription:(NSString *)html {
-	[webView loadHTMLString:html baseURL:NULL];
-}
+//- (void)refreshTicketDescription:(NSString *)html {
+//	[webView loadHTMLString:html baseURL:NULL];
+//}
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -129,7 +129,7 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	if(section == 0) {
-		return 8;
+		return 5;
 	} else {
 		return 0;
 	}
@@ -162,31 +162,23 @@
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 2) {
-			NSString *tp = [[NSString alloc] initWithFormat:@"Priority: %i", ticket.ticketPriority];
-			cell.text = tp;
-			[tp release];
-		} else if (indexPath.row == 3) {
 			NSString *tp = [[NSString alloc] initWithFormat:@"Milestone: %@", ticket.milestone];
 			cell.text = tp;
 			[tp release];
-		} else if (indexPath.row == 4) {
+		} else if (indexPath.row == 3) {
 			NSString *tp = [[NSString alloc] initWithFormat:@"Created By: %@", ticket.creatorUserName];
 			cell.text = tp;
 			[tp release];
-		} else if (indexPath.row == 5) {
-			NSString *tp = [[NSString alloc] initWithFormat:@"Tags: %@", ticket.tags];
-			cell.text = tp;
-			[tp release];
-		} else if (indexPath.row == 6) {
+		} else if (indexPath.row == 4) {
 			NSString *tp = [[NSString alloc] initWithFormat:@"URL: %@", ticket.url];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			cell.text = tp;
 			[tp release];
-		} else if (indexPath.row == 7) {
+//		} else if (indexPath.row == 7) {
 //			cell = tableViewCell;
 //			[webView loadHTMLString:ticketDescription baseURL:NULL];
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-			cell.text = ticket.body;
+//			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//			cell.text = ticket.body;
 		}
 	}
 	
@@ -195,14 +187,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	if(indexPath.row == 6) {
+	if(indexPath.row == 4) {
 		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
 		webViewController.url = ticket.url;
-		[[self navigationController] pushViewController:webViewController animated:YES];
-		[webViewController release];
-	} else if(indexPath.row == 7) {
-		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-		webViewController.body = ticket.body;
 		[[self navigationController] pushViewController:webViewController animated:YES];
 		[webViewController release];
 	}	
@@ -261,7 +248,7 @@
 //    [ticket dealloc];
 // DELETING THE PROJECT CAUSES CRASHES
 //  [project dealloc];
-	[ticketDescription dealloc];
+//	[ticketDescription dealloc];
     [super dealloc];
 }
 

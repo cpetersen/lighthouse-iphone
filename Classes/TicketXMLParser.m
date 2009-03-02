@@ -80,9 +80,9 @@
 	} else if(MILESTONE_FLAG) {
 		aTicket.milestone = string;
 		MILESTONE_FLAG = NO;
-	} else if(BODY_FLAG) {
-		aTicket.body = string;
-		BODY_FLAG = NO;
+//	} else if(BODY_FLAG) {
+//		aTicket.body = string;
+//		BODY_FLAG = NO;
 	}
 }
 

@@ -13,19 +13,19 @@
 
 @interface TicketDetailViewController : UITableViewController {
 	IBOutlet UITableView *tableView;
-	IBOutlet UITableViewCell *tableViewCell;
-	IBOutlet UIWebView *webView;
+//	IBOutlet UITableViewCell *tableViewCell;
+//	IBOutlet UIWebView *webView;
 	
 	Ticket *ticket;
 	Project *project;
-	NSString *ticketDescription;
+//	NSString *ticketDescription;
 }
 
 @property (nonatomic, retain) Ticket *ticket;
 @property (nonatomic, retain) Project *project;
-@property (nonatomic, retain) NSString *ticketDescription;
+//@property (nonatomic, retain) NSString *ticketDescription;
 
 -(void)loadTicket;
-- (void)refreshTicketDescription:(NSString *)html;
+//- (void)refreshTicketDescription:(NSString *)html;
 
 @end
