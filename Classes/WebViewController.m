@@ -12,7 +12,7 @@
 @implementation WebViewController
 
 @synthesize url;
-//@synthesize body;
+@synthesize body;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -40,12 +40,10 @@
 		NSURLRequest *request = [NSURLRequest requestWithURL:ns_url];
 		[webView loadRequest:request];
 		[pool release];
-//	} else if([self body]) {
-//		NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 40pt; font-family: sans-serif; }</style><body>%@</body></html>", [self body]];
-//		[webView loadHTMLString:html baseURL:NULL];
-//		[html release];
-//		
-//		NSLog(@"viewDidLoad 8 [%@]", [self body]);
+	} else if([self body]) {
+		NSString *html = [[NSString alloc] initWithFormat:@"<html><style>body { font-size: 40pt; font-family: sans-serif; }</style><body>%@</body></html>", [self body]];
+		[webView loadHTMLString:html baseURL:NULL];
+		[html release];
 	}
 }
 

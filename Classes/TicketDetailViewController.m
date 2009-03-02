@@ -183,10 +183,10 @@
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 7) {
-			cell = tableViewCell;
-			[webView loadHTMLString:ticketDescription baseURL:NULL];
-//			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//			cell.text = ticket.body;
+//			cell = tableViewCell;
+//			[webView loadHTMLString:ticketDescription baseURL:NULL];
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			cell.text = ticket.body;
 		}
 	}
 	
@@ -211,22 +211,22 @@
 		NSLog(@"click 5");
 		[webViewController release];
 		NSLog(@"click 6");
-//	} else if(indexPath.row == 7) {
-//		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-//		webViewController.body = ticket.body;
-//		[[self navigationController] pushViewController:webViewController animated:YES];
-//		[webViewController release];
+	} else if(indexPath.row == 7) {
+		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+		webViewController.body = ticket.body;
+		[[self navigationController] pushViewController:webViewController animated:YES];
+		[webViewController release];
 	}	
 }
 
 //RootViewController.m
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {	
-	if(indexPath.row == 7) {
-		return 150;
-	} else {
-		return 40;
-	}
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {	
+//	if(indexPath.row == 7) {
+//		return 150;
+//	} else {
+//		return 40;
+//	}
+//}
 
 /*
 // Override to support conditional editing of the table view.

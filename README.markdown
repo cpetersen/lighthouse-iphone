@@ -1,4 +1,5 @@
 # TODO
+* load all ticket versions
 
 # BUGS
 * activity indicator doesn't appear on second and third page view
@@ -8,7 +9,6 @@
 	* when you reach the last page of tickets, it keeps reloading
 
 # FUTURE
-* load all ticket versions
 * thread loading ticket descriptions
 * get changesets
 * get messages
