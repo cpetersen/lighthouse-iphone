@@ -2,7 +2,6 @@
 
 # BUGS
 * activity indicator doesn't appear on second and third page view
-* load ticket body-html AND body
 * add loading icon when webview is loading
 * ERRORS
 	* memory leaks
@@ -59,3 +58,4 @@
 * load all ticket versions
 * ticket bodies aren't quite right
 * thread loading ticket descriptions
+* load ticket body-html AND body
