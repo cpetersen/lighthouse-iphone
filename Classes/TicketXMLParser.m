@@ -25,15 +25,20 @@
 	CREATOR_FLAG = NO;
 	URL_FLAG = NO;
 	MILESTONE_FLAG = NO;
+
+	USER_FLAG = NO;
 	BODY_FLAG = NO;
+	BODY_HTML_FLAG = NO;
 	
 	return self;
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
 	if([elementName isEqualToString:@"ticket"]) {
-		//Initialize the book.
 		aTicket = [[Ticket alloc] init];
+		aTicket.versions = [[NSMutableArray alloc] init];
+	} else if([elementName isEqualToString:@"version"]) {
+		aTicketVersion = [[TicketVersion alloc] init];
 	} else if([elementName isEqualToString:@"title"]) {
 		TITLE_FLAG = YES;
 	} else if([elementName isEqualToString:@"number"]) {
@@ -50,39 +55,57 @@
 		URL_FLAG = YES;
 	} else if([elementName isEqualToString:@"milestone-title"]) {
 		MILESTONE_FLAG = YES;
+	} else if([elementName isEqualToString:@"user-name"]) {
+		USER_FLAG = YES;
 	} else if([elementName isEqualToString:@"body"]) {
 		BODY_FLAG = YES;
+	} else if([elementName isEqualToString:@"body-html"]) {
+		BODY_HTML_FLAG = YES;
 	}
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
 	if(TITLE_FLAG) {
-		aTicket.ticketTitle = string;
-		TITLE_FLAG = NO;
+		if(aTicketVersion.body) {
+			NSLog(@"TITLE [%@]", string);
+			aTicket.ticketTitle = [aTicket.ticketTitle stringByAppendingString:string];
+		} else {
+			aTicket.ticketTitle = string;
+		}
 	} else if(NUMBER_FLAG) {
 		aTicket.ticketNumber = [string intValue];
-		NUMBER_FLAG = NO;
 	} else if(STATE_FLAG) {
 		aTicket.ticketState = string;
-		STATE_FLAG = NO;
 	} else if(PRIORITY_FLAG) {
 		aTicket.ticketPriority = [string intValue];
-		PRIORITY_FLAG = NO;
 	} else if(CREATOR_FLAG) {
 		aTicket.creatorUserName = string;
-		CREATOR_FLAG = NO;
 	} else if(ASSIGNED_FLAG) {
 		aTicket.assignedUserName = string;
-		ASSIGNED_FLAG = NO;
 	} else if(URL_FLAG) {
 		aTicket.url = string;
-		URL_FLAG = NO;
 	} else if(MILESTONE_FLAG) {
 		aTicket.milestone = string;
-		MILESTONE_FLAG = NO;
-//	} else if(BODY_FLAG) {
-//		aTicket.body = string;
-//		BODY_FLAG = NO;
+	} else if(USER_FLAG) {
+		if(aTicketVersion) {
+			aTicketVersion.user = string;
+		}
+	} else if(BODY_FLAG) {
+		if(aTicketVersion) {
+			if(aTicketVersion.body) {
+				aTicketVersion.body = [aTicketVersion.body stringByAppendingString:string];
+			} else {
+				aTicketVersion.body = string;
+			}
+		}
+	} else if(BODY_HTML_FLAG) {
+		if(aTicketVersion) {
+			if(aTicketVersion.bodyHtml) {
+				aTicketVersion.bodyHtml = [aTicketVersion.bodyHtml stringByAppendingString:string];
+			} else {
+				aTicketVersion.bodyHtml = string;
+			}
+		}
 	}
 }
 
@@ -90,6 +113,31 @@
 	if([elementName isEqualToString:@"ticket"]) {
 		[tickets addObject:aTicket];		
 		[aTicket release];
+	} else if([elementName isEqualToString:@"version"]) {
+		[aTicket.versions addObject:aTicketVersion];		
+		[aTicketVersion release];
+	} else if([elementName isEqualToString:@"title"]) {
+		TITLE_FLAG = NO;
+	} else if([elementName isEqualToString:@"number"]) {
+		NUMBER_FLAG = NO;
+	} else if([elementName isEqualToString:@"state"]) {
+		STATE_FLAG = NO;
+	} else if([elementName isEqualToString:@"priority"]) {
+		PRIORITY_FLAG = NO;
+	} else if([elementName isEqualToString:@"creator-name"]) {
+		CREATOR_FLAG = NO;
+	} else if([elementName isEqualToString:@"assigned-user-name"]) {
+		ASSIGNED_FLAG = NO;
+	} else if([elementName isEqualToString:@"url"]) {
+		URL_FLAG = NO;
+	} else if([elementName isEqualToString:@"milestone-title"]) {
+		MILESTONE_FLAG = NO;
+	} else if([elementName isEqualToString:@"user-name"]) {
+		USER_FLAG = NO;
+	} else if([elementName isEqualToString:@"body"]) {
+		BODY_FLAG = NO;
+	} else if([elementName isEqualToString:@"body-html"]) {
+		BODY_HTML_FLAG = NO;
 	}
 }
 

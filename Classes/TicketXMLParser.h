@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Ticket.h"
+#import "TicketVersion.h"
 #import "lighthouseAppDelegate.h"
 
 @interface TicketXMLParser : NSObject {
 	NSMutableArray *tickets;
 
 	Ticket *aTicket;
+	TicketVersion *aTicketVersion;
+	
 	NSMutableString *currentElementValue;
 	BOOL TITLE_FLAG;
 	BOOL NUMBER_FLAG;
@@ -23,7 +26,10 @@
 	BOOL CREATOR_FLAG;
 	BOOL URL_FLAG;
 	BOOL MILESTONE_FLAG;
+	
+	BOOL USER_FLAG;
 	BOOL BODY_FLAG;
+	BOOL BODY_HTML_FLAG;
 }
 
 @property (nonatomic, retain) NSMutableArray *tickets;

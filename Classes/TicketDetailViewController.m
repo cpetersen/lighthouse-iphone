@@ -27,8 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	//[NSThread detachNewThreadSelector:@selector(loadTicket) toTarget:self withObject:nil];
-	[self loadTicket];
+	[NSThread detachNewThreadSelector:@selector(loadTicket) toTarget:self withObject:nil];
+	//[self loadTicket];
 	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -122,7 +122,7 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [ticket.versions count]+1;
 }
 
 
@@ -131,7 +131,7 @@
 	if(section == 0) {
 		return 5;
 	} else {
-		return 0;
+		return 2;
 	}
 }
 
@@ -170,7 +170,7 @@
 			cell.text = tp;
 			[tp release];
 		} else if (indexPath.row == 4) {
-			NSString *tp = [[NSString alloc] initWithFormat:@"URL: %@", ticket.url];
+			NSString *tp = [[NSString alloc] initWithFormat:@"%@", ticket.url];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			cell.text = tp;
 			[tp release];
@@ -178,7 +178,14 @@
 //			cell = tableViewCell;
 //			[webView loadHTMLString:ticketDescription baseURL:NULL];
 //			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//			cell.text = ticket.body;
+		}
+	} else {
+		if(indexPath.row == 0) {
+			cell.accessoryType = UITableViewCellAccessoryNone;
+			cell.text = [[ticket.versions objectAtIndex:indexPath.section-1] user];
+		} else if(indexPath.row == 1) {
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			cell.text = [[ticket.versions objectAtIndex:indexPath.section-1] body];
 		}
 	}
 	
@@ -187,12 +194,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	if(indexPath.row == 4) {
-		WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-		webViewController.url = ticket.url;
-		[[self navigationController] pushViewController:webViewController animated:YES];
-		[webViewController release];
-	}	
+	if(indexPath.section == 0) {
+		if(indexPath.row == 4) {
+			WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+			webViewController.url = ticket.url;
+			[[self navigationController] pushViewController:webViewController animated:YES];
+			[webViewController release];
+		}
+	} else {
+		if(indexPath.row == 1) {
+			WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+			webViewController.body = [[ticket.versions objectAtIndex:indexPath.section-1] bodyHtml];
+			[[self navigationController] pushViewController:webViewController animated:YES];
+			[webViewController release];
+		}
+	}
 }
 
 //RootViewController.m

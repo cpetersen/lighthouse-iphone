@@ -19,6 +19,7 @@
 		B1269BBC0F4C0B40009B9439 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1269BBB0F4C0B40009B9439 /* WebViewController.m */; };
 		B12D63B20F303B5A00BDF814 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D63B10F303B5A00BDF814 /* Ticket.m */; };
 		B12D648F0F3101C900BDF814 /* ProjectAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */; };
+		B13D96150F5BA1CF00FC240C /* TicketVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D96140F5BA1CF00FC240C /* TicketVersion.m */; };
 		B14ADBFD0F42B5C000EAF021 /* TicketDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14ADBFC0F42B5C000EAF021 /* TicketDetailView.xib */; };
 		B14ADC040F42B6A600EAF021 /* TicketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */; };
 		B15EE8DC0F494E740042D422 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = B15EE8DB0F494E740042D422 /* user.png */; };
@@ -73,6 +74,8 @@
 		B12D63B10F303B5A00BDF814 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		B12D648D0F3101C900BDF814 /* ProjectAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectAdminViewController.m; path = Classes/ProjectAdminViewController.m; sourceTree = "<group>"; };
 		B12D64F80F316B0200BDF814 /* AddProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddProjectViewController.h; path = Classes/AddProjectViewController.h; sourceTree = "<group>"; };
+		B13D96130F5BA1CF00FC240C /* TicketVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketVersion.h; sourceTree = "<group>"; };
+		B13D96140F5BA1CF00FC240C /* TicketVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketVersion.m; sourceTree = "<group>"; };
 		B14ADBFC0F42B5C000EAF021 /* TicketDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketDetailView.xib; sourceTree = "<group>"; };
 		B14ADC020F42B6A600EAF021 /* TicketDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketDetailViewController.h; path = Classes/TicketDetailViewController.h; sourceTree = "<group>"; };
 		B14ADC030F42B6A600EAF021 /* TicketDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicketDetailViewController.m; path = Classes/TicketDetailViewController.m; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				B1FCBEBD0F36441B002AE255 /* ProjectXMLParser.m */,
 				B12D63B00F303B5A00BDF814 /* Ticket.h */,
 				B12D63B10F303B5A00BDF814 /* Ticket.m */,
+				B13D96130F5BA1CF00FC240C /* TicketVersion.h */,
+				B13D96140F5BA1CF00FC240C /* TicketVersion.m */,
 				B1FCBEB70F363CD2002AE255 /* TicketXMLParser.h */,
 				B1FCBEB80F363CD2002AE255 /* TicketXMLParser.m */,
 			);
@@ -351,6 +356,7 @@
 				B1D573A50F3F98EB007198F7 /* MilestonesViewController.m in Sources */,
 				B14ADC040F42B6A600EAF021 /* TicketDetailViewController.m in Sources */,
 				B1269BBC0F4C0B40009B9439 /* WebViewController.m in Sources */,
+				B13D96150F5BA1CF00FC240C /* TicketVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

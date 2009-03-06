@@ -1,15 +1,15 @@
 # TODO
-* load all ticket versions
 
 # BUGS
 * activity indicator doesn't appear on second and third page view
-* load ticket body-html instead of body
+* load ticket body-html AND body
+* add loading icon when webview is loading
 * ERRORS
+	* memory leaks
 	* remove "more tickets" row when there are no more tickets
 	* when you reach the last page of tickets, it keeps reloading
 
 # FUTURE
-* thread loading ticket descriptions
 * get changesets
 * get messages
 * create tickets
@@ -56,3 +56,6 @@
 * webkit view for html ticket bodies
 * UiWebView Race Condition
 * crashes on second load of ticket web view
+* load all ticket versions
+* ticket bodies aren't quite right
+* thread loading ticket descriptions
