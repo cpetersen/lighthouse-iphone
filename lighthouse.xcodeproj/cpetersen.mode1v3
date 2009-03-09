@@ -228,6 +228,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,12 +278,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>53</integer>
+									<integer>23</integer>
+									<integer>13</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 302}, {240, 660}}</string>
+							<string>{{0, 0}, {240, 660}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -311,14 +314,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>README.markdown</string>
+								<string>RootViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>README.markdown</string>
+										<string>RootViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B18A10020F61141A00E2EB16</string>
+										<string>B1ABB9880F636C0B00212DEA</string>
 										<key>history</key>
 										<array>
 											<string>B1CE82DC0F2C105A00AD82E1</string>
@@ -360,7 +361,6 @@
 											<string>B16DE49C0F55282F00E773AC</string>
 											<string>B1E89A740F573DF900FC4027</string>
 											<string>B13D95760F59FC8700FC240C</string>
-											<string>B13D95770F59FC8700FC240C</string>
 											<string>B13D95780F59FC8700FC240C</string>
 											<string>B13D95A60F5A22BC00FC240C</string>
 											<string>B13D95D10F5B8C6000FC240C</string>
@@ -379,7 +379,7 @@
 											<string>B18A0FF70F61130100E2EB16</string>
 											<string>B18A0FF80F61130100E2EB16</string>
 											<string>B18A10000F61141A00E2EB16</string>
-											<string>B18A0FE20F61126900E2EB16</string>
+											<string>B13D95770F59FC8700FC240C</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -430,15 +430,6 @@
 											<string>B16DE4300F53D89100E773AC</string>
 											<string>B13D96260F5BAB1800FC240C</string>
 											<string>B13D962B0F5BAB1800FC240C</string>
-											<string>B18A0FE80F61126900E2EB16</string>
-											<string>B18A0FE90F61126900E2EB16</string>
-											<string>B18A0FEA0F61126900E2EB16</string>
-											<string>B18A0FEB0F61126900E2EB16</string>
-											<string>B18A0FEC0F61126900E2EB16</string>
-											<string>B18A0FFA0F61130100E2EB16</string>
-											<string>B18A0FFB0F61130100E2EB16</string>
-											<string>B18A0FFC0F61130100E2EB16</string>
-											<string>B18A10010F61141A00E2EB16</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -470,7 +461,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 678}, {954, 0}}</string>
+								<string>{{0, 679}, {954, 0}}</string>
 								<key>RubberWindowFrame</key>
 								<string>3 59 1216 719 0 0 1280 778 </string>
 							</dict>
@@ -496,9 +487,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>B18A0FD70F610F8000E2EB16</string>
+				<string>B1ABB9890F636C0B00212DEA</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>B18A0FD80F610F8000E2EB16</string>
+				<string>B1ABB98A0F636C0B00212DEA</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -632,9 +623,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>B19F69860F270C2D0001541B</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/cpetersen/Code/iphone/Lighthouse/lighthouse.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -715,7 +706,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>B19F69860F270C2D0001541B</string>
-				<string>B18A0FEE0F61126900E2EB16</string>
+				<string>B1ABB98B0F636C0B00212DEA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -835,13 +826,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>B18A0FEF0F61126900E2EB16</string>
+				<string>B1ABB98C0F636C0B00212DEA</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>B18A0FF00F61126900E2EB16</string>
-				<string>B18A0FF10F61126900E2EB16</string>
-				<string>B18A0FF20F61126900E2EB16</string>
-				<string>B18A0FF30F61126900E2EB16</string>
-				<string>B18A0FF40F61126900E2EB16</string>
+				<string>B1ABB98D0F636C0B00212DEA</string>
+				<string>B1ABB98E0F636C0B00212DEA</string>
+				<string>B1ABB98F0F636C0B00212DEA</string>
+				<string>B1ABB9900F636C0B00212DEA</string>
+				<string>B1ABB9910F636C0B00212DEA</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -960,8 +951,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -997,7 +986,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>B18A0FF50F61126900E2EB16</string>
+				<string>B1ABB9920F636C0B00212DEA</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -1007,7 +996,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

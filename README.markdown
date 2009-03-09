@@ -59,3 +59,8 @@
 * ticket bodies aren't quite right
 * thread loading ticket descriptions
 * load ticket body-html AND body
+
+
+== META INFO
+Descriptions:
+Access your all your Lighthouse tickets from anywhere. The Lighthouse iPhone app gives you access to public and private accounts and all their related milestones and tickets. You can search for any ticket and even access the Lighthouse website directly from the integrated browser.
