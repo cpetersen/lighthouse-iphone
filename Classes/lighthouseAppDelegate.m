@@ -55,6 +55,7 @@ static sqlite3 *database = nil;
 
 - (NSString *) getProperty:(NSString *)name {
 	NSString *value;
+	value = @"";
 	if (sqlite3_open([self.getDBPath UTF8String], &database) == SQLITE_OK) {
 		const char *sql = "select value from properties where name = ?";
 		sqlite3_stmt *selectstmt;

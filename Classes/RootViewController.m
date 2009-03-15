@@ -31,19 +31,19 @@
 }
 
 -(void)loadProjects:(Project *)project {
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
 	BOOL PASSED = YES;
 	appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 
 	[activityIndicator startAnimating];
 
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	for(int i=0; i < [[appDelegate projectArray] count]; i++) {
 		Project *project = [[appDelegate projectArray] objectAtIndex:i];
 		BOOL RESULT = [project loadSubProjects];
 		PASSED = RESULT && PASSED;
 		[tableView reloadData];
 	}
-	[pool release];
 	
 	if(!PASSED) {
 		UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
@@ -53,9 +53,11 @@
 		[dialog show];
 		[dialog release];		
 	}
-	
+
 	[activityIndicator stopAnimating];
 	appDelegate.reloadProjects = NO;
+
+	[pool release];
 }
 
 -(void)adminClicked:(id)sender {
