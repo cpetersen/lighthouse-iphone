@@ -66,7 +66,7 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
 	if(TITLE_FLAG) {
-		if(aTicketVersion.body) {
+		if(aTicket.ticketTitle && aTicketVersion == NULL) {
 			NSLog(@"TITLE [%@]", string);
 			aTicket.ticketTitle = [aTicket.ticketTitle stringByAppendingString:string];
 		} else {
