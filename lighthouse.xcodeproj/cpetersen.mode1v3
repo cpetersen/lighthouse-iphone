@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B1445C740F6DBD7500F955C5</string>
+										<string>B17805270F6E12BB00662D6B</string>
 										<key>history</key>
 										<array>
 											<string>B1CE82DC0F2C105A00AD82E1</string>
@@ -375,7 +375,7 @@
 											<string>B16B5F4A0F6DA7C400AE0727</string>
 											<string>B1445C680F6DAF0400F955C5</string>
 											<string>B1445C710F6DBD7500F955C5</string>
-											<string>B1445C720F6DBD7500F955C5</string>
+											<string>B1445C740F6DBD7500F955C5</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -426,8 +426,6 @@
 											<string>B16DE4300F53D89100E773AC</string>
 											<string>B13D96260F5BAB1800FC240C</string>
 											<string>B13D962B0F5BAB1800FC240C</string>
-											<string>B1445C690F6DAF0400F955C5</string>
-											<string>B1445C730F6DBD7500F955C5</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -485,9 +483,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>B1445C460F6DAC8900F955C5</string>
+				<string>B17805280F6E12BB00662D6B</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>B1445C470F6DAC8900F955C5</string>
+				<string>B17805290F6E12BB00662D6B</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -621,12 +619,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>B1445C5E0F6DADAB00F955C5</string>
-		<string>B1445C5F0F6DADAB00F955C5</string>
-		<string>B1445C540F6DACAD00F955C5</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>B19F69860F270C2D0001541B</string>
 		<string>/Users/cpetersen/Code/iphone/Lighthouse/lighthouse.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

@@ -18,7 +18,7 @@
 * store current state in database
 * protocol handler for api key, tickets, projects, milestones
 
-# DONE
+# DONE - VERSION 1.0 is out
 * HOOK UP DELETE BUTTON TO DELETEPROJECT METHOD
 * CHECK THAT THE FIRST PROJECT IS DISPLAYED (check array indexes)
 * change + button to admin
