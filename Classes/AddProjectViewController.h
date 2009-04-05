@@ -10,6 +10,7 @@
 #import "Project.h"
 
 @interface AddProjectViewController : UIViewController {
+	IBOutlet UISwitch *sslSwitch;
 	IBOutlet UITextField *txtProjectName;
 }
 

@@ -11,6 +11,7 @@
 #import "Project.h"
 
 @interface ShowProjectViewController : UIViewController {
+	IBOutlet UISwitch *sslSwitch;
 	Project *project;
 }
 

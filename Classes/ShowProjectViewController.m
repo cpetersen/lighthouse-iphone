@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	[sslSwitch setOn:FALSE];
+	
 	self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 

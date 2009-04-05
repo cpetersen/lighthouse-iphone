@@ -33,6 +33,8 @@
 
 	self.title = @"Add Account";
 	
+	[sslSwitch setOn:FALSE];
+
 	self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] 
 											  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
 											  target:self action:@selector(cancelClicked:)] autorelease];
