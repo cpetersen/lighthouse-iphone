@@ -30,7 +30,7 @@ static sqlite3_stmt *deleteStmt = nil;
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
-		const char *sql = "select id, name from projects";
+		const char *sql = "select id, name, secure from projects";
 		sqlite3_stmt *selectstmt;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
 			while(sqlite3_step(selectstmt) == SQLITE_ROW) {

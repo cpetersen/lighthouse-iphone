@@ -68,7 +68,6 @@
 	NSString *apiKey = [appDelegate getApiKey];
 
 	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/tickets.xml?q=%@&_token=%@&page=%i", project.accountName, project.projectID, new_query2, apiKey, currentPage ];
-	NSLog(@"URL [%@]", urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -92,7 +91,6 @@
 		if(ticketArray == NULL) {
 			ticketArray = [[NSMutableArray alloc] init];
 		}
-		NSLog(@"tickets [%i]", [parser.tickets count]);
 		for(int i=0; i<[parser.tickets count]; i++) {
 			[ticketArray addObject:[parser.tickets objectAtIndex:i]];
 		}

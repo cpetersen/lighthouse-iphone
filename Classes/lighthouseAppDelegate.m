@@ -25,6 +25,11 @@ static sqlite3 *database = nil;
 	/****** DATABASE WORK ******/
 	[self copyDatabaseIfNeeded];
 
+	if([self getDbVersion] < 1) {
+		[self updatedDbVersion1];
+	}
+	//[self deleteProperty:@"db_version"];	
+	
 	/****** UI WORK ******/
 	// Configure and show the window
 	[window addSubview:[navigationController view]];
@@ -51,6 +56,26 @@ static sqlite3 *database = nil;
 
 - (void) setApiKey:(NSString *)apiKey {
 	[self setProperty:@"api_key" value:apiKey];
+}
+
+- (NSInteger) getDbVersion {
+	NSInteger result;
+	NSString *string;
+
+	string = [self getProperty:@"db_version"];
+	if(string == NULL) {
+		result = 0;
+	} else {
+		result = [string intValue];
+	}
+	[string release];
+	
+	return result;
+}
+- (void) setDbVersion:(int)version {
+	NSString *versionStr = [[NSString alloc] initWithFormat:@"%i", version];
+	[self setProperty:@"db_version" value:versionStr];
+	[versionStr release];
 }
 
 - (NSString *) getProperty:(NSString *)name {
@@ -88,6 +113,21 @@ static sqlite3 *database = nil;
 			sqlite3_bind_text(insertstmt, 2, [newValue UTF8String], -1, SQLITE_TRANSIENT);
 			if(sqlite3_step(insertstmt) == SQLITE_ROW) {
 				NSLog(@"Error while executing insert statement. '%s'", sqlite3_errmsg(database));
+			}
+		}
+	} else {
+		sqlite3_close(database); //Even though the open call failed, close the database connection to release all the memory.
+	}
+}
+
+- (void) deleteProperty:(NSString *)name {
+	if (sqlite3_open([self.getDBPath UTF8String], &database) == SQLITE_OK) {
+		const char *sql_delete = "delete from properties where name = ?";
+		sqlite3_stmt *deletestmt;
+		if(sqlite3_prepare_v2(database, sql_delete, -1, &deletestmt, NULL) == SQLITE_OK) {
+			sqlite3_bind_text(deletestmt, 1, [name UTF8String], -1, SQLITE_TRANSIENT);
+			if (SQLITE_DONE != sqlite3_step(deletestmt)) {
+				NSLog(@"Error while executing delete statement. '%s'", sqlite3_errmsg(database));
 			}
 		}
 	} else {
@@ -143,6 +183,16 @@ static sqlite3 *database = nil;
 	[navigationController release];
 	[window release];
 	[super dealloc];
+}
+
+- (void)updatedDbVersion1 {
+	if (sqlite3_open([self.getDBPath UTF8String], &database) == SQLITE_OK) {
+		if(sqlite3_exec(database, "alter table projects add column secure boolean default false", nil, nil, nil) == SQLITE_OK) {
+			[self setDbVersion:1];
+		}
+	} else {
+		sqlite3_close(database); //Even though the open call failed, close the database connection to release all the memory.
+	}
 }
 
 @end

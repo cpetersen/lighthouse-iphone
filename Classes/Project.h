@@ -13,6 +13,7 @@
 	NSInteger projectID;
 	NSString *projectName;
 	NSString *accountName;
+	BOOL secure;
 
 	NSString *loadErrorMessage;
 	NSMutableArray *projectArray;

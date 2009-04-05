@@ -32,6 +32,8 @@
 
 - (NSString *) getApiKey;
 - (void) setApiKey:(NSString *)apiKey;
+- (NSInteger) getDbVersion;
+- (void) setDbVersion:(int)apiKey;
 
 - (void) addProject:(Project *)projectObj;
 - (void) removeProject:(Project *)projectObj;
@@ -42,6 +44,9 @@
 
 - (NSString *) getProperty:(NSString *)name;
 - (void) setProperty:(NSString *)name value:(NSString *)newValue;
+- (void) deleteProperty:(NSString *)name;
 
+- (void)updatedDbVersion1;
+	
 @end
 
