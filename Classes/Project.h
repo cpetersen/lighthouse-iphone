@@ -41,5 +41,6 @@
 - (void) updateProject;
 - (void) deleteProject;
 - (id) initWithPrimaryKey:(NSInteger)pk;
+- (NSString *) getProtocol;
 
 @end

@@ -63,7 +63,8 @@ static sqlite3_stmt *deleteStmt = nil;
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSString *apiKey = [appDelegate getApiKey];
 
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects/%i/milestones.xml?_token=%@", accountName, projectID, apiKey ];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"%@://%@.lighthouseapp.com/projects/%i/milestones.xml?_token=%@", [self getProtocol], accountName, projectID, apiKey ];
+	NSLog(urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -87,7 +88,8 @@ static sqlite3_stmt *deleteStmt = nil;
 	lighthouseAppDelegate *appDelegate = (lighthouseAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSString *apiKey = [appDelegate getApiKey];
 
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://%@.lighthouseapp.com/projects.xml?_token=%@", projectName, apiKey ];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"%@://%@.lighthouseapp.com/projects.xml?_token=%@", [self getProtocol], projectName, apiKey ];
+	NSLog(urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -164,6 +166,14 @@ static sqlite3_stmt *deleteStmt = nil;
 	[super init];
 	projectID = pk;
 	return self;
+}
+
+- (NSString *) getProtocol {
+	if(secure == 0) {
+		return @"http";
+	} else {
+		return @"https";
+	}
 }
 
 - (void) dealloc {

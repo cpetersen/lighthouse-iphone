@@ -51,6 +51,7 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 	if([elementName isEqualToString:@"project"]) {
 		aProject.accountName = project.projectName;
+		aProject.secure = project.secure;
 		[self.project.projectArray addObject:aProject];		
 		[aProject release];
 	} else if(NAME_FLAG) {
