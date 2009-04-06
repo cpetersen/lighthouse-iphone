@@ -18,11 +18,12 @@
 
 static sqlite3 *database = nil;
 static sqlite3_stmt *insertStmt = nil;
+static sqlite3_stmt *updateStmt = nil;
 static sqlite3_stmt *deleteStmt = nil;
 
 @implementation Project
 
-@synthesize projectID, projectName, accountName, loadErrorMessage;
+@synthesize projectID, projectName, accountName, loadErrorMessage, secure;
 @synthesize projectArray;
 @synthesize milestonesArray;
 
@@ -35,8 +36,10 @@ static sqlite3_stmt *deleteStmt = nil;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
 			while(sqlite3_step(selectstmt) == SQLITE_ROW) {
 				NSInteger projectID = sqlite3_column_int(selectstmt, 0);
+				NSInteger secureInt = sqlite3_column_int(selectstmt, 2);
 				Project *projectObj = [[Project alloc] initWithPrimaryKey:projectID];
 				projectObj.projectName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
+				projectObj.secure = secureInt != 0;
 				
 //				[projectObj loadSubProjects];
 				[appDelegate.projectArray addObject:projectObj];
@@ -104,14 +107,15 @@ static sqlite3_stmt *deleteStmt = nil;
 
 - (void) insertProject {
 	if(insertStmt == nil) {
-		const char *sql = "insert into projects (name) values (?)";
+		const char *sql = "insert into projects (name, secure) values (?, ?)";
 		if(sqlite3_prepare_v2(database, sql, -1, &insertStmt, NULL) != SQLITE_OK) {
 			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
 		}
 	}
 	
 	sqlite3_bind_text(insertStmt, 1, [projectName UTF8String], -1, SQLITE_TRANSIENT);
-	
+	sqlite3_bind_int(insertStmt, 2, secure);
+
 	if(SQLITE_DONE != sqlite3_step(insertStmt)) {
 		NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(database));
 	} else {
@@ -120,6 +124,24 @@ static sqlite3_stmt *deleteStmt = nil;
 	}
 	//Reset the add statement.
 	sqlite3_reset(insertStmt);
+}
+
+- (void) updateProject {
+	if(updateStmt == nil) {
+		const char *sql = "update projects set secure=? where id=?";
+		if(sqlite3_prepare_v2(database, sql, -1, &updateStmt, NULL) != SQLITE_OK) {
+			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
+		}
+	}
+	
+	sqlite3_bind_int(updateStmt, 1, secure);
+	sqlite3_bind_int(updateStmt, 2, projectID);
+	
+	if(SQLITE_DONE != sqlite3_step(updateStmt)) {
+		NSAssert1(0, @"Error while updating data. '%s'", sqlite3_errmsg(database));
+	}
+	//Reset the add statement.
+	sqlite3_reset(updateStmt);
 }
 
 - (void) deleteProject {

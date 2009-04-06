@@ -187,7 +187,7 @@ static sqlite3 *database = nil;
 
 - (void)updatedDbVersion1 {
 	if (sqlite3_open([self.getDBPath UTF8String], &database) == SQLITE_OK) {
-		if(sqlite3_exec(database, "alter table projects add column secure boolean default false", nil, nil, nil) == SQLITE_OK) {
+		if(sqlite3_exec(database, "alter table projects add column secure integer default 0", nil, nil, nil) == SQLITE_OK) {
 			[self setDbVersion:1];
 		}
 	} else {

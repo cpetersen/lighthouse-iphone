@@ -13,7 +13,7 @@
 	NSInteger projectID;
 	NSString *projectName;
 	NSString *accountName;
-	BOOL secure;
+	NSInteger secure;
 
 	NSString *loadErrorMessage;
 	NSMutableArray *projectArray;
@@ -24,6 +24,7 @@
 @property (nonatomic, copy) NSString *projectName;
 @property (nonatomic, copy) NSString *accountName;
 @property (nonatomic, copy) NSString *loadErrorMessage;
+@property (nonatomic) NSInteger secure;
 
 @property (nonatomic, retain) NSMutableArray *projectArray;
 @property (nonatomic, retain) NSMutableArray *milestonesArray;
@@ -37,6 +38,7 @@
 
 - (BOOL) loadSubProjects;
 - (void) insertProject;
+- (void) updateProject;
 - (void) deleteProject;
 - (id) initWithPrimaryKey:(NSInteger)pk;
 

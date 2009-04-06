@@ -71,7 +71,12 @@
 	// pop it off the stack.
 	Project *project = [[Project alloc] init];
 	project.projectName = txtProjectName.text;
-	
+	if(sslSwitch.on) {
+		project.secure = 1;
+	} else {
+		project.secure = 0;
+	}
+
 	//Add the object
 	[appDelegate addProject:project];
 	appDelegate.reloadProjects = YES;

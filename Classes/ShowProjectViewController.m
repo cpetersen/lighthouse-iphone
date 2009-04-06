@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	[sslSwitch setOn:FALSE];
+	BOOL on = project.secure != 0;
+	[sslSwitch setOn:on];
 	
 	self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
@@ -56,6 +57,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
     // Release anything that's not essential, such as cached data
+}
+
+-(IBAction) updateProjectSecurity: (id) sender {
+	project.secure = sslSwitch.on;
+	[project updateProject];
 }
 
 -(IBAction) deleteProject: (id) sender {

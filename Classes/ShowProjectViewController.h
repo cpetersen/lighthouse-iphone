@@ -17,6 +17,7 @@
 
 @property (nonatomic, retain) Project *project;
 
+-(IBAction) updateProjectSecurity: (id) sender;
 -(IBAction) deleteProject: (id) sender;
 
 @end
