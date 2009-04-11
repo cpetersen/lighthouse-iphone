@@ -66,9 +66,10 @@ static sqlite3 *database = nil;
 	if(string == NULL) {
 		result = 0;
 	} else {
+//		result = 1;
 		result = [string intValue];
 	}
-	[string release];
+//	[string release];
 	
 	return result;
 }

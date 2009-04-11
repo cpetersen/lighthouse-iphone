@@ -44,7 +44,7 @@
 	NSString *apiKey = [appDelegate getApiKey];
 
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@://%@.lighthouseapp.com/projects/%i/tickets/%i.xml?_token=%@", [project getProtocol], project.accountName, project.projectID, ticket.ticketNumber, apiKey ];
-	NSLog(urlString);
+	NSLog (urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];

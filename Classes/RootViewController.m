@@ -28,9 +28,10 @@
 											target:self action:@selector(tokenClicked:)];
 
 	[NSThread detachNewThreadSelector:@selector(loadProjects:) toTarget:self withObject:nil];
+	//[self loadProjects:nil];
 }
 
--(void)loadProjects:(Project *)project {
+-(void)loadProjects:(id)sender {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
 	BOOL PASSED = YES;

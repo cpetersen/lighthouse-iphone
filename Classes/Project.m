@@ -64,7 +64,7 @@ static sqlite3_stmt *deleteStmt = nil;
 	NSString *apiKey = [appDelegate getApiKey];
 
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@://%@.lighthouseapp.com/projects/%i/milestones.xml?_token=%@", [self getProtocol], accountName, projectID, apiKey ];
-	NSLog(urlString);
+	NSLog (urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -89,7 +89,7 @@ static sqlite3_stmt *deleteStmt = nil;
 	NSString *apiKey = [appDelegate getApiKey];
 
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@://%@.lighthouseapp.com/projects.xml?_token=%@", [self getProtocol], projectName, apiKey ];
-	NSLog(urlString);
+	NSLog (urlString);
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	[urlString release];
 	NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -101,7 +101,7 @@ static sqlite3_stmt *deleteStmt = nil;
 	BOOL success = [xmlParser parse];
 	
 	if(!success) {
-		NSLog(@"Parsing Error!!!");
+		NSLog (@"Parsing Error!!!");
 		RESULT = NO;
 	}
 	return RESULT;
