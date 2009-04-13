@@ -99,16 +99,16 @@
 			empty = YES;
 		}
 	}
-	
-	[tableView reloadData];
-	[pool release];
 
+	[tableView reloadData];
 //	[activityIndicator stopAnimating];
 	[moreActivityIndicator stopAnimating];
+	[pool release];
 }
 
 - (void) searchTableView {
 	[NSThread detachNewThreadSelector:@selector(loadTickets) toTarget:self withObject:nil];
+	letUserSelectRow = YES;
 }
 
 #pragma mark Search Bar methods
@@ -266,7 +266,6 @@
 //
 //    return cell;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(!empty) {
